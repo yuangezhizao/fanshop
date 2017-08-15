@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <link href="/css/base.css" rel="stylesheet">
+    <link href="/css/ch-box.css" rel="stylesheet">
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/functions/g_Type.js"></script>
+    <script src="/js/tost.js"></script>
+
+</head>
+<body class="bg-f5" onload="isTouchDevice();">
+    <div class="ch-header" id="curr">
+        <a class="fanhui" id="btnback">返回</a>
+        <input id="txtSearch" type="text" value="" placeholder="请输入搜索内容">
+        <i id="btnCancel"></i>
+        <a id="btnShowType" href="#" class="pressed">pressed</a>
+    </div>
+    <section class="ch-search">
+        <div class="ch-no" id="divResultNull" style="display:none">
+            <p>未搜到结果，请重新搜索！</p>
+        </div>
+        <h2 id="h2ResultRecom" style="display:none"><span>热门推荐</span></h2>
+        <ul id="ulResultRecom" class="ch-groom" style="display:none">
+            <div id="divResultRecom"></div>
+        </ul>
+        <ul class="ch-nav" id="ulResultMenu">
+            <li id="liot0" class="curr"><a href="#" onclick="Product.Change_Sort('0')">综合</a></li>
+            <li id="liot1"><a href="#" onclick="Product.Change_Sort('1')">销量</a></li>
+            <li id="liot3"><a href="#" onclick="Product.Change_Sort('3')">价格</a></li>
+            <li id="liot4"><a href="#" onclick="Product.Change_Sort('4')">人气</a></li>
+        </ul>
+        <ul class="ch-small" id="ulResultList">
+            <div id="divResultList"></div>
+        </ul>
+        <div class="ch-up" style="display:none;">
+            <a>顶部</a>
+        </div>
+    </section>
+    <script>
+        objTop.Start($(".ch-up"));
+
+    </script>
+
+    <script type="text/javascript" src="/js/ch-dome.js"></script>
+    <script src="/js/pages/Product_List.js"></script>
+    <script src="/js/g_footer.js"></script>
+</body>
+</html>

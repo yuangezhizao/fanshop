@@ -1,0 +1,16 @@
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.WebTouch.dll.config
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.WebTouch.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.WebTouch.pdb
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.BusinessLayer.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.EntityFacade.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.FrameWork.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.QueryFacade.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\Starsoft.Core.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\Starsoft.Web.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.BusinessLayer.pdb
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.EntityFacade.pdb
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.FrameWork.pdb
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\bin\com.hjy.fan.QueryFacade.pdb
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\obj\Release\JYHTouch.csprojResolveAssemblyReference.cache
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\obj\Release\com.hjy.fan.WebTouch.dll
+E:\工作\乾和晟云\GIT\fan\wxshop_fan\JYHTouch\obj\Release\com.hjy.fan.WebTouch.pdb

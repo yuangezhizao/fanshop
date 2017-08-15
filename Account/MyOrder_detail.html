@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <script src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/g_header.js"></script>
+
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+
+    <script src="/JS/pages/MyOrder_detail.js"></script>-->
+    <script type="text/javascript">
+        var staticlist = [["/css/sbc.css","/css/base.css", "/css/index.css" ], ["/js/jquery-2.1.4.js", "/js/jquery.mobile-1.4.5.js", "/JS/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/focus.js", "/js/jquery.w.js", "/js/pages/MyOrder_detail.js"]];
+    WriteStatic(staticlist);
+    </script>
+
+    <style>
+        #mask {
+            display: block;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <!--订单编号-->
+    <input type="hidden" id="hid_order_code" value="">
+    <!--选择的订单编号-->
+    <input type="hidden" id="sel_order_code" value="">
+    <!--点击的按钮-->
+    <input type="hidden" id="sel_btn_name" value="" />
+    <!--页码-->
+    <input type="hidden" id="sel_nextPage" value="1" />
+    <!--List页选择的状态-->
+    <input type="hidden" id="hid_list_paytype" value="" />
+
+
+    <section class="container">
+        <h1 class="back-hd">
+            <a class="go-back" num="202072-1"></a>订单详情
+
+        </h1>
+        <article id="MyOrder_detail_article" class="my-order pb-55">
+            <div class="lijian" id="fktishi"  style="display:none;">提示:下单成功后24小时内不付款，系统将自动取消订单！</div>
+            <div class="d_order_warm" id="div_idnumber_warm" style="display:none">提示：因您提供的收货人身份证信息有误，导致通关失败，请核对收货人姓名与身份证号后重新下单！</div>
+            <h3 class="order-status">订单状态: <em>待付款</em></h3>
+            <dl class="order-price-details">
+                <!--<dt>订单金额:<em><i>￥876.00</i></em></dt>
+                <dd>商品总金额：<em><i>￥900.00</i></em></dd>
+                <dd>首单88折：<em>-<i>￥24.00</i></em></dd>
+                <dd>满减：<em>-<i>￥40.00</i></em></dd>
+                <dd>手机下单立减：<em>-<i>￥40.00</i></em></dd>
+                <dd>运费：<em>+<i>￥0.00</i></em></dd>-->
+            </dl>
+            <!-- <p id="fktishi" class="order-note red" style="display:none;">提示:下单成功后24小时内不付款，系统将自动取消订单！</p> -->
+            <p id="orderActivityRemarkDetailsResult" class="order-note">注：新疆、西藏地区每单收24元运费，由派件员送货时向您收取</p>
+            <div class="order-address">
+                <!--<h3 class="order-contacts">
+                    <span>逍遥妃</span>
+                    <em>18701618375</em>
+                </h3>
+                <p>北京市朝阳区高碑店小郊亭1376号润坤大厦10层125室</p>-->
+            </div>
+            <div class="bt"></div>
+            <dl id="transport-info" class="transport-info">
+                <dt>物流信息</dt>
+                <dd class="order-detl-tp">
+                    <!--<a href="">
+                        货物已达[1朝阳四站]由派送员[张孝辉]开始派送，<br>投递员电话：<i>53353874</i>
+                        <span>2014-09-29 07:31:21</span>
+                    </a>-->
+                </dd>
+            </dl>
+
+            <ul class="my-order-list" module="202073">
+                <!--<li>
+                    <div class="order-info">
+                        <a href="" title="双立人TWIN Point S刀具5件套装厨房菜刀">
+                            <div class="order-shop-img"><img src="./img/w-demo/demo-12.jpg" alt=""></div>
+                            <div class="order-shop-info">
+                                <h1><span>双立人TWIN Point S刀具5件套装厨房菜刀</span><em>￥649.00</em></h1>
+                                <h3>x 1</h3>
+                                <p>款式：共同</p>
+                                <p>规格：共同</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="order-info">
+                        <a href="" title="双立人TWIN Point S刀具5件套装厨房菜刀">
+                            <div class="order-shop-img"><img src="./img/w-demo/demo-12.jpg" alt=""></div>
+                            <div class="order-shop-info">
+                                <h1><span>双立人TWIN Point S刀具5件套装厨房菜刀</span><em>￥649.00</em></h1>
+                                <h3>x 1</h3>
+                                <p>款式：共同</p>
+                                <p>规格：共同</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>-->
+            </ul>
+            <dl class="order-footer">
+                <!--<dt>支付方式<em>支付宝</em></dt>
+                <dt>发票信息<em>不开发票</em></dt>
+                <dd>发票类型：电子发票</dd>
+                <dd>发票抬头：北京乾和盛云电子商务有限公司</dd>
+                <dd>发票内容：明细</dd>-->
+            </dl>
+            <div class="order-time">
+                <!--<p>订单号：   1234567890</p>
+                <p>下单时间：2014-09-09 20:30:34</p>-->
+            </div>
+            <div class="order-btn">
+                <!--<a href="" class="service-btn">取消订单</a><a href="" class="service-btn">电话退款/售后</a><a href="" class="service-btn">查看物流</a><a href="" class="pay-btn">付款</a>-->
+            </div>
+        </article>
+    </section>
+    <!--确认窗口  开始-->
+    <!--<div id="fbox_ftel" class="fbox ftel" style="display:none">
+        <div id="sc_jxtx" class="sc jxtx"><span>确定要取消订单吗？</span></div>
+        <div class="btns">
+            <a operate="no">取消</a><a class="ok" operate="yes">确定</a>
+        </div>
+    </div>
+    <div id="mask" style="display:none;z-index:20;">&nbsp;</div>-->
+    <div id="fbox_ftel">
+    </div>
+    <!--确认窗口  结束-->
+    <!--<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>-->
+    <!--<script type="text/javascript" src="/js/jquery.w.js"></script>-->
+
+    <!--底部-->
+    <!--<script src="/JS/g_footer.js"></script>-->
+
+    <!--退款售后原因弹出层-->
+    <div id="div_orderMask" class="orderMask" style="display:none;">
+        <input type="hidden" id="hid_tksh_pid" value="" />
+        <input type="hidden" id="hid_sel_val" value="" />
+        <input type="hidden" id="hid_sel_pro" value="" />
+        <input type="hidden" id="hid_tksh_num" value="" />
+        <input type="hidden" id="hid_tksh_OnePrice" value="" />
+        
+        <div class="dialog">
+            <h3>请选择取消发货原因</h3>
+            <ul id="ul_thyy" class="select">
+                <!--<li class="clearfix">
+                    <div class="radio on">
+                        <input type="radio" data-role="none" name="select" value="1" checked="checked" onclick="myorder_detaile.tkshSel('1')" />
+                    </div>
+                    <div class="choiceTxt">拍多/多拍/不想要</div>
+                </li>
+                <li class="clearfix">
+                    <div class="radio">
+                        <input type="radio" data-role="none" name="select" value="2" onclick="myorder_detaile.tkshSel('2')" />
+                    </div>
+                    <div class="choiceTxt">未按约定时间发货</div>
+                </li>
+                <li class="clearfix">
+                    <div class="radio">
+                        <input type="radio" data-role="none" name="select" value="3" onclick="myorder_detaile.tkshSel('3')" />
+                    </div>
+                    <div class="choiceTxt">协商一致退款</div>
+                </li>
+                <li class="clearfix">
+                    <div class="radio">
+                        <input type="radio" data-role="none" name="select" value="4" onclick="myorder_detaile.tkshSel('4')" />
+                    </div>
+                    <div class="choiceTxt">发现更便宜的了</div>
+                </li>-->
+            </ul>
+            <div class="selectBtn">
+                <a id="orderMask_hide" class="cancel" onclick="MyOrder_detaile.tkshHide()">取消</a>
+                <a id="orderMask_submit" class="confirm">确认</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="display:none;">
+        <a id="telhref" href="tel:+400-867-8210"><span id="shtel">拨打400-867-8210</span> </a>
+    </div>
+</body>
+
+
+
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101044";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/style1.css"],
+                          ["/js/jquery-2.1.4-min.js", "/js/g_header.js", "/js/functions/g_Const.js", "/js/tost.js"]
+                        ];
+        WriteStatic(staticlist);
+    </script>
+    <!--<link href="/css/style1.css" rel='stylesheet'>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/tost.js"></script>-->
+    
+    <style type="text/css">
+        .d_sale_header {
+            background: #fff;
+            color: #333;
+            font-size: 18px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #b2b2b2;
+        }
+
+        .d_jt_left::after {
+            content: "";
+            width: 21px;
+            height: 21px;
+            background: url(/img/d_btn_3.png);
+            background-size: 100%;
+            position: absolute;
+            left: 1rem;
+            top: 12px;
+        }
+    </style>
+
+</head>
+<body>
+    <header id="d_go_top" class="d_sale_header" title="品牌特惠" module="202082"><a id="btnBack" class="fl d_jt_left"></a>品牌特惠<a></a></header>
+    <div class="wrap pinp-list">
+        <div id="divBrandPreferenceList" module="202052"></div>
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/pages/BrandPreferenceList.js", "/js/pages/group.js", "/js/g_footer.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <!--<script src="/js/pages/BrandPreferenceList.js"></script>-->
+    <script>
+        BrandPreference.Init();
+    </script>
+    <!--<script src="/js/pages/group.js"></script>
+    <script src="/js/g_footer.js"></script>-->
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101059";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

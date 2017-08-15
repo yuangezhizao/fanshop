@@ -1,0 +1,130 @@
+﻿.top {
+	width: 100%;
+	padding: 1rem 0 .6rem;
+	background: #fff;
+	position: relative;
+	border-bottom: 1px solid #dadada;
+	overflow: hidden;
+}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+	margin: 0;
+	padding: 0;
+}
+body, input, textarea, select, button, table {
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+}
+body {
+	min-width: 320px;
+	margin: 0 auto;
+	font-family: "microsoft yahei", Verdana, Arial, Helvetica, sans-serif;
+	color: #333;
+	-webkit-text-size-adjust: none;
+	background: #f7f7f7;
+}
+.qqbg {
+	background: #f5f5f5;
+}
+html {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+a {
+	-webkit-appearance: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+}
+.top .btn-close {
+	display: block;
+	position: absolute;
+	top: 1rem;
+	right: 3.12%;
+	z-index: 9;
+	width: 2.4rem;
+	height: 2.4rem;
+	overflow: hidden;
+	background: url(../img/btn-close.png) left top no-repeat;
+	background-size: 100% auto;
+	line-height: 99rem;
+}
+.top .txt, .top .btns {
+	padding: .4rem 3%;
+	overflow: hidden;
+}
+.top .txt {
+	color: #666;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	height: 4.7rem;
+	margin: 0 3% .5rem;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+.top .btns span {
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.top .rspan a {
+	border: 1px solid #c41c40;
+	background: #c41c40;
+	color: #fff;
+	margin: 0 0 0 .3rem;
+}
+.top .lspan a {
+	border: 1px solid #c41c40;
+	margin: 0 .3rem 0 0;
+	color: #c41c40;
+}
+.top .btns span a {
+	display: block;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	text-align: center;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.5rem;
+	overflow: hidden;
+}
+.top .txt div {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 4.7rem;
+	height: 4.7rem;
+}
+.top .txt span {
+	display: block;
+	font-size: 1.2rem;
+	padding: .1rem 2.1rem 0 0;
+	margin: 0 0 0 4.5rem;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: hidden;
+}
+.top .txt b {
+	letter-spacing: -0.15rem;
+	font-weight: normal;
+}
+em, address {
+	font-style: normal;
+}
+.top .txt em {
+	color: #c41c40;
+}
+img, fieldset {
+	display: block;
+	border: 0;
+}
+.top .txt div img {
+	width: 100%;
+	height: auto;
+}

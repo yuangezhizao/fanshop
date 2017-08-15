@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>优惠券兑换</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" href="http://win.image.ichsy.com/hjyshop/act/151118/css/base.css" />
+    <style>
+*{padding: 0px; margin: 0px;}
+html{ font-size: 10px;}
+.werification{ position:fixed; left:0; top:0; width:100%;  }
+.werification header{ height:6.65rem; }
+.werification header a{ height:4rem; width:4rem; margin-top: 1.325rem; margin-left:0.75rem; float:left;}
+.werification .con{float:left; margin-left: 0.9rem;}
+.werification .c{ font-size:1.6rem; }
+.werification .cen{font-size:1rem; margin:0 0.7rem 0 0.8rem; line-height:7rem;}
+
+.weri li{ height:4.65rem; border:0.1rem solid #e5e5e5; position: relative;}
+.w_send input{ margin-left:1rem; height:4.65rem; width:50%; line-height:4.65rem; font-size:1.3rem; outline:none; border:none; color:#968c88;}
+.w_send a{  position: absolute; right:1rem; top:0.575rem; width:9.5rem; height:3.5rem; background:#dc0f50; border-radius:0.4rem;text-align:center; line-height:3.5rem; color:#FFF; font-size:1.1rem; }
+.w_send_pic img{  position: absolute; right:1rem; top:0.575rem; width:9.5rem; height:3.5rem; background:#dc0f50; border-radius:0.4rem;text-align:center; line-height:3.6rem; color:#FFF; font-size:1.1rem; }
+.weri .in{ margin-left:1rem; width:100%; line-height:4.65rem; font-size:1.3rem; outline:none; border:none; color:#968c88;}
+.atOnce{ display:block; width:93%; height:3.75rem; margin:0 auto; margin-top:7.4rem; background:#dc0f50; border-radius:0.4rem; font-size:1.4rem; color:#FFF; text-align:center; line-height:3.75rem;}
+/*成功*/
+.open{ position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7);display: none; }
+.open .close{ color:#FFF; font-size:1.5rem;  position:absolute; top:1.5rem; right:2rem;}
+
+.open .success{ width:23.25rem; height:20.2rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/yes.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 14%;}
+.open .converted{ width:23.25rem; height:20.2rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/converted.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 14%; }
+.open .failed{ width:23.25rem; height:24.2rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/no.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 14%; }
+
+/*增加商户类型*/
+.open .re{ width:23.25rem; height:4.25rem;background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic6.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_jygw{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic2.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_xzq{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic3.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_xzqsd{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic3.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_xzqjs{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic3.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_anmyzw{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic4.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_ahmyz{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic4.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_wy{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic6.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_wyt8{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic6.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_wyapp{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic5.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_wyt8app{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/pic5.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .re_failed{ width:23.25rem; height:4.25rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/re_fail.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+
+.open .a_open{display:block; width:100%; height:3.95rem;background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open.png)no-repeat; background-size:100%; }
+.open .a_open_jygw{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open.png)no-repeat; background-size:100%; }
+.open .a_open_xzq{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open.png)no-repeat; background-size:100%; }
+.open .a_open_xzqsd{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open.png)no-repeat; background-size:100%; }
+.open .a_open_xzqjs{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open.png)no-repeat; background-size:100%; }
+.open .a_open_anmyzw{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open.png)no-repeat; background-size:100%; }
+.open .a_open_ahmyz{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open.png)no-repeat; background-size:100%; }
+.open .a_open_wy{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open_2.png)no-repeat; background-size:100%; }
+.open .a_open_wyt8{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open_2.png)no-repeat; background-size:100%; }
+.open .a_open_wyapp{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open_1.png)no-repeat; background-size:100%; }
+.open .a_open_wyt8app{display:block; width:100%; height:3.95rem; background:url(http://win.image.ichsy.com/hjyshop/act/151118/img/open_1.png)no-repeat; background-size:100%; }
+.open .toOpen{ width:85%; margin:0 auto; margin-top: 3%;}
+/*验证码失败提示框*/
+#hahaWrap{position: fixed;left:0; top:70%; z-index: 9999; width:100%;}
+#toastMessage { width:auto; max-width: 14rem; margin:0 auto; position:relative;}
+#toastMessage span { display:block; overflow:hidden;}
+#toastMessage .sbg { background:#000; color:#fff; opacity: .8; z-index: 1; width: 100%; height: 100%; position: absolute; left: 0; top: 0; border-radius: 5px; -webkit-border-radius: 5px; }
+#toastMessage .stxt { padding: .4rem 0.75rem 0.55rem; font-size: 1.3rem; line-height: 2rem; z-index: 2; color: #fff; text-align: center; position: relative }
+        #mask {display: block;}
+        /*加载页面*/
+        .wrap-wait{position: absolute;top:33%;left:50%;margin-left:-50px;z-index:10;}
+        .wrap-wait .img { width: 100px; height: 100px; margin: 32% auto 0; }
+        .wrap-wait .img img { width: 100%; height: auto; }
+        .wrap-wait p { width: 100%; font-size: 12px; line-height: 18px; text-align: center; padding: 10px 0 0; color: #222; display: block; }
+    </style>
+    <script src="/js/cdn.js"></script>
+    <script type='application/javascript' src="http://win.image.ichsy.com/hjyshop/act/151118/js/lib/fastclick.js"></script> 
+    <script src="http://win.image.ichsy.com/hjyshop/js/jquery-2.1.4-min.js"></script>
+    <script src="http://win.image.ichsy.com/hjyshop/js/JValidator.js"></script>
+    <script src="http://win.image.ichsy.com/hjyshop/js/g_header.js"></script>
+    <script src="http://win.image.ichsy.com/hjyshop/js/functions/g_Const.js"></script>
+    <script src="http://win.image.ichsy.com/hjyshop/js/functions/g_Type.js"></script>
+    <script src="http://win.image.ichsy.com/hjyshop/act/151118/js/act.js"></script>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/shareGoodsDetail.js"></script>
+    <script>document.write('<scri' + 'pt type="text/javascript" src="' + merchant_act_js + '"></scr' + 'ipt>');</script>
+<script>
+    function fontSize() {
+        document.documentElement.style.fontSize = 10 * (document.documentElement.clientWidth / 320) + 'px';
+    }
+    fontSize();
+    //var url_wx = "wy";
+    var url_web = "/index.html";
+   // var param = "";
+    var smstype = "";
+    var verifyFlag = 0;
+    $(document).ready(function () {
+        
+        if (verifyFlag == 1) {
+            $("#li_Verify").show();
+            $("#Verify_codeImag").attr("src", "/Ajax/LoginHandler.ashx?action=code");
+
+        }
+        else {
+            $("#li_Verify").hide();
+            $("#Verify_codeImag").attr("src", "");
+        }
+        $("#hidcardid").val(GetQueryString("cardid"));
+        $("#hidcardkey").val(GetQueryString("cardkey"));
+        $("#hidexchangedcode").val(GetQueryString("exchangedcode"));
+        localStorage[g_const_localStorage.Card_Key] = $("#hidcardkey").val();
+        if (GetQueryString("merchant")!="") {
+            $("#hidmerchant").val(GetQueryString("merchant"));
+        }
+        if (GetQueryString("from") != "") {
+            $("#hidmerchant").val(GetQueryString("from"));
+        }
+
+
+        $.each(actlist.ResultTable, function (i, n) {
+            if ($("#hidmerchant").val() == n.merchantcode && (n.cardflag.indexOf($("#hidcardkey").val()) > -1 || n.cardflag.length == 0)) {
+                if (n.linkurl.indexOf('?') > -1) {
+                    url_web = n.linkurl + "&from=" + $("#hidmerchant").val() + "&t=" + Math.random();
+                }
+                else {
+                    url_web = n.linkurl + "?from=" + $("#hidmerchant").val() + "&t=" + Math.random();
+                }
+                //   param = n[2];
+                smstype = n.smstype;
+                $("#div_re").attr("style", "width:23.25rem; height:4.25rem;background:url(" + g_merchant_Act_Host + n.img_re + ")no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;");
+                $("#a_open").attr("style", "display:block; width:100%; height:3.95rem;background:url(" + g_merchant_Act_Host + n.img_open + ")no-repeat; background-size:100%;");
+                return false;
+            }
+        });
+        //if (GetQueryString("iscard") == "1") {
+            
+        //    CouponCodeExchange.GetList();
+        //    return;
+        //}
+        //$.each(g_const_SMSType, function (i, n) {
+        //    if ("couponcodeexchange_"+$("#hidmerchant").val() == n[0]) {
+        //        smstype = n[1];
+        //        return false;
+        //    }
+        //});
+        //$("#div_success").attr("class", "success_" + $("#hidmerchant").val());
+        //$("#div_failed").attr("class", "failed_" + $("#hidmerchant").val());
+        //$("#div_converted").attr("class", "converted_" + $("#hidmerchant").val());
+       // $("#div_re").attr("class", "re_" + $("#hidmerchant").val());
+       // $("#a_open").attr("class", "a_open_" + $("#hidmerchant").val());
+        if (GetQueryString("iscard") == "1") {
+            Message.ShowLoading("优惠券兑换中", "divAlert");
+            $("#werification").hide();
+            CouponCodeExchange.CheckAPI();
+        }
+        var defaultValue = $("#txtNum").val();
+        var oIn_defaultValue = $("#in").val();
+        var oPc_defaultValue = $("#txtPicCode").val();
+        $("#txtNum").on('click', function () {
+            if ($("#txtNum").val() == defaultValue) {
+                $("#txtNum").val('');
+            }
+        });
+        $("#txtNum").on('blur', function () {
+            if ($("#txtNum").val() == '') {
+                $("#txtNum").val('请输入11位有效手机号');
+            }
+        });
+        //......
+        $("#in").on('click', function () {
+            if ($("#in").val() == oIn_defaultValue) {
+                $("#in").val('');
+            }
+        });
+        $("#in").on('blur', function () {
+            if ($("#in").val() == '') {
+                $("#in").val( '请输入验证码');
+            }
+        });
+
+        $("#txtPicCode").on('click', function () {
+            if ($("#txtPicCode").val() == oPc_defaultValue) {
+                $("#txtPicCode").val('');
+            }
+        });
+        $("#txtPicCode").on('blur', function () {
+            if ($("#txtPicCode").val() == '') {
+                $("#txtPicCode").val('请输入图片验证码');
+            }
+        });
+
+        var timer = null;
+        $("#btnCode").on('click', function () {
+
+
+            
+
+
+
+            if (sendflag == 1) {
+                return;
+            }
+            var _this = this;
+            clearInterval(timer);
+
+
+
+            var piccode ="";
+            if (verifyFlag == 1) {
+                piccode = $("#txtPicCode").val();
+                if (piccode.length == 0 || piccode == oPc_defaultValue) {
+                    ShowMesaage(g_const_API_Message["8904"]);
+                    return;
+                }
+            }
+            var tel = $("#txtNum").val();
+            if (tel.length == 0 || tel == defaultValue) {
+                //flag.innerHTML = g_const_API_Message["107901"];
+                //flag.style.display = 'block';
+                ShowMesaage(g_const_API_Message["107901"] );
+                return;
+            }
+            if (!isMobile(tel)) {
+                //flag.innerHTML = g_const_API_Message["107902"];
+                //flag.style.display = 'block';
+                ShowMesaage(g_const_API_Message["107902"]);
+                return;
+            }
+            if (localStorage["ValidCodeTime"]) {
+                var oldtime = localStorage["ValidCodeTime"];
+                var newtime = new Date().getTime();
+                var check = newtime - oldtime;
+                if (check < 0 * 1000) {
+                    ShowMesaage("发送短信太频繁");
+                    return;
+                }
+            }
+            localStorage["ValidCodeTime"] = new Date().getTime();
+            localStorage["ValidCodeTime"] = new Date().getTime();
+            var action = "couponcodeexchange";
+            Send_ValidCode.MerchantID = $("#hidmerchant").val();
+            Send_ValidCode.SendCodeImgEx(action, tel, piccode, smstype);
+        });
+        //..........................
+        //var atOnce = document.getElementById('atOnce');
+        //var open = document.getElementById('open');
+        $("#atOnce").on('click', function () {
+            var tel = $("#txtNum").val();
+            var code = $("#in").val();
+            if (tel.length == 0) {
+                //flag.innerHTML = g_const_API_Message["107901"];
+                //flag.style.display = 'block';
+                ShowMesaage(g_const_API_Message["107901"]);
+                return;
+            }
+            if (!isMobile(tel)) {
+                //flag.innerHTML = g_const_API_Message["107902"];
+                //flag.style.display = 'block';
+                ShowMesaage(g_const_API_Message["107902"]);
+                return;
+            }
+
+            if ($("#in").val().length == 0) {
+                //flag.innerHTML = g_const_API_Message["107802"];
+                //flag.style.display = 'block';
+                ShowMesaage(g_const_API_Message["107802"]);
+                return;
+            }
+            Merchant1.RecordPageAct($("#hidmerchant").val(), "_exchange");
+            Register.PhoneNo = tel;
+            Register.ValidCode = code;
+            Register.PhoneRegister();
+            //this.parentNode.style.display='none';
+            //open.style.display='block';
+        });
+        $("#btnclose").on('click', function () {
+            if (IsInWeiXin.check()) {
+                var retstr = $("#hidmerchant").val();
+                if ($("#hidcardid").val() != "") {
+                    CouponCodeExchange.CheckAPI();
+                }
+                window.location.replace("/Account/OauthLogin.aspx?oauthtype=WeiXin&returnurl=" + GetReturnParam() + "&isreg=1");
+            }
+            else {
+                window.location.replace(url_web);
+            }
+        });
+        $("#btnopen").on('click', function () {
+            Merchant1.RecordPageAct($("#hidmerchant").val(), "_openapp");
+            openApp();
+        });
+    });
+    function GetReturnParam() {
+        var retstr = $("#hidmerchant").val();
+        if ($("#hidcardid").val() != "") {
+            retstr = $("#hidcardid").val();
+        }
+        return retstr;
+    }
+    var sendflag = 0;
+    function ShowMesaage(sMessage) {
+        new ToastEx({ context: $('body'), message: sMessage, top: '50%' }).show();
+    }
+    var ToastEx = function (config) {
+        this.context = config.context == null ? $('body') : config.context;//上下文  
+        this.message = config.message;//显示内容  
+        this.time = config.time == null ? 5000 : config.time;//持续时间  
+        this.left = config.left;//距容器左边的距离  
+        this.top = config.top;//距容器上方的距离  
+        this.init();
+    }
+    var msgEntity;
+    ToastEx.prototype = {
+        //初始化显示的位置内容等  
+        init: function () {
+            $("#toastMessage").remove();
+            //设置消息体  
+            var msgDIV = new Array();
+            msgDIV.push('<div id="hahaWrap">');
+            msgDIV.push('<div id="toastMessage">');
+            msgDIV.push('<span class="stxt">' + this.message + '</span>');
+            msgDIV.push('<span class="sbg">&nbsp;</span></div></div>');
+            msgEntity = $(msgDIV.join('')).appendTo(this.context);
+            //设置消息样式  
+            var left = this.left == null ? this.context.width() / 2 - msgEntity.find('span').width() / 2 - 12 : this.left;
+            var top = this.top == null ? '20px' : this.top;
+            //msgEntity.css({position:'fixed',top:top,'z-index':'9999',left:left,'background-color':'black',color:'white','font-size':'1em',padding:'10px',margin:'10px'});  
+            msgEntity.css({ top: top});
+            msgEntity.hide();
+        },
+        //显示动画  
+        show: function () {
+            //msgEntity.fadeIn(this.time/2);  
+            //msgEntity.fadeOut(this.time/2); 
+            msgEntity.fadeIn(this.time / 5);
+            msgEntity.fadeOut(this.time / 5);
+        }
+
+    };
+
+//注册
+var Register = {
+    PhoneNo:"",
+    ValidCode:"",
+    PhoneRegister: function () {
+        var purl = g_INAPIUTL;
+        var request = $.ajax({
+            url: purl,
+            cache: false,
+            method: g_APIMethod,
+            data: "t=" + Math.random() + "&action=phonereg_exchange" + "&phoneno=" + Register.PhoneNo + "&validcode=" + Register.ValidCode + "&mercode=" + $("#hidmerchant").val() + "&smstype=" + smstype,
+            dataType: g_APIResponseDataType
+        });
+
+        request.done(function (msg) {
+            if (msg.resultcode) {
+                if (msg.resultcode == g_const_Success_Code) {
+                    Register.Load_Result(msg);
+                }
+                else {
+                    //flag.innerHTML = g_const_API_Message[msg.resultcode];
+                    //flag.style.display = 'block';
+                    ShowMesaage(g_const_API_Message[msg.resultcode]);
+                }
+            }
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            //flag.innerHTML = g_const_API_Message["7001"];
+            //flag.style.display = 'block';
+            ShowMesaage(g_const_API_Message["7001"]);
+        });
+    },
+    Load_Result: function (msg) {
+        if (msg.resultmessage == "isnew") {
+            localStorage[g_const_localStorage.IsnewReg] = 1;
+            g_type_loginjs.Member.phone = Register.PhoneNo;
+            localStorage[g_const_localStorage.Member] = JSON.stringify(g_type_loginjs);
+        }
+        else {
+            localStorage[g_const_localStorage.IsnewReg] = 0;
+        }
+        CouponCodeExchange.GetList();
+    },
+};
+
+//优惠码兑换
+var CouponCodeExchange = {
+    api_target: "com_cmall_familyhas_api_ApiForCouponCodeExchange",
+    api_input: { "version": 1, "couponCode": "" },
+    ExchangeCode: "",
+    GetList: function () {
+        var s_api_input = "";
+        var obj_data = [];
+        var couponcode = "";
+        $.each(actlist.ResultTable, function (k, o) {
+            if ($("#hidmerchant").val() == o.merchantcode && (o.cardflag.indexOf($("#hidcardkey").val()) > -1 || o.cardflag.length == 0)) {
+                if (o.apitype == "1") {
+                    //口令兑换
+                    CouponCodeExchange.api_target = "com_cmall_familyhas_api_ApiForCouponCodeExchange";
+                    CouponCodeExchange.api_input = { "version": 1, "couponCode": "" };
+                    $.each(o.couponcode.split(','), function (i, n) {
+                        if (o.exchangetimes == "1") {
+                            if ($("#hidexchangedcode").val().indexOf(n) == -1) {
+                                CouponCodeExchange.api_input.couponCode = Base64.base64encode(Base64.utf16to8(n));
+                                CouponCodeExchange.ExchangeCode = n;
+                                return false;
+                            }
+                        }
+                        else {
+                            CouponCodeExchange.api_input.couponCode = Base64.base64encode(Base64.utf16to8(n));
+                            CouponCodeExchange.ExchangeCode = n;
+                            return false;
+                        }
+                    });
+                    couponcode = CouponCodeExchange.ExchangeCode;
+
+                }
+                else {
+                    //活动兑换
+                    CouponCodeExchange.api_target = "com_cmall_familyhas_api_ApiForActivityCoupon";
+                    CouponCodeExchange.api_input = { "version": 1, "activityCode": "", "mobile": "", "validateFlag": "" };
+                    CouponCodeExchange.api_input.activityCode = o.couponcode;
+                    CouponCodeExchange.api_input.mobile = Register.PhoneNo;
+                    if (o.exchangetimes == "1") {
+                        CouponCodeExchange.api_input.validateFlag = "2";
+                    }
+                    else {
+                        CouponCodeExchange.api_input.validateFlag = "1";
+                    }
+                    couponcode = CouponCodeExchange.api_input.activityCode;
+                }
+            }
+        });
+        var obj_data = { "api_input": JSON.stringify(CouponCodeExchange.api_input), "api_target": CouponCodeExchange.api_target, "api_token": g_const_api_token.Wanted };
+        var purl = g_INAPIUTL;
+        var request = $.ajax({
+            url: purl,
+            cache: false,
+            method: g_APIMethod,
+            data: "t=" + Math.random() + "&action=couponcode_api" + "&couponcode=" + couponcode + "&apiinput=" + JSON.stringify(CouponCodeExchange.api_input) + "&apitarget=" + CouponCodeExchange.api_target,
+            dataType: g_APIResponseDataType
+        });
+        request.done(function (msg) {
+            Message.Operate('', "divAlert");
+            if (msg.resultcode == g_const_Success_Code_IN) {
+                CouponCodeExchange.Load_Result(1);
+            }
+            else if (msg.resultcode == "89") {//已兑换过
+                CouponCodeExchange.Load_Result(2);
+            }
+            else {
+                CouponCodeExchange.Load_Result(0);
+            }
+        });
+        //接口异常
+        request.fail(function (jqXHR, textStatus) {
+            Message.Operate('', "divAlert");
+            ShowMesaage(g_const_API_Message["7001"]);
+        });
+    },
+    //接口返回成功后的处理
+    Load_Result: function (type) {
+        document.getElementById('div_failed').style.display = 'none';
+        document.getElementById('div_success').style.display = 'none';
+        document.getElementById('div_converted').style.display = 'none';
+        switch (type) {
+            case 1:
+                document.getElementById('div_success').style.display = 'block';
+                break;
+            case 2:
+                document.getElementById('div_converted').style.display = 'block';
+                break;
+            case 0:
+                $("#div_re").attr("class", "re_failed");
+                document.getElementById('div_failed').style.display = 'block';
+                break;
+        }
+
+        document.getElementById('atOnce').parentNode.style.display = 'none';
+        document.getElementById('open').style.display = 'block';
+        if ($("#hidcardid").val()!="") {
+            //通知接口兑换结果
+            CouponCodeExchange.NoticeAPI(type);
+        }
+        else {
+            if (IsInWeiXin.check()) {
+                setTimeout("window.location.replace(\"/Account/OauthLogin.aspx?oauthtype=WeiXin&returnurl=" + GetReturnParam() + "&isreg=1\");", 5000);
+            }
+            else {
+                setTimeout("window.location.replace(\"" + url_web + "\");", 5000);
+            }
+        }
+    },
+    //接口返回失败后的处理
+    NoticeAPI: function (type) {
+        var purl = g_INAPIUTL;
+        var request = $.ajax({
+            url: purl,
+            cache: false,
+            method: g_APIMethod,
+            data: "t=" + Math.random() + "&action=exchangecoupon_wxapi&cardid=" + $("#hidcardid").val() + "&result=" + type + "&code=" + CouponCodeExchange.ExchangeCode,
+            dataType: g_APIResponseDataType
+        });
+
+        request.done(function (msg) {
+            if (IsInWeiXin.check()) {
+                setTimeout("window.location.replace(\"/Account/OauthLogin.aspx?oauthtype=WeiXin&returnurl=" + GetReturnParam() + "&isreg=1\");", 5000);
+            }
+            else {
+                setTimeout("window.location.replace(\"" + url_web + "\");", 5000);
+            }
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            if (IsInWeiXin.check()) {
+                setTimeout("window.location.replace(\"/Account/OauthLogin.aspx?oauthtype=WeiXin&returnurl=" + GetReturnParam() + "&isreg=1\");", 5000);
+            }
+            else {
+                setTimeout("window.location.replace(\"" + url_web + "\");", 5000);
+            }
+        });
+    },
+    //接口返回失败后的处理
+    CheckAPI: function () {
+        var purl = g_INAPIUTL;
+        var request = $.ajax({
+            url: purl,
+            cache: false,
+            method: g_APIMethod,
+            data: "t=" + Math.random() + "&action=wxcard_check&cardid=" + $("#hidcardid").val(),
+            dataType: g_APIResponseDataType
+        });
+
+        request.done(function (msg) {
+            if (msg.resultcode != g_const_Success_Code_IN.toString()) {
+                location.replace(g_const_PageURL.Index);
+            }
+            else {
+                CouponCodeExchange.GetList();
+            }
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            location.replace(g_const_PageURL.Index);
+        });
+    },
+};
+
+function hjy() {
+   // window.location.replace("/Account/OauthLogin.aspx?oauthtype=WeiXin&returnurl=" + GetReturnParam() + "&isreg=1");
+}
+</script>
+</head>
+<body>
+    <div id="divAlert"></div>
+    <div class="werification" id="werification" module="202104">
+        <header class="clearfix">
+            <a href="javascript:;" id="logo">
+                <img src="../img/logo.gif" alt="" title="" onclick="hjy()" />
+            </a>
+            <span class="con"><i class="c">品位家居</i><i class="cen">•</i><i class="c">优选特卖</i></span>
+        </header>
+        <section>
+            <ul class="weri">
+                <li class="w_send">
+                    <input id="txtNum" type="tel" value="请输入11位有效手机号">
+                    <a id="btnCode" href="javascript:;">获取验证码</a>
+                </li>
+                
+                <li class="w_send_pic" id="li_Verify" style="display:none">
+                    <input id="txtPicCode" type="text" value="请输入图片验证码"  class="in" />
+                    <img src="" id="Verify_codeImag" width="120" height="28" alt="点击切换验证码"
+                         title="点击切换验证码" style="vertical-align: top; cursor: pointer;"
+                         onclick="ToggleCode(this.id, '/Ajax/LoginHandler.ashx'); return false;" />
+                </li>
+                <li>
+                    <input id="in" type="tel" value="请输入验证码" class="in" />
+                </li>
+        </ul>
+    </section>
+        <footer>
+            <a href="javascript:;" id="atOnce" class="atOnce">
+                立即兑换
+            </a>
+        </footer>
+        </div>
+
+        <div class="open" id="open" module="202104">
+            <div id="btnclose" class="close">关闭</div>
+            <div id="div_success" class="success"></div>
+            <div id="div_failed" class="failed"></div>
+            <div id="div_converted" class="converted"></div>
+            <div id="div_re"></div>
+            <div id="btnopen" class="toOpen"><a id="a_open" href="javascript:;"></a></div>
+
+        </div>
+    <input id="hidcardid" type="hidden" />
+    <input id="hidcardkey" type="hidden" />
+    <input id="hidexchangedcode" type="hidden" />
+    <input id="hidmerchant" type="hidden" />
+</body>
+<script src="http://win.image.ichsy.com/hjyshop/js/pages/ValidCodeBase.js"></script>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "102012";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var length = document.getElementsByTagName("script").length;
+        var cusScript = document.getElementsByTagName("script")[length - 1];
+        cusScript.parentNode.insertBefore(gas, cusScript);
+    })();
+</script>

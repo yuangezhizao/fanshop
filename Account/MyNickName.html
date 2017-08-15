@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <script src="/JS/g_header.js"></script>
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+    <script src="/JS/JValidator.js"></script>
+    <script src="/JS/pages/MyNickName.js"></script>-->
+
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css", "/css/sbc.css"], ["/js/jquery-2.1.4.js", "/js/jquery.mobile-1.4.5.js", "/JS/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/focus.js", "/js/JValidator.js", "/js/pages/MyNickName.js", "/js/g_footer.js"]];
+    WriteStatic(staticlist);
+    </script>
+
+
+</head>
+<body>
+    <section class="container">
+        <h1 class="back-hd"><a id="btnBack" class="go-back"></a>修改昵称<a style="cursor:pointer;" class="fr" id="btnSave">保存</a></h1>
+        <ul class="modify">
+        	<li><input id="txtnickname" type="text" value="" placeholder="请输入昵称"><b id="close"><i></i></b><span>昵称由中文、英文、数字、-和_组成，昵称不得超过七个字且不少于两个字。</span></li>
+        </ul>
+    </section>
+    <!--底部-->
+    <!--<script src="/JS/g_footer.js"></script>-->
+	<script type="text/javascript">
+    	$('#close').click(function(){
+			$(this).hide();
+			$('#text').val('');
+		});
+		$('#text').click(function(){
+			$('#close').show();
+		});
+    </script>
+</body>
+</html>

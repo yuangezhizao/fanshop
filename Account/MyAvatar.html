@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html style="font-size: 10px;">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <script src="/js/cdn.js"></script>
+
+    <!--<link href="/css/base.css" rel="stylesheet" type="text/css">
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/css/sbc.css" rel="stylesheet" type="text/css" />
+    <link href="/css/shouhou.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <script src="/JS/g_header.js"></script>
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/jquery.form.min.js"></script>
+    <script src="/JS/tost.js"></script>
+    <link href="css/base.css" rel="stylesheet">-->
+
+    <script type="text/javascript">
+
+        var staticlist = [["/css/sbc.css", "/css/base.css",  "/css/shouhou.css"], ["/js/jquery-2.1.4.js", "/js/jquery.mobile-1.4.5.js", "/JS/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/g_footer.js", "/js/jquery.form.min.js", "/js/pages/MyAvatar.js"]];
+    WriteStatic(staticlist);
+    </script>
+
+
+    <style>
+    </style>
+</head>
+<body>
+
+    <!--图片控件num，以便提交后获得控件对应图片-->
+    <input id="hid_img_ids" type="hidden" value="" />
+    <!--可上传图片控件ID-->
+    <input id="hid_freeimg_id" type="hidden" value="" />
+    <div class="addrHeader">
+        <a id="go_back" class="back"></a>我的头像
+    </div>
+    <!--申请售后内容-->
+    <ul class="user-setting">
+        <li class="curr"><a><img id="img_headpic" src="../img/ch-img/dome_4.jpg" alt="">头像</a></li>
+    </ul>
+
+
+        <div id="div_uploadPic" class="uploadPic">
+            <h4>上传凭证  <i>（最多5张）</i></h4>
+            <ul class="_pic clearfix">
+                <li id="li_uploadimg" class="uploadBtn"><img src="/img/a.jpg" /></li>
+            </ul>
+        </div>
+        <div id="sh_submit" class="subBtn">提交</div>
+        <div id="sh_submit_o" class="subBtn" style="display:none;">提交中，请稍后</div>
+
+  
+</body>
+
+
+</html>

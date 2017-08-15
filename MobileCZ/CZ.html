@@ -1,0 +1,195 @@
+﻿
+<html>
+<head>
+    <meta charset="GBK">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+    <title>充值中心 </title>
+    <link rel="stylesheet" href="../css/cz_normalize.css">
+    <link rel="stylesheet" href="../css/cz_buy_v2.css">
+    <link rel="stylesheet" href="../css/cz_m_chong_vtms.css">
+
+    <script type="text/javascript">
+        var _speedMark = new Date();
+    </script>
+    <script>
+        var jdata = {
+            qString: 'btnc1=E50008&btnc2=BC0005&btncb=C01011&cfg=hm.10,20,30,50,100,300_100__|hq.2623___&cncolor=000000&confName=h5&height=480&pcolor=FF0000&portal=mobile&strus=himg&tabs=mobile|qq|game&tbfcolorc=2C61C3&tblinec=ff0000&ptype=58&vb2ctag=4_2008_3_1010&width=320&',
+            portal: 'mobile',
+            plist: '10,20,30,50,100,300',
+            pprice: '100',
+            vb2ctag: '4_2008_3_1010',
+            width: '320',
+            height: '480',
+            tabs: 'mobile|qq|game' || [],
+            strus: 'himg',
+            cncolor: '000000' || '333333',
+            tbfcolorc: '2C61C3' || 'FF0000',
+            tblinec: 'ff0000' || 'FF0000',
+            pcolor: 'FF0000' || 'FF0000',
+            cpfc: '' || 'D00007',
+            cpbc: '' || 'C01011',
+            btnc1: 'E50008' || 'E50008',
+            btnc2: 'BC0005' || 'BC0005',
+            btncb: 'C01011' || 'C01011',
+            btnst: '',
+            showService: '2623',
+            deService: '' || '2623',
+            deNum: '' || '50',
+            deMonth: '' || '3'
+        };
+        var tabwidth = parseInt(10000 / (jdata.tabs.split("|").length)) / 100;
+        var ie9c = jdata.btnc1;
+        document.write([
+            '<style id="stylesheet">',
+            'body {color: #' + jdata.cncolor + ';} /*cncolor*/',
+            '.tabs .cur { color: #' + jdata.tbfcolorc + ';}   /*tbfcolorc*/',
+            '.tabs .cur {border-color: #' + jdata.tblinec + ';}  /* tblinec*/',
+            '.tabs li {width: ' + tabwidth + '%;}',
+            '.price {color: #' + jdata.pcolor + ';}  /*pcolor*/',
+            '.value-sel .cur { background: #' + jdata.cpfc + '; border-color: #' + jdata.cpbc + '; }',
+            '.btn-chong {',
+            '	border-color: #' + jdata.btncb + ';',
+            '	background: #' + ie9c + ';',
+            '	background: -o-linear-gradient(#' + jdata.btnc1 + ', #' + jdata.btnc2 + ');',
+            '	background: -moz-linear-gradient(#' + jdata.btnc1 + ', #' + jdata.btnc2 + ');',
+            '	background: -webkit-linear-gradient(#' + jdata.btnc1 + ', #' + jdata.btnc2 + ');',
+            '	background: linear-gradient(#' + jdata.btnc1 + ', #' + jdata.btnc2 + ');',
+            '}',
+            '</style>'
+        ].join(''));
+    </script>
+    <style id="stylesheet">
+        body {
+            color: #000000;
+        }
+        /*cncolor*/
+
+        .tabs .cur {
+            color: #2C61C3;
+        }
+        /*tbfcolorc*/
+
+        .tabs .cur {
+            border-color: #ff0000;
+        }
+        /* tblinec*/
+
+        .tabs li {
+            width: 33.33%;
+        }
+
+        .price {
+            color: #FF0000;
+        }
+        /*pcolor*/
+
+        .value-sel .cur {
+            background: #D00007;
+            border-color: #C01011;
+        }
+
+        .btn-chong {
+            border-color: #C01011;
+            background: #E50008;
+            background: -o-linear-gradient(#E50008, #BC0005);
+            background: -moz-linear-gradient(#E50008, #BC0005);
+            background: -webkit-linear-gradient(#E50008, #BC0005);
+            background: linear-gradient(#E50008, #BC0005);
+        }
+    </style>
+
+    <script type="text/javascript" src="../js/jquery-2.1.4"></script>
+    <script type="text/javascript" src="../js/pages/mobileCZ.js"></script>
+
+</head>
+<body>
+    <!--订单总页数-->
+    <input type="hidden" id="hid_sumpage" value="0" />
+    <!--页码-->
+    <input type="hidden" id="sel_nextPage" value="1" />
+
+
+    <div class="main">
+
+        <header class="">
+            <h1>充值中心</h1>
+        </header>
+
+        <div class="bd">
+            <ul class="tabs" id="tabList">
+                <li><a class="cur" id="cz1">充话费</a></li>
+                <li><a id="cz2">充流量</a></li>
+            </ul>
+
+            <div class="tab-cont show1" id="frames">
+                <div class="form-list">
+                    <div id="chongform" class="chong-form">
+                        <!--资金充值  开始-->
+                        <div id="cz1_div" class="chong-form">
+                            <div class="chong-mb-form">
+                                <input type="tel" name="mobileNumInput" id="mobileNumInput" placeholder="请输入手机号码" value="" class="inputText" maxlength="11">
+                                <div class="tips-warning">错误提示错误提示错误提示</div>
+                                <ul id="value_sel" class="value-sel group"></ul>
+                                <div class="charge-info">
+                                    <p>归属地：<span id="mb_area"> </span></p>
+                                    <p>价格：<em id="mb_price" class="price"> </em></p>
+                                </div>
+                                <a id="mb_submit" class="btn-chong btn2">立即充值</a>
+                                <div class="charge-info">
+                                    <p id="Discount_p">9.83折起，1-10分钟到账</p>
+                                    <p><a target="_blank" href="">充值帮助</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--资金充值  结束-->
+                        <!--流量充值  开始-->
+                        <!--
+            <div id="cz2_div" class="chong-form">
+            <div class="chong-mb-form">
+                <input type="tel" name="mobileNumInput" id="mobileNumInput" placeholder="请输入手机号码" value="" class="inputText" maxlength="11">
+                <div class="tips-warning">错误提示错误提示错误提示</div>
+                <ul id="value_sel" class="value-sel group"></ul>
+                <div class="charge-info">
+                    <p>归属地：<span id="mb_area"> </span></p>
+                    <p>价格：<em id="mb_price" class="price"> </em></p>
+                </div>
+                <a id="mb_submit" class="btn-chong btn2" href="#">立即充值</a>
+                <div class="charge-info">
+                    <p>9.83折起，1-10分钟到账</p>
+                    <p><a target="_blank" href="http://m.buy.qq.com/t/template.xhtml?tid=help_touch_phone">充值帮助</a></p>
+                </div>
+            </div>
+        </div>
+            -->
+                        <!--流量充值  结束-->
+                        <!--<div class="chong-form"><div class="chong-mb-form"><input type="tel" name="mobileNumInput" id="mobileNumInput" placeholder="请输入手机号码" value="" class="inputText" maxlength="11"><div class="tips-warning" style="display: none;">错误提示错误提示错误提示</div><ul id="value_sel" class="value-sel group"><li><input type="button" data="1000" value="10元" class=""></li><li><input type="button" data="2000" value="20元"></li><li><input type="button" data="3000" value="30元"></li><li><input type="button" data="5000" value="50元" class=""></li><li><input type="button" class="" data="10000" value="100元"></li><li><input type="button" data="30000" value="300元" class="cur"></li></ul><div class="charge-info"><p style="display: none;">归属地：<span id="mb_area"> </span></p><p>价格：<em id="mb_price" class="price">￥294-298.80</em></p></div><form method="post" action="http://chzapi.ichsy.com/API/MerchantTest.aspx" id="genDeal"><input id="m" name="m" type="hidden"><input id="op" name="op" type="hidden" value="demo"><input id="am" name="am" type="hidden"><input id="from" name="from" type="hidden" value="1"><input id="s" name="s" type="hidden" value="4_2008_3_1010"><input id="sid" name="sid" type="hidden" value=""></form><a id="mb_submit" class="btn-chong btn2" href="#">立即充值</a><div class="charge-info"><p>9.83折起，1-10分钟到账</p></div></div></div>
+        <div class="chong-form"><div class="chong-qb-form"><ul class="select-list"><li><div class="select" id="qqservicelist"><select id="qqservice"><option selected="true" value="0_2623_undefined">Q币</option><option value="1_2609_10">会员</option><option value="2_2608_10">黄钻</option><option value="3_2605_10">红钻</option><option value="4_2611_10">绿钻</option><option value="5_2610_10">蓝钻</option><option value="6_2603_10">粉钻</option><option value="7_1302_10">超级QQ</option><option value="8_2602_10">飞车紫钻</option><option value="9_1311_30">CF会员</option><option value="10_2614_10">QQ堂紫钻</option><option value="11_3401_30">AVA精英</option><option value="12_2618_20">QQ炫舞紫钻</option><option value="13_2604_20">QQ黑钻</option><option value="14_2620_10">QQ音速紫钻</option><option value="15_3222_20">寻仙VIP</option><option value="16_2110_10">洛克王国VIP</option></select></div></li><li><div class="select" id="amountlist"><select id="amount"><option value="1">1Q币</option><option value="10">10Q币</option><option value="30">30Q币</option><option selected="true" value="50">50Q币</option><option value="100">100Q币</option></select></div></li><li><input id="qqNum" type="tel" placeholder="请输入要充值的QQ号码" value="" class="inputText"><div class="tips-warning">错误提示错误提示错误提示</div></li></ul><div class="charge-info"><p>价格：<em id="qq_price" class="price">￥50</em></p></div><form method="get" action="http://chong.qq.com/t/vb2c/dealQQService.xhtml" name="qqgenDeal"><input name="gid" type="hidden"><input name="amount" type="hidden"><input name="bc" type="hidden" value="1"><input name="s" type="hidden" value=""><input name="cuin" type="hidden" value=""><input name="sid" type="hidden" value=""></form><a id="qq_submit" class="btn-chong btn2" href="#">立即充值</a><div class="charge-info"><p>9.3折起，1分钟内到账</p><p><a target="_blank" href="http://m.buy.qq.com/t/template.xhtml?tid=help_touch_phone">充值帮助</a></p></div></div></div>
+        <div class="chong-form"><div class="chong-game-form"><div class="game-directory"><div class="chong-gtit">请选择要充值的网游:</div><h2>热门游戏</h2><div class="hot-game-list"><ul class="group" id="hotgame"><li><a tag="game" href="2814">盛大点券</a></li><li><a tag="game" href="2624">七雄争霸</a></li><li><a tag="game" href="3406">征途</a></li><li><a tag="game" href="2220">魔兽世界</a></li><li><a tag="game" href="1310">穿越火线</a></li><li><a tag="game" href="1918">劲舞团</a></li><li><a tag="game" href="3412">诛仙前传</a></li><li><a tag="game" href="2501">跑跑卡丁车</a></li><li><a tag="game" href="2908">天龙八部3</a></li><li><a tag="game" href="3104">网易一卡通</a></li><li><a tag="game" href="1409">地下城与勇士</a></li><li><a tag="game" href="3101">完美世界国际版</a></li></ul></div><h2>所有游戏</h2><div class="game-all"><div class="chong-gcat"><div class="title">ABCDE</div></div><div class="chong-gcat"><div class="title">FGHJK</div></div><div class="chong-gcat"><div class="title">LMNOP</div></div><div class="chong-gcat"><div class="title">QRSTV</div></div><div class="chong-gcat"><div class="title">WXYZ</div></div></div><div class="charge-info"><p>最便宜的网游充值，1-10分钟内到账</p><p><a target="_blank" href="http://m.buy.qq.com/t/template.xhtml?tid=help_touch_phone">充值帮助</a></p></div></div><div class="game-flist hide"><ul><li class="title"><a tag="back" href="#">返回</a><h2 id="curgamename"> </h2></li><li><div class="select"><select id="price"><option value="">价格</option></select></div></li><li><div class="select"><select id="chargeway"><option value="">充值类型</option></select></div></li><li><div class="select"><select id="num"><option value="">点卡数量</option></select></div></li><li><div class="select"><select id="qu"><option value="">大区</option></select></div></li><li><div class="select"><select id="fu"><option value="">服务器</option></select></div></li><li><input type="tel" name="field2" placeholder="请输入战网通行证" class="inputText"><div class="tips-warning">错误提示错误提示错误提示</div></li><li><input type="tel" name="field3" placeholder="请确认战网通行证" class="inputText"><div class="tips-warning">错误提示错误提示错误提示</div></li><li><input type="tel" name="field0" placeholder="请输入游戏账号" class="inputText"><div class="tips-warning">错误提示错误提示错误提示</div></li><li><input type="tel" name="field1" placeholder="请再次输入游戏账号" class="inputText"><div class="tips-warning">错误提示错误提示错误提示</div></li><li>价 格：<em id="game_price" class="price">￥29.49-30.20</em></li><li><a class="btn-chong btn2" id="game_submit" href="#">立即充值</a></li></ul>	<form method="post" name="gameDetailForm" id="gameDetailForm" action="http://chong.qq.com/t/vb2c/dealGame.xhtml?pgid=7-2-3&amp;icfa=&amp;gcfa=&amp;o_icfa=&amp;extWrap=&amp;extLogo=&amp;extTag="><input name="id" type="hidden" value=""><input name="amount" type="hidden" value=""><input name="ct" type="hidden" value=""><input name="sc" type="hidden" value=""><input name="svc" type="hidden" value=""><input name="bc" type="hidden" value=""><input name="ac" type="hidden" value=""><input name="ac1" type="hidden" value=""><input name="sid" type="hidden" value=""><input name="s" type="hidden" value="4_10_104_0_2"></form></div></div></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+
+            mobile.init();
+            liuliang.init();
+
+
+            $J("#wg_menu_box_handle").click(function () {
+                if ($J("#wg_menu_box").hasClass("active")) {
+                    $J("#wg_menu_box").removeClass("active");
+                }
+                else {
+                    $J("#wg_menu_box").addClass("active");
+                }
+            });
+
+        </script>
+
+
+
+</body>
+</html>

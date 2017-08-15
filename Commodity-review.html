@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="/JS/jquery-2.1.4.js"></script>   
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/g_header.js"></script>
+
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+
+    <script src="/JS/pages/feedback.js"></script>
+
+</head>
+<body>
+    <section class="container">
+        <h1 class="back-hd">
+            <a class="go-back"></a>商品评价
+        </h1>
+        <article class="commodity">
+        	<div class="hd">
+            	<a href class="curr">全部(1249)</a>
+            	<a href>好评(999+)</a>
+            	<a href>中评(10)</a>
+            	<a href>差评(5)</a>
+            	<a href>有图(5)</a>
+            </div>
+            <ul>
+            	<li>
+                	<img src="img/ch-img/dome_4.jpg" alt="" class="pic">
+                    <h2><font class="f4"></font>程****程</h2>
+                    <b>此处只显示一条用户评论，使用感觉很好啊，买来送人的，母亲节买的时候优惠，妈妈很喜欢，还会回购哦~</b>
+                    <strong>2015-02-01&emsp;款式：黑色&emsp;规格：M</strong>
+                    <div class="img">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    </div>
+                    <div class="reply">
+                    	<p>[惠家抱抱]: 感谢亲购买我的宝贝，您的孝心阿姨一定会感觉到的！</p>
+                        <span>回复于2015-02-05 </span>
+                    </div>
+                </li>
+                <li>
+                	<img src="img/ch-img/dome_4.jpg" alt="" class="pic">
+                    <h2><font class="f4"></font>程****程</h2>
+                    <b>使用感觉很好啊，母亲节买的时候优惠，妈妈很喜欢，还会回购哦~</b>
+                    <strong>2015-02-01&emsp;款式：黑色&emsp;规格：M</strong>
+                    <div class="img">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    </div>
+                    <div class="reply">
+                    	<p>[惠家抱抱]: 感谢亲购买我的宝贝，您的孝心阿姨一定会感觉到的！</p>
+                        <span>回复于2015-02-05 </span>
+                    </div>
+                </li>
+                <li>
+                	<img src="img/ch-img/dome_4.jpg" alt="" class="pic">
+                    <h2><font class="f4"></font>程****程</h2>
+                    <b>不错</b>
+                    <strong>2015-02-01&emsp;款式：黑色&emsp;规格：M</strong>
+                    <div class="img">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    	<img src="img/ch-img/dome_7.jpg" alt="">
+                    </div>
+                    <div class="reply">
+                    	<p class="p1">[惠家抱抱]: 感谢亲购买我的宝贝，您的孝心阿姨一定会感觉到的！</p>
+                        <span>回复于2015-02-05 </span>
+                    </div>
+                </li>
+            </ul>
+            <div class="commodity-btn">
+            	<p>
+                	<span id="sc">收藏</span>
+                	<a href>加入购物车</a>
+                	<a href class="lj">立即购买</a>
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <!--<div id="pageloading" class="wrap wrap-wait" style="position: absolute;top:0;z-index:10;">
+        <div class="img">
+            <img src="img/waiting.gif" alt="" />
+        </div>
+        <p>拼命加载中<br />...</p>
+    </div>-->
+
+    <!--底部-->
+    <script src="/JS/g_footer.js"></script>
+	<script type="text/javascript">
+    	$('#sc').click(function(){
+			var cla = $(this).attr('class');
+			if(undefined == cla || '' == cla){
+				$(this).addClass('curr');
+				$(this).html('已收藏');
+			}else{
+				$(this).removeClass('curr');
+				$(this).html('收藏');
+			}
+		});
+    </script>
+</body>
+</html>

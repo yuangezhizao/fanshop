@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/ch-box.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <h1 class="back-hd" id="d_go_top" title="秒杀" module="202088"><a class="go-back" id="btnBack"></a>秒杀</h1>
+    <section class="main">
+        <div class="title"></div>
+        <div id="div_main">
+
+        </div>
+        <div class="titlefoot"></div>
+    </section>
+    <script type="text/template" id="tpl_seckill_time">
+        <h2 class="{{h2class}}">{{timetype}}</h2>
+        <ul module="202089">
+            {{productList}}
+        </ul>
+    </script>
+    <script type="text/template" id="tpl_seckill_time_product">
+        <li>
+            <a onclick="page_seckill.ShowDetail('{{productlink}}')">
+                <font id="{{fontid}}"></font>
+                <b><img src="{{picture}}" alt=""><span style="{{isSoldOut_style}}" id="{{spanid}}"><i>抢光了</i></span></b>
+                <dl>
+                    <dt>{{pname}}</dt>
+                    <dd>
+                        <font>
+                            {{ccurpricelist}}
+                        </font>
+                        <span><i style="{{timeleftpercent_style}}"></i></span>
+                        <div class="shu">剩余{{salesVolume}}件</div>
+                        <label id="{{labelid}}">
+                            {{ccurtimelist}}
+                        </label>
+                    </dd>
+                </dl>
+            </a>
+        </li>
+    </script>
+
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/pages/group.js", "/js/pages/Seckill.js", "/js/g_footer.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script>
+        page_seckill.event_product_sortType = g_const_event_product_sortType.SaleCount;
+        page_seckill.Init();
+        page_seckill.Refresh();
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "102005";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

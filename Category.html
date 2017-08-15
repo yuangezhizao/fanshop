@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/ch-box.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body class="bg-f5">
+    <div class="ch-header ch-fenlei" module="202021">
+        <a class="fanhui" id="btnBack_cg">返回</a>
+        <a class="hd-search" id="btnSearch">搜索</a>
+    </div>
+    <section class="ch-classify">
+        <div class="category-wrap" id="category-wrap">
+            <ul class="fl" id="divlevel1" module="202022"></ul>
+        </div>
+        <div class="fr category-right" module="202023">
+            <div class="bn"><div id="divCatePic"></div></div>
+            <div class="ch-fr-list">
+                <div id="divlevel2"></div>
+            </div>
+            <h2>品牌</h2>
+            <div class="bd">
+                <div id="divlevel3"></div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        //try {
+        //    //加载静态文件
+        //    staticlist = [[], [g_StaticFilePath + "/web_category.js"]];
+        //    WriteStatic(staticlist);
+        //}
+        //catch (e) {
+
+        //}
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/tost.js", "/js/ch-dome.js", "/js/pages/Category.js", "/js/g_footer.js", "/js/iscroll.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101011";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

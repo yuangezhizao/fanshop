@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>惠家有购物商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>   
+    <!-- header srarch -->
+    <header class="header">
+        <a class="hd-classify"></a>
+        <a class="hd-search">搜索商品</a>
+        <a class="user-content"></a>       
+    </header>
+    <!-- end -->
+    <!-- swipeSlide -->
+    <article class="swipe-slide">
+       
+    </article>
+    <!-- Ad -->
+    <ul class="index-ad clearfix">
+        
+    </ul>
+    <!-- menu -->
+    <article class="menu">
+        <ul class="menu-list clearfix">
+            
+        </ul>
+      
+    </article>
+    <div class="space"></div>
+    <!-- end -->
+    <script type="text/template" id="tpl_fastbuy">
+        <!-- @ 限时抢购 -->
+        <article class="module" id="article_fastbuy">
+        <h1 class="module-hd"><s class="time-tit">{{columnName}}</s><a href="{{showmoreLink}}" class="more">{{showmoreTitle}}</a><span class="count-down">{{CountDown}}</span></h1>
+            <ul class="cols-three clearfix">
+                {{productList}}
+            </ul>
+            
+        </article>
+        <div class="space"></div>
+        <!-- end -->
+    </script>
+   
+    <script type="text/template" id="tpl_fastbuy_productList">
+        <li>
+            <a href="{{showmoreLink}}" title="">
+                <div class="goods-item">
+                    <img src="{{picture}}" title="">
+                    <!-- 售罄
+                    <span class="sold-out"><em>售罄</em></span>
+                    -->
+                </div>
+                <em class="goods-item-sale">{{discount}}折</em>
+                <h1 class="goods-item-tit">{{productName}}</h1>
+                <span class="goods-item-price"><i>¥</i>{{sellPrice}}</span>
+            </a>
+        </li>
+    </script> 
+    <script type="text/template" id="tpl_tvlive">
+        <!-- @ TV直播 -->
+        <article class="module">
+            <h1 class="module-hd">{{columnName}} <a href="{{showmoreLink}}" class="{{classmore}}">{{showmoreTitle}}</a></h1>
+            <section class="module-live">
+                <ul class="live-list">
+                    {{productList}}
+                </ul>
+                <div class="live-goods-num">{{NumList}}</div>
+            </section>
+        </article>
+        <div class="space"></div>
+        <!-- end -->
+    </script>
+    <script type="text/template" id="tpl_tvlive_product">
+        <li>
+            <div class="live-goods"><a href="{{showmoreLink}}"><img src="{{picture}}"></a></div>
+            <div class="live-goods-info">
+                <h1><a href="{{showmoreLink}}">{{productName}}</a></h1>
+                <p><i class="f12">¥</i>{{sellPrice}}</p>
+                <em class="live-status"><i>正在直播</i>{{startTime}}－{{endTime}}</em>
+            </div>
+        </li>
+    </script>
+    <script type="text/template" id="tpl_tvlive_num">
+        <a {{classcurr}}></a>
+    </script>
+        <script type="text/template" id="tpl_single_one">
+            <!-- @ 单品模块一 -->
+            <article class="module">
+                <h1 class="module-hd">单品模块一 <a href="javascript:;" class="switch">换一换</a></h1>
+                <ul class="cols-two clearfix">
+                    <li>
+                        <a href="" title="">
+                            <div class="goods-item">
+                                <img src="./img/w-demo/demo-11.jpg" title="">
+                                <!-- 售罄 -->
+                                <span class="sold-out"><em>售罄</em></span>
+                            </div>
+                            <em class="goods-item-sale">5.2折</em>
+                            <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                            <span class="goods-item-price"><i>¥</i>238</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <div class="goods-item"><img src="./img/w-demo/demo-11.jpg" title=""></div>
+                            <em class="goods-item-sale">5.2折</em>
+                            <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                            <span class="goods-item-price"><i>¥</i>238</span>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <div class="space"></div>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_single_two">
+            <!-- @ 单品模块二 -->
+            <article class="module">
+                <h1 class="module-hd">单品模块二 <a href="javascript:;" class="switch">换一换</a></h1>
+                <ul class="cols-three clearfix">
+                    <li>
+                        <a href="" title="">
+                            <div class="goods-item">
+                                <img src="./img/w-demo/demo-11.jpg" title="">
+                                <!-- 售罄 -->
+                                <span class="sold-out"><em>下架</em></span>
+                            </div>
+                            <em class="goods-item-sale">5.2折</em>
+                            <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                            <span class="goods-item-price"><i>¥</i>238</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <div class="goods-item"><img src="./img/w-demo/demo-12.jpg" title=""></div>
+                            <em class="goods-item-sale">5.2折</em>
+                            <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                            <span class="goods-item-price"><i>¥</i>238</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <div class="goods-item"><img src="./img/w-demo/demo-11.jpg" title=""></div>
+                            <em class="goods-item-sale">5.2折</em>
+                            <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                            <span class="goods-item-price"><i>¥</i>238</span>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <div class="space"></div>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_recommendone">
+            <!-- @ 一栏推荐 -->
+            <article class="module" id="article_recommendone">
+                <h1 class="module-hd">{{columnName}}<a href="{{showmoreLink}}" class="{{classmore}}">{{showmoreTitle}}</a></h1>
+                <ul class="column-one clearfix">
+                    <li><a href="{{pshowmoreLink}}" title="">
+                            <h1 style="{{titleColor}}">{{title}}</h1>
+                            <p style="{{descriptionColor}}">{{description}}</p>
+                            <img src="{{picture}}" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <div class="space"></div>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_commonAD">
+            <!-- @ 通屏广告 -->
+            <article class="common-ad">
+                <a href="{{showmoreLink}}" title=""><img src="{{picture}}" alt=""></a>
+            </article>
+            <div class="space"></div>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_recommend_leftorright_two">
+            <!-- @ 左或者右两栏推荐 -->
+            <article class="module">
+                <h1 class="module-hd">{{columnName}} <a href="{{showmoreLink}}" class="{{classmore}}">{{showmoreTitle}}</a></h1>
+                <div class="{{classcolumn}} clearfix">
+                    {{productList}}
+                </div>
+            </article>
+            <div class="space"></div>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_recommend_leftorright_two_product">
+            <a href="{{showmoreLink}}" title="">
+                <img src="{{picture}}" alt="">
+                <aside class="column-dec">
+                    <h1 style="{{titleColor}}">{{title}}</h1>
+                    <p style="{{descriptionColor}}">{{description}}</p>
+                </aside>
+            </a>
+        </script>
+        <script type="text/template" id="tpl_recommend_product">
+            <!-- @ 商品推荐 -->
+            <article class="module">
+                <h1 class="module-hd">{{columnName}} <a href="{{showmoreLink}}" class="{{classmore}}">{{showmoreTitle}}</a></h1>
+                <div class="touch-wrap" id="touch-wrap">
+                    <ul class="goods-recomd clearfix">
+                        {{productList}}
+                    </ul>
+                </div>
+            </article>
+            <div class="space"></div>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_recommend_product_product">
+            <li>
+                <a href="{{showmoreLink}}">
+                    <img src="{{picture}}">
+                    <h1>{{productName}}</h1>
+                    <span><i>¥</i>{{sellPrice}}</span>
+                </a>
+            </li>
+        </script>
+        <script type="text/template" id="tpl_RecommendHot">
+            <!-- @ 热门市场 -->
+            <article class="module clearfix">
+                <h1 class="module-hd">{{columnName}} <a href="{{showmoreLink}}" class="{{classmore}}">{{showmoreTitle}}</a></h1>
+                <ul class="hot-market">
+                    {{productList}}
+                </ul>
+            </article>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_RecommendHot_product">
+            <li>
+                <a href="{{showmoreLink}}">
+                    <img src="{{picture}}" alt="">
+                    <aside class="market-dec">
+                        <h1 style="{{titleColor}}">{{title}}</h1>
+                        <p style="{{descriptionColor}}">{{description}}</p>
+                    </aside>
+                </a>
+            </li>
+        </script>
+        <script type="text/template" id="tpl_GuessYourLike">
+            <!-- @ 猜您喜欢 -->
+            <article class="module love-goods">
+                <h1 class="love-goods-tit"><span>您可能喜欢的商品</span></h1>
+                <div id="ichsy_jyh_wrapper">
+                    <ul class="cols-two clearfix" id="ichsy_jyh_scroller">
+                        {{productList}}
+                    </ul>
+                </div>                
+            </article>
+            <!-- end -->
+        </script>
+        <script type="text/template" id="tpl_GuessYourLike_product">
+            <li>
+                <a href="{{ProductDetailURL}}">
+                    <div class="goods-item"><img src="{{picture}}" /></div>                    
+                    <h1 class="goods-item-tit">{{productNameString}}</h1>
+                    <span class="goods-item-price"><i>¥</i>{{productPrice}}<b>¥{{market_price}}</b></span>
+                </a>
+            </li>
+        </script>
+        <div id="bodycontent"></div>
+        <a class="scroll-top" ></a>
+        <a href="cart.html" class="shop-cart"><em></em></a>
+        <footer class="copyright">
+            <a onclick="window.location.reload(true);" ></a>
+        </footer>
+        <!-- app tips -->
+        <footer class="app">
+            <a href="javascript:;" class="app-close"></a>
+            <a href="javascript:;" class="app-logo"></a>
+            <p><em>客户端“优惠券”中输入<br>“买买买买”立获30元红包~</em></p>
+            <a href="javascript:;" onclick="openApp();" class="open-app">打开客户端</a>
+        </footer>
+        <!-- end -->
+        <!-- 引导页 -->
+        <aside class="guide-app">
+        <img src="img/w_img/guide.png" alt="">
+        <a href="javascript:;" onclick="openApp();"></a>
+        <a href="javascript:;" class="guide-close"></a>
+        </aside>
+        <aside class="mask"></aside>
+        <!-- end -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/g_header.js"></script>
+        <script src="js/functions/g_Const.js"></script>
+        <script src="js/functions/g_Type.js"></script>
+        <script src="js/tost.js"></script>
+        <script type="text/javascript" src="js/swipeSlide.min.js"></script>
+        <script type="text/javascript" src="js/iscroll.js"></script>
+        <script type="text/javascript" src="js/jquery.w.js"></script>
+        <script src="js/pages/index.js"></script>
+        <script type="text/javascript" src="js/shareGoodsDetail.js"></script>
+        <script>
+            Page_Index.Init();  
+            Page_Index.LoadData();
+            //objTop.Start($(".scroll-top"));
+            
+        </script>
+        <script src="js/g_footer.js"></script>
+    </div>
+</body>
+</html>

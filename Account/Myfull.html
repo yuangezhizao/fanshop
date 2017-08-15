@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <section class="container">
+        <h1 class="back-hd"><a class="go-back" id="btnBack"></a>活动详情<a href class="car"></a></h1>
+
+        <article class="history">
+        	<div class="lijian">以下商品满¥100，立减¥50；满¥200，立减¥100；满¥300，立减¥150；</div>
+            <ul class="full-tab">
+            	<li class="curr"><a href>默认</a></li>
+            	<li><a href>销量</a></li>
+            </ul>
+            <ul class="cols-one clearfix">                
+                <li>
+                    <a href="">
+                        <div class="goods-item">
+                            <img src="../img/w-demo/demo-12.jpg">
+                            <!-- 售罄 -->
+                            <span class="sold-out"><em>售罄</em></span>
+                        </div>
+                        <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                        <span class="goods-item-price"><i>¥</i>2425<b>¥238</b></span>
+                        <p class="scale-num">月销234件</p>
+                    </a>
+                    <!--<a href class="car">购物车</a>-->
+                </li>
+                <li>
+                    <a href="">
+                        <div class="goods-item"><img src="../img/w-demo/demo-12.jpg"></div>
+                        <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                        <span class="goods-item-price"><i>¥</i>2308<b>¥238</b></span>
+                        <p class="scale-num">月销234件</p>
+                    </a>
+                    <!--<a href class="car">购物车</a>-->
+                </li>
+                <li>
+                    <a href="">
+                        <div class="goods-item"><img src="../img/w-demo/demo-11.jpg" title=""></div>
+                        <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                        <span class="goods-item-price"><i>¥</i>2568<b>¥238</b></span>
+                        <p class="scale-num">月销234件</p>
+                    </a>
+                    <!--<a href class="car">购物车</a>-->
+                </li>
+                <li>
+                    <a href="">
+                        <div class="goods-item"><img src="../img/w-demo/demo-12.jpg"></div>
+                        <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                        <span class="goods-item-price"><i>¥</i>2308<b>¥238</b></span>
+                        <p class="scale-num">月销234件</p>
+                    </a>
+                    <!--<a href class="car">购物车</a>-->
+                </li>
+                <li>
+                    <a href="">
+                        <div class="goods-item"><img src="../img/w-demo/demo-11.jpg" title=""></div>
+                        <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                        <span class="goods-item-price"><i>¥</i>2568<b>¥238</b></span>
+                        <p class="scale-num">月销234件</p>
+                    </a>
+                    <!--<a href class="car">购物车</a>-->
+                </li>
+                <li>
+                    <a href="">
+                        <div class="goods-item"><img src="../img/w-demo/demo-12.jpg"></div>
+                        <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                        <span class="goods-item-price"><i>¥</i>2308<b>¥238</b></span>
+                        <p class="scale-num">月销234件</p>
+                    </a>
+                    <!--<a href class="car">购物车</a>-->
+                </li>
+                <li>
+                    <a href="">
+                        <div class="goods-item"><img src="../img/w-demo/demo-11.jpg" title=""></div>
+                        <h1 class="goods-item-tit">摩登情人 拼接雪纺长款</h1>
+                        <span class="goods-item-price"><i>¥</i>2568<b>¥238</b></span>
+                        <p class="scale-num">月销234件</p>
+                    </a>
+                    <!--<a href class="car">购物车</a>-->
+                </li>
+            </ul>
+        </article>
+        <article class="no-data" style="display:none;">
+            <p> 暂无浏览记录哦~<br/>
+            
+                去发现一下心仪的宝贝吧！
+            </p>
+            <div class="no-data-btn">
+                <a id="btnqugg">去逛逛</a>
+            </div>
+        </article>
+    </section>
+    <a class="scroll-top topone" href="javascript:;" style="display: none;"></a>
+    
+<script type="text/javascript">
+/*=返回顶部*/
+$(function(){
+	$(window).scroll(function(){
+		if ($(window).scrollTop()>300){
+			$(".scroll-top").fadeIn(500);
+		}else{
+			$(".scroll-top").fadeOut(500);
+		}
+	});
+	$(".scroll-top").click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+	});
+});
+</script>
+</body>
+</html>

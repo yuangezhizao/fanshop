@@ -1,0 +1,120 @@
+[2016-02-23 14:45:18.195]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 14:49:21.321]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 14:51:27.713]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 15:06:04.777]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 15:11:10.085]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 15:18:31.925]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 15:27:20.688]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 15:30:08.638]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 15:32:01.988]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[2016-02-23 15:41:35.164]		System.IO.FileLoadException: Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
+File name: 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes'
+   at com.ichsy.message.businesslayer.MerchantWebReceiveAPIBase..ctor(NameValueCollection request)
+   at com.ichsy.message.sms.businesslayer.SMSReceiveSendMessage..ctor(RequestCollection request)
+   at com.ichsy.message.businesslayer.MerchantReceiveFactory.GetInstance()
+   at MessageCenterAPI.ReceiveMerchantRequest.Page_Load(Object sender, EventArgs e)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css", "/css/sbc.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <section class="container" module="202068">
+        <h1 class="back-hd">
+            <a class="go-back"></a>意见反馈
+        </h1>
+        <article class="feedback">
+            <textarea id="txtFeed" name="feedtext" class="feedback-txt" onpropertychange="GetValueCount();" placeholder="欢迎反馈您的任何意见和建议"></textarea>
+            <span class="text-num"><span id="textlen">0</span>/200</span>
+        </article>
+        <a id="btn_tj" class="btn">提 交</a>
+    </section>
+
+    <!--<div id="pageloading" class="wrap wrap-wait" style="position: absolute;top:0;z-index:10;">
+        <div class="img">
+            <img src="img/waiting.gif" alt="" />
+        </div>
+        <p>拼命加载中<br />...</p>
+    </div>-->
+
+    <!--底部-->
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/focus.js", "/js/g_footer.js", "/JS/pages/feedback.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101069";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

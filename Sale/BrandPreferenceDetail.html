@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/style1.css", "/css/footer.css"],
+                          ["/js/jquery-2.1.4-min.js", "/js/g_header.js", "/js/functions/g_Const.js", "/js/tost.js", "/js/functions/g_Type.js"]
+                        ];
+        WriteStatic(staticlist);
+    </script>
+    <!--<link href="/css/style1.css" rel='stylesheet'>
+    <link href="/css/footer.css" rel='stylesheet'>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/tost.js"></script>
+    <script src="../js/functions/g_Type.js"></script>-->
+    <style type="text/css">
+        .d_sale_header {
+            background: #fff;
+            color: #333;
+            font-size: 18px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #b2b2b2;
+        }
+
+        .d_jt_left::after {
+            content: "";
+            width: 21px;
+            height: 21px;
+            background: url(/img/d_btn_3.png);
+            background-size: 100%;
+            position: absolute;
+            left: 1rem;
+            top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header id="d_go_top" class="d_sale_header" title="品牌特惠" module="202083"><a id="btnBack" class="fl d_jt_left" style="display:"></a>品牌特惠<a></a></header>
+    <div class="wrap pinp-th">
+
+        <div class="pinp-ad" id="divBrandPreferenceInfo"></div>
+        <div class="lidw">
+            <div id="divBrandPreferenceDetail" class="brand-deals" module="202053"></div>
+        </div>
+        <div class="pinp-ad" id="adfooter"></div>
+    </div>
+    <!--<div class="kongbiaoqian" style="height:5.1rem;display:none" id="div_app">
+        <footer class="app" module="202083">
+            <a href="javascript:;" class="app-close"></a>
+            <a href="javascript:;" class="app-logo"></a>
+            <p><em><span id="sp_guide"></span></em></p>
+            <a href="javascript:;" onclick="openApp();" class="open-app">打开客户端</a>
+        </footer>
+    </div>-->
+    <a class="scroll-top"></a>
+    <script>document.write('<scri' + 'pt type="text/javascript" src="' + merchant_act_js + '"></scr' + 'ipt>');</script>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/jquery.w.js", "/js/pages/BrandPreferenceDetail.js", "/js/pages/group.js", "/js/g_footer.js", "/js/pages/guide.js", "/js/shareGoodsDetail.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <!--<script type="text/javascript" src="/js/jquery.w.js"></script>
+    <script src="/js/pages/BrandPreferenceDetail.js"></script>
+    <script src="/js/pages/group.js"></script>
+    <script src="/js/g_footer.js"></script>
+    <script src="/js/pages/guide.js"></script>
+    <script type="text/javascript" src="/js/shareGoodsDetail.js"></script>-->
+    <script type="text/javascript">
+        //BrandPreference.share = window.share;
+        //BrandPreference.SetAPPShare(window);
+        BrandPreference.Init(window);
+        //SetHtmlByDate();
+        //$(function(){
+        //    /* @ 顶部搜索框 */
+        //    $(window).on('scroll', function () {
+        //        var scrollBtn = $('.scroll-top');
+        //        var top = document.body.scrollTop;
+        //        //top <= 50 && header.removeAttr('style');
+        //        top >= 750 ? scrollBtn.show() : scrollBtn.hide();
+        //    });
+        //    /* @ 返回顶部 */
+        //    $('.scroll-top').on('click', function () {
+        //        document.body.scrollTop = 0;
+        //        $(this).hide();
+        //    });
+        //    $(".d_sale_header").css("display", "none");
+        //})
+
+    </script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101062";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

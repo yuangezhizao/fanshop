@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/jquery-2.1.4-min.js"></script>
+    <script>document.write('<scri' + 'pt type="text/javascript" src="' + merchant_act_js + '"></scr' + 'ipt>');</script>
+    <script>
+        var DateNow = new Date().getTime();
+        var DateStart = new Date().getTime();
+        var DateEnd = new Date().getTime();
+        window.location.search;
+        localStorage["actlist"] = "";
+        $.each(actlist.ResultTable, function (i, n) {
+            if (GetQueryString("from") == n.merchantcode && (n.cardflag.indexOf(GetQueryString("cardkey")) > -1 || n.cardflag.length == 0)) {
+                    DateStart = new Date(n.starttime.replace(/-/g, "/"));
+                    DateEnd = new Date(n.endtime.replace(/-/g, "/"));
+                    if (DateNow > DateStart && DateNow < DateEnd) {
+                        localStorage["actlist"] = JSON.stringify(n);
+                        if (n.actpage!="") {
+                            location.replace(n.actpage + window.location.search);
+                        }
+                        return false;
+                    }
+                
+            }
+        });
+        
+        function GetQueryString(name) {
+            var results = new RegExp('[\\?&]' + name + '=([^&#]*)', "ig").exec(window.location.href);
+            if (results != null)
+                return results[1];
+            else
+                return "";
+        }
+    </script>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+</body>
+</html>

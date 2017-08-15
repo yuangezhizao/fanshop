@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <style>
+        #mask {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="container" module="202042">
+        <h1 class="back-hd"><a id="btnBack" class="go-back"></a><span id="spoperate"></span>收货地址</h1>
+        <article class="my-address pb-55" id="atcList" style="display:none">
+            <ul class="address-list" module="202043">
+                <div id="divAddressList"></div>
+            </ul>
+        </article>
+        <article class="no-data" id="atcListNull" style="display:none">
+            <p>您还没有收获地址哦~</p>
+        </article>
+        <aside class="d_fixed"><a id="btnNewaddress" class="d_btn">添加新地址</a></aside>
+    </section>
+    <div id="divAlert"></div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/g_footer.js", "/js/pages/AddressBase.js", "/js/pages/AddressList.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101052";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

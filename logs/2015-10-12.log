@@ -1,0 +1,26 @@
+2015-10-12 17:07:08.898 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx081d285c706cc7e6]]></appid><attach><![CDATA[]]></attach><body><![CDATA[商品]]></body><goods_tag><![CDATA[]]></goods_tag><mch_id><![CDATA[1246662601]]></mch_id><nonce_str><![CDATA[3bf16bf970094a449e145df9e9c9828b]]></nonce_str><notify_url><![CDATA[http://qhbeta-cfamily.qhw.srnpr.com/cfamily/manage/wechatWAP_response.ftl]]></notify_url><openid><![CDATA[oz1WBsyLAuxPpkE7_0rh3x_GyvqY]]></openid><out_trade_no><![CDATA[OS148569103]]></out_trade_no><sign><![CDATA[C84020E84C567C4F25CEF5551C2515F8]]></sign><spbill_create_ip><![CDATA[8.8.8.8]]></spbill_create_ip><time_expire><![CDATA[20151012171708]]></time_expire><time_start><![CDATA[20151012170708]]></time_start><total_fee>100</total_fee><trade_type><![CDATA[JSAPI]]></trade_type></xml>
+2015-10-12 17:07:09.398 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx081d285c706cc7e6]]></appid>
+<mch_id><![CDATA[1246662601]]></mch_id>
+<nonce_str><![CDATA[df5N0ro8gmsrX6WI]]></nonce_str>
+<sign><![CDATA[7EA02B13E2CF4D0A7BDBE4567FB08D2B]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20151012170710d47fce6d250317599397]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2015-10-12 17:07:09.398 DEBUG com.ichsy.jyh.BusinessLayer.WxPayAPI.JsApiPay: JsApiPay::GetJsApiParam is processing...
+2015-10-12 17:07:09.476 DEBUG com.ichsy.jyh.BusinessLayer.WxPayAPI.JsApiPay: Get jsApiParam : {"appId":"wx081d285c706cc7e6","nonceStr":"6c5036bc3bda49da9d871029ef0688d3","package":"prepay_id=wx20151012170710d47fce6d250317599397","paySign":"8ACC09EFB9C81877F8839108C5B4CCFD","signType":"MD5","timeStamp":"1444640829"}
+2015-10-12 17:45:48.560 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx081d285c706cc7e6]]></appid><attach><![CDATA[]]></attach><body><![CDATA[商品]]></body><goods_tag><![CDATA[]]></goods_tag><mch_id><![CDATA[1246662601]]></mch_id><nonce_str><![CDATA[d7343da20f654a6e86df185770540e6c]]></nonce_str><notify_url><![CDATA[http://qhbeta-cfamily.qhw.srnpr.com/cfamily/manage/wechatWAP_response.ftl]]></notify_url><openid><![CDATA[oz1WBs_FPv5qbh1cyyoN9fzNZgUw]]></openid><out_trade_no><![CDATA[OS148597103]]></out_trade_no><sign><![CDATA[7E94E76F21EC06584F1BF17F8BF908E5]]></sign><spbill_create_ip><![CDATA[8.8.8.8]]></spbill_create_ip><time_expire><![CDATA[20151012175548]]></time_expire><time_start><![CDATA[20151012174548]]></time_start><total_fee>100</total_fee><trade_type><![CDATA[JSAPI]]></trade_type></xml>
+2015-10-12 17:45:49.012 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx081d285c706cc7e6]]></appid>
+<mch_id><![CDATA[1246662601]]></mch_id>
+<nonce_str><![CDATA[ukwAwDjszOR2MCmt]]></nonce_str>
+<sign><![CDATA[F0734828C4150DF564388BE9B1971863]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201510121745508e767eebc50114998158]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2015-10-12 17:45:49.012 DEBUG com.ichsy.jyh.BusinessLayer.WxPayAPI.JsApiPay: JsApiPay::GetJsApiParam is processing...
+2015-10-12 17:45:49.012 DEBUG com.ichsy.jyh.BusinessLayer.WxPayAPI.JsApiPay: Get jsApiParam : {"appId":"wx081d285c706cc7e6","nonceStr":"85c1c08dbe494e379c4d263b97b62fb9","package":"prepay_id=wx201510121745508e767eebc50114998158","paySign":"EC24C1296F66C59A8212A89733BE4D19","signType":"MD5","timeStamp":"1444643149"}

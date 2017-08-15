@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/d_style.css" rel="stylesheet">
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/js/tost.js"></script>
+    <script src="/js/JValidator.js"></script>
+    <script src="/js/tost.js"></script>
+    <style>
+        #mask {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bgcf5f5f5">
+    <header module="202090"><a id="btnBack" class="fl jt">返回</a>填写推荐人<a id="btnOver" class="sysm cadadad">跳过</a></header>
+    <div class="nodata" module="202090">
+        <div class="d_nodata_img">
+            <img src="/img/d_zfjg.png" alt="" />
+        </div>
+        <p class="d_nodata_p"><span class="ce24a7a fs14 lh18">您有推荐好友吗？<br>填写他的手机号他会得到奖励哦~</span></p>
+        <input id="txtPhone" class="d_zh_input d_bdb d_bdt" type="text" placeholder="需要填写我们注册会员的手机号哦~">
+        <a class="d_save_btn w301 d_fs15" id="btnSave">确定</a>
+    </div>
+
+    <div id="divAlert"></div>
+    <script src="/js/pages/OrderRecom.js"></script>
+    <script src="/js/g_footer.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "102006";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

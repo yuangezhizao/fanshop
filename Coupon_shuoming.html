@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/style.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js", "/js/functions/g_Const.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body class="bg-f5">
+    <header module="202061"><a id="btnback" class="jt">返回</a>使用说明</header>
+    <section class="explain">
+        <p>1、一个订单只能使用一张优惠券；</p>
+        <p>2、优惠券不可叠加使用；</p>
+        <p>3、优惠券可以与其他活动一同享受；</p>
+        <p>4、优惠券不能抵运费；</p>
+        <p>5、使用优惠券抵押的金额不可开具发票。</p>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnback").click(function () {
+                location.href =PageUrlConfig.BackTo();
+            });
+        });
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101067";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

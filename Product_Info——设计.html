@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html style="max-width:100%">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/sbc.css", "/css/style.css"], ["/js/functions/g_Const.js", "/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body class="qqbg">
+    <div class='tabnav' id="menu" style="display:none">
+        <ul class="clearfix">
+            <li onclick="javascript:test_item(0);" class="on"><span>图文详情</span></li>
+            <li onclick="javascript:test_item(1);"><span>规格参数</span></li>
+            <li onclick="javascript:test_item(2);" style="display:none" id="li_commonquestion"><span>常见问题</span></li>
+        </ul>
+    </div>
+                <div id="tabc0" class='tabc'>
+
+                </div>
+                <div id="tabc1" class="no">
+                    <div class="param">
+
+                    </div>
+                </div>
+                <div id="tabc2" class="no">
+                    <div class="issue" id="div_commonquestion">
+
+                    </div>
+                </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/pages/product_info.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script type="text/javascript">
+        Product_Detail.api_input.picWidth = 0;
+        Product_Detail.api_input.productCode = GetQueryString("pid");// "108577";
+        Product_Detail.api_input.buyerType = GetQueryString("buyerType");
+        Product_Detail.api_input.version = 1.0;
+        Product_Detail.GetDetail();
+        test_item(GetQueryString("tab"))
+    </script>
+</body>
+</html>

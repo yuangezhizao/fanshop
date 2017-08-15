@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>饭好了</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <script src="../../js/functions/g_Const.js"></script>   
+    <script src="../../js/tost.js"></script>
+    <script src="../../js/g_header.js"></script>
+    <script src="../../js/functions/g_Type.js"></script>    
+    <script src="../../js/jquery-2.1.4.js"></script>
+    
+</head>
+<body>
+    <input type="button" id="testshare" value="分享"/>
+    <script>
+        var arrremove = [["132286", "132286"], ["128698", "128698"]];
+       
+        $("#testshare").on("click", function (e) {
+            g_type_cart.BatchRemoveWithCloud(arrremove, function () { alert("ok") });
+            return;
+            //testwx.wx = wx;
+            //testwx.wxparam.debug = true;
+            //testwx.LoadParam("onMenuShareTimeline");
+            WX_JSAPI.wx = wx;
+            WX_JSAPI.wxparam.debug = true;
+            WX_JSAPI.dataUrl = "";
+            WX_JSAPI.desc = "分享描述";
+            WX_JSAPI.imgUrl = "http://qhbeta-cfiles.qhw.srnpr.com/cfiles/staticfiles/upload/24aba/910bda426ad84a9f8af2760ef52aee0b.png";
+            WX_JSAPI.link = "http://wx.lacues.cn/product_detail.html?pid=108577";
+            WX_JSAPI.title = "分享标题";
+            WX_JSAPI.type = g_const_wx_share_type.link;
+            WX_JSAPI.LoadParam(g_const_wx_AllShare);            
+        });
+    </script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</body>
+</html>

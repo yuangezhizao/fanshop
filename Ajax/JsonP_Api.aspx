@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JsonP_Api.aspx.cs" Inherits="com.hjy.fan.WebTouch.Ajax.JsonP_Api" %>

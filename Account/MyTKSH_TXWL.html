@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html style="background:#fff">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/js/cdn.js"></script>
+    <!--<script type="text/javascript" src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/g_header.js"></script>
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/shouhou.css">-->
+
+    <script type="text/javascript">
+
+        var staticlist = [["/css/sbc.css", "/css/base.css", "/css/index.css", "/css/shouhou.css"], ["/js/jquery-2.1.4.js", "/js/jquery.mobile-1.4.5.js", "/JS/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/g_footer.js", "/js/jquery.form.min.js", "/js/pages/MyTKSH_TXWL.js"]];
+
+    WriteStatic(staticlist);
+    </script>
+
+
+</head>
+<body>
+    <!--售后单号-->
+    <input type="hidden" id="hid_afterCode" value="">
+    <!--选中的快递公司编号-->
+    <input type="hidden" id="hid_sel_kd" value="">
+
+    <div class="applycustomer">
+        <!-- <div class="addrHeader">
+            <a class="back" id="go_back"></a>填写退货物流
+        </div> -->
+        <h1 class="back-hd">
+                <a id="a_go_back" class="go-back ui-link"></a>填写退货物流
+            </h1>
+        <div id="div_notice" class="notice" style="display:none;">
+            <!--
+                <span class="re_addr">请将货品寄回以下地址:</span>
+                <span>退货地址:北京市朝阳区高碑店小郊亭磷酸精胺酸</span><br />
+                <span>收货人:哈哈，电话：12312312312，邮编：12312312</span><br />
+                <span class="tuikuan_time">我们将在收到货的1~7个工作日内处理您的退款</span>
+                -->
+        </div>
+        <div class="rightInfo">请填写您的退货物流信息:</div>
+        <ul class="tuihuo">
+            <li class="clearfix sh_class" id="li_kd">
+                <span class="cust_name">快递公司</span>
+                <span id="span_sel_kd" class="cust_class">请选择快递公司</span>
+                <span class="cust_b"></span>
+                <ul id="ul_kd" class="sl_list">
+                    <!--<li onclick ="MyTKSH_TXWL_KDGS.sel('111','222')">因为春天来了 </li>
+                    <li>因为夏天来了</li>
+                    <li>因为秋天来了 </li>
+                    <li>因为冬天来了 </li>-->
+                </ul>
+            </li>
+            <li class="clearfix">
+                <span class="cust_name">快递单号</span>
+                <input id="txt_kddh" type="text" class="cust_class" placeholder="请输入快递单号" />
+                <span id="span_danhao" class="danhao"></span>
+            </li>
+        </ul>
+        <div id="div_uploadPic" class="uploadPic">
+            <h4>上传凭证  <i>（最多3张）</i></h4>
+            <ul class="_pic clearfix">
+                <li id="li_uploadimg" class="uploadBtn"><img src="/img/a.jpg" /></li>
+            </ul>
+        </div>
+
+        <div id="div_submit" class="subBtn">提交</div>
+        <div id="div_submit_o" class="subBtn" style="display:none">提交中，请稍后</div>
+
+    </div>
+    <!--<script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/pages/MyTKSH_TXWL.js"></script>-->
+
+    <!--<script>
+        window.onload = function () {
+            //自适应rem初始化设置
+            function fontSize() {
+                if (document.documentElement.clientWidth < 640) { //initial-scale=0.5是缩小一倍后适应屏幕宽。
+                    document.documentElement.style.fontSize = 10* (document.documentElement.clientWidth / 320) + 'px';
+                } else {
+                    document.documentElement.style.fontSize = '20px';
+                }
+            }
+            fontSize();
+            window.onresize = function () { fontSize(); };
+            /*end*/
+            //地址
+            //选择
+            $('.sh_class').click(function () {
+                $('.sl_list').hide();
+                $(this).find('.sl_list').show();
+                return false;
+            })
+            $(document).click(function () {
+                $('.sl_list').hide();
+            })
+            $('.sl_list li').click(function () {
+                var Otxt = $(this).text();
+                $(this).parent().parent().find('.cust_class').text(Otxt);
+            })
+            //删除所上传的图片
+            $('._pic').on('click', '.deletPic', function () {
+                $(this).parent().remove();
+            })
+
+        }
+    </script>-->
+</body>
+
+
+</html>

@@ -1,0 +1,202 @@
+﻿<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5">
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/d_change_style.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        .hongbao {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 999;
+            display: none;
+        }
+
+        .maskWrap {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .mask_hb {
+            width: 32rem;
+            height: 24.55rem;
+            background: url(/img/w_img/guide_zhy.png) no-repeat;
+            background-size: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .mask_hb ul {
+                margin: 0 auto;
+                margin-top: 11.3rem;
+                height: 3.4rem;
+                width: 80%;
+            }
+
+                .mask_hb ul li {
+                    height: 3.2rem;
+                    width: 12.2rem;
+                    text-align: center;
+                    line-height: 3.2rem;
+                    float: right;
+                    font-size: 1.3rem;
+                    letter-spacing: 0.2rem;
+                }
+
+            .mask_hb .open {
+                float: left;
+            }
+
+            .mask_hb .continue {
+                float: right;
+            }
+
+            .mask_hb .open a {
+                display: block;
+                color: #FFF;
+            }
+
+            .mask_hb .continue a {
+                display: block;
+                color: #FFF;
+            }
+
+        .m_close {
+            position: absolute;
+            width: 2.2rem;
+            height: 2.2rem;
+            right: 0.9rem;
+            top: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header id="d_go_top" class="d_sale_header" module="202027" title="TV直播"><a class="fl d_jt_left" href="javascript:;"></a>TV直播</header>
+    <div class="tabw">
+        <div class="tabsw">
+            <div class="a tab-scroll">
+                <div class="tabs" id="date-picker" module="202028">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container" id="wrapper">
+        <div class="swiper-wrapper" id="scroller" module="202029">
+
+        </div>
+    </div>
+    <script type="text/ng-template" id="tpl_tv_live">
+        <div class="swiper-slide" style="display:block;">
+            <div class="content-slide">
+                {{productList}}
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="tpl_tv_live_product">
+        <div class="{{Class1}}" onclick="page_tvlive.gotoprouduct('{{pid}}')">
+            <div class="{{Class2}}">&emsp;{{TimeTitle}}&emsp;{{Time}}</div>
+            <div class="lidw">
+                <div class="{{Class3}}">
+                    <div class="imgd"><a href="{{productLink}}"><img src="{{productPic}}" /></a></div>
+                    <div class="txtd">
+                        <h3><a href="{{productLink}}">{{productName}}</a></h3>
+                        <div class="icod">{{activityList}}{{otherShow}}</div>
+                        <div class="price"><b>¥</b>{{salePrice}}<span>¥{{markPrice}}</span></div>
+                        <div class="d_sales_volume">月销{{saleNum}}件</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 引导页 -->
+    <div class="hongbao1">
+        <div class="maskWrap" style="display:none">
+            <div class="mask_hb">
+                <div onclick="CloseRecord();" class="m_close"><div class="cha"></div></div>
+                <ul class="clearfix">
+                    <li class="open" onclick="OpenAppRecord()"></li>
+                    <li class="continue" onclick="CloseRecord();"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end -->
+    <a class="d_go_top"><img src="img/d_top_btn1.png"></a>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/pages/tvlive.js", "/js/iscroll.js", "/js/g_footer.js", "/js/jquery.w.js", "/js/pages/guide.js", "/js/shareGoodsDetail.js", "/js/pages/group.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script type="text/javascript">
+        var aid = GetQueryString("aid");
+        if (aid == "")
+            aid = "467703130008000100070001";
+        page_tvlive.api_input.activity = aid;
+        page_tvlive.Init();
+        function fontSize() {
+            if (document.documentElement.clientWidth < 1280) { //initial-scale=0.5是缩小一倍后适应屏幕宽。
+                document.documentElement.style.fontSize = 10 * (document.documentElement.clientWidth / 320) + 'px';
+            } else {
+                document.documentElement.style.fontSize = '40px';
+            }
+
+        }
+        fontSize();
+        window.onresize = function () { fontSize(); };
+
+    </script>
+    <script>document.write('<scri' + 'pt type="text/javascript" src="' + merchant_act_js + '"></scr' + 'ipt>');</script>
+    <script type="text/javascript">
+        $(function () {
+            var oTab = $('.tabs');
+            var aA = oTab.find('a');
+            var aAwidth = aA.outerWidth();
+            var windowWidth = $(window).width();
+            var overallWidth = aA.length * aAwidth + 1;
+            oTab.css({
+                'width': overallWidth
+            });
+            $('.tab-scroll').scrollLeft(overallWidth - windowWidth)
+        });
+        //SetHtmlByDate();
+        function OpenAppRecord() {
+            //  Merchant1.RecordPageAct("jygw", "_openapp");
+            openApp();
+        }
+        function CloseRecord() {
+            Merchant1.RecordPageAct("jygw", "_continue");
+            hongbao_close();
+        }
+    </script>
+
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101009";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

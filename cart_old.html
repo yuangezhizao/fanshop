@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/ch-box.css"], ["/js/jquery-2.1.4-min.js", "/js/jquery.mobile-1.4.5.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <style>
+        #mask {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body class="bg-f5">
+
+    <section class="ch-cart" module="202048">
+        <input id="touchStart" type="hidden" />
+        <input id="touchMove" type="hidden" />
+        <div id="div_scrolldown" class="d_refresh" style="display:none">
+        </div>
+        <h1 class="back-hd"><a id="btnBack" class="go-back"></a>购物车<span id="spEdit" style="display:none"><a id="btnFinish" class="back-right" style="display:none">完成</a><a id="btnEdit" class="back-right" style="display:none">编辑</a></span></h1>
+
+        <div class="ch-tips" id="divCartNull" style="display:none">
+            <div class="ch-icon">您的购物车是空的，快去逛逛吧!</div>
+            <p><a id="btnIndex">去逛逛</a><a id="btnLogin" class="login">去登录</a></p>
+        </div>
+        <div id="divCart" style="display:none">
+            <div class="title">
+                <div id="divTitle"></div>
+            </div>
+            <div id="divCartList" module="202049"></div>
+            <h3 id="h3_invalid" style="display:none">您的购物车内已有 <span id="spinvalidnum">0</span> 款商品失效</h3>
+                <div class="invalid" style="display: ;">
+                    <ul>
+                        <div id="divCartInvalid" module="202049"></div>
+                    </ul>
+                </div>
+                <a id="btnClear" class="clear-goods" style="display:none">清空全部失效商品</a>
+                <div class="ch-btn" id="divFootView" style="display:none"><label id="lblAllSelView" class="curr"><span>合计:￥<i id="sp_price"></i></span><font id="font_money"></font></label><a id="btnSubmit">结算<b id="sp_total"></b></a><a id="btnSubmit_wait" style="display:none;">同步中<b id="sp_total"></b></a></div>
+                <div class="ch-btn" id="divFootEdit" style="display:none"><label id="lblAllSelEdit">全选</label> <a id="btnDel">删 除</a></div>
+</div>
+    </section>
+    <div id="divAlert"></div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/JValidator.js", "/js/focus.js", "/js/ch-dome.js", "/js/pages/cart.js", "/js/g_footer.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101045";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

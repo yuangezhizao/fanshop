@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+	<meta charset="UTF-8">
+	<title>wap扫码引导下载页</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/smg_style.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js", "/js/functions/g_Const.js", "/js/shareGoodsDetail.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script type="text/javascript">
+        function Enter() {
+            if (localStorage[g_const_localStorage.SMG_ProductID] != null && localStorage[g_const_localStorage.SMG_ProductID] != "")
+            {
+                if (localStorage[g_const_localStorage.SMG_ProductID] != "") {
+                    pid = localStorage[g_const_localStorage.SMG_ProductID];
+                    localStorage[g_const_localStorage.SMG_ProductID] = "";
+                    window.top.location.href = g_const_PageURL.Product_Detail + "?pid=" + pid + "&from_smg=1" + "&t=" + Math.random();
+                }
+            }
+            else
+            {
+                window.top.location.href = g_const_PageURL.Index+"?t=" + Math.random();
+            }
+            return false;
+        }
+        //关闭当前页面
+        function GetQueryString(name) {
+            var results = new RegExp('[\\?&]' + name + '=([^&#]*)', "ig").exec(window.location.href);
+            if (results != null)
+                return results[1];
+            else
+                return "";
+        }
+    </script>
+</head>
+<body>
+<div class="wrap">
+	<img src="http://win.image.ichsy.com/hjyshop/img/smg_img/bg.jpg" alt="">
+    <ul>
+    	<li><a onclick="Enter()"><img src="http://win.image.ichsy.com/hjyshop/img/smg_img/btn_01.png" alt=""></a></li>
+    	<li><a onclick="openApp()"><img src="http://win.image.ichsy.com/hjyshop/img/smg_img/btn_02.png" alt=""></a></li>
+    </ul>
+    <p><img src="http://win.image.ichsy.com/hjyshop/img/smg_img/bottom_bg.png" alt=""></p>
+</div>
+</body>
+</html>

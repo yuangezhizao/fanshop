@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="baidu-site-verification" content="PZzEtDyOeJ" />
+    <link rel="shortcut icon" href="http://win.image.ichsy.com/hjyweb/img/jyh.ico" type="image/vnd.microsoft.icon" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+
+
+    </script>
+</head>
+<body style="background:#fff;">
+    <!-- header srarch -->
+    <header class="header" module="202018">
+        <a class="hd-classify" num="202018-1"></a>
+        <a class="hd-search" num="202018-2">搜索商品、菜谱</a>
+        <a class="user-content" num="202018-3"></a>
+    </header>
+    <!-- end -->
+    <!-- swipeSlide -->
+    <article class="swipe-slide" module="202001"></article>
+    <!-- Ad -->
+    <ul class="index-ad clearfix" module="202020"></ul>
+    <!--导航-->
+    <article class="menu">
+        <ul class="menu-list clearfix" module="202019"></ul>
+    </article>
+    <div class="space"></div>
+    <script type="text/template" id="tpl_fastbuy">
+        <!-- @ 限时抢购 -->
+        <article class="module" id="article_fastbuy" module="202011">
+            <h1 class="module-hd"><s class="time-tit">{{columnName}}</s><a {{showmoreLink}} class="more">{{showmoreTitle}}</a><span class="count-down">{{CountDown}}</span></h1>
+            <ul class="cols-three clearfix">
+                {{productList}}
+            </ul>
+
+        </article>
+        <div class="space"></div>
+        <!-- end -->
+    </script>
+    <!--闪购-->
+    <script type="text/template" id="tpl_fastbuy_productList">
+        <li>
+            <a {{showmoreLink}} title="">
+                <div class="goods-item">
+                    <img src="{{picture}}" title="">
+                    <!-- 抢光了
+                    <span class="sold-out"><em>抢光了</em></span>
+                    -->
+                </div>
+                <em class="goods-item-sale">{{discount}}折</em>
+                <h1 class="goods-item-tit">{{productName}}</h1>
+                <span class="goods-item-price"><i>¥</i>{{sellPrice}}</span>
+            </a>
+        </li>
+    </script>
+    <!--396 TV直播-->
+    <script type="text/template" id="tpl_tvlive">
+
+        <article class="module" module="202010">
+            <h1 class="module-hd">{{columnName}} <a href="{{showmoreLink}}" class="{{classmore}}">{{showmoreTitle}}</a></h1>
+            <section class="module-live-02 clearfix">
+                <ul id="index_tvzb" style="width:450px;">
+                    {{productList}}
+                </ul>
+                <div class="space"></div>
+            </section>
+			<div class="space"></div>
+        </article>
+		
+    </script>
+    <!--多个视频直播-->
+    <script type="text/template" id="tpl_tvlive_product">
+        <li>
+            <a {{showmoreLink}}>
+                <div class="live-02-img">
+                    <img src="{{picture}}">
+                    <span class="live-02-time">{{startTime}}</span>
+                </div>
+                <div class="live-02-con">
+                    <p class="live-02-name">{{productName}}</p>
+                    <span class="live-02-price"><i>￥</i>{{sellPrice}}</span>
+                </div>
+            </a>
+        </li>
+    </script>
+    <script type="text/template" id="tpl_tvlive_product_1">
+        <li>
+            <a {{showmoreLink}}>
+                <div class="live-02-img">
+                    <img src="{{picture}}">
+                    <span class="live-02-state">直播中</span>
+                </div>
+                <div class="live-02-con">
+                    <p class="live-02-name">{{productName}}</p>
+                    <span class="live-02-price"><i>￥</i>{{sellPrice}}</span>
+                </div>
+            </a>
+        </li>
+    </script>
+
+    <script type="text/template" id="tpl_tvlive_num">
+        <a {{classcurr}}></a>
+    </script>
+    <!-- 一栏推荐 -->
+    <script type="text/template" id="tpl_recommendone">
+
+        <article class="module" id="article_recommendone" module="202005">
+            <h3 class="clearfix fan-h3" style="{{titleColor}}"><span><i class="left"></i>{{title}}<i class="right"></i></span></h3>
+            <h1 class="module-hd" style="display:none">{{columnName}}<a {{showmoreLink}} class="{{classmore}}">{{showmoreTitle}}</a></h1>
+            <ul class="column-one clearfix">
+                <li>
+                    <a {{pshowmoreLink}} title="">
+                        <p style="{{descriptionColor}}">{{description}}</p>
+                        <img src="{{picture}}" alt="">
+                    </a>
+                </li>
+            </ul>
+        <div class="space"></div>
+        </article>
+    </script>
+    <!-- @ 通屏广告 -->
+    <script type="text/template" id="tpl_commonAD">
+        <h3 class="clearfix fan-h3" {{showTitle}}><span><i class="left"></i>{{columnName}}<i class="right"></i></span></h3>
+        <article class="common-ad" module="202002">
+            <a {{showmoreLink}} title=""><img src="{{picture}}" alt=""></a>
+        
+		</article>
+		<div class="space"></div>
+    </script>
+
+    <!-- @ 商品推荐 -->
+    <script type="text/template" id="tpl_recommend_product">
+        <article class="module" module="202008">
+            <h3 class="clearfix fan-h3" {{showTitle}}><span><i class="left"></i>{{columnName}}<i class="right"></i></span></h3>
+            <div class="touch-wrap" id="{{touchwrapid}}">
+                <ul class="goods-recomd clearfix">
+                    {{productList}}
+                    <div class="slid-more" {{showmoreLink}}><a>{{showmoreTitle}}</a></div>
+                </ul>               
+            </div>
+			<div class="space"></div>
+        </article>
+    </script>
+    <script type="text/template" id="tpl_recommend_product_product">
+        <li>
+            <a {{showmoreLink}}>
+                <img src="{{picture}}">
+                <h1>{{productName}}</h1>
+                <span><i>¥</i>{{sellPrice}}</span>
+            </a>
+        </li>
+    </script>
+    <!-- @ 热门市场 -->
+    <script type="text/template" id="tpl_RecommendHot">
+        <section class="fan-foodBoxWrap" module="202009">
+            <h3 class="clearfix fan-h3" {{showStyle}}><span><i class="left"></i>{{columnName}}<i class="right"></i></span></h3>
+            <ul class="fan-list clearfix">
+                {{productList}}
+            </ul>
+            <a {{showmoreLink}} {{showmore}}><div class="fan-foodBox02-more clearfix"><span>{{showmoreTitle}}<!--更多优选食器--></span></div></a>
+        </section>
+        <div class="space"></div>
+    </script>
+    <script type="text/template" id="tpl_RecommendHot_product">
+        <li>
+            <a {{showmoreLink}}>
+                <img src="{{picture}}" alt="">
+                <!--<aside class="market-dec">-->
+                <p class="txt01" style="{{titleColor}};{{titleshow}}">{{title}}</p>
+                <p class="txt01" style="{{descriptionColor}};{{descriptionshow}}">{{description}}</p>
+                <!--</aside>-->
+            </a>
+        </li>
+    </script>
+    <!--猜你喜欢-->
+    <script type="text/template" id="tpl_GuessYourLike">
+        <!-- @ 猜您喜欢 -->
+        <article class="module love-goods" module="202017">
+            <h1 class="love-goods-tit"><span>您可能喜欢的商品</span></h1>
+            <div id="ichsy_jyh_wrapper">
+                <ul class="cols-two clearfix" id="ichsy_jyh_scroller">
+                    {{productList}}
+                </ul>
+            </div>
+			<div class="space"></div>
+        </article>
+        <!-- end -->
+    </script>
+    <!--推荐商品-->
+    <script type="text/template" id="tpl_GuessYourLike_product">
+        <li>
+            <a href="{{ProductDetailURL}}">
+                <div class="goods-item">
+                    {{mark}}
+                    <img src="{{picture}}" />
+                </div>
+                <h1 class="goods-item-tit">{{productNameString}}</h1>
+                <span class="goods-item-price"><i>¥</i>{{productPrice}}<b>¥{{market_price}}</b></span>
+            </a>
+        </li>
+    </script>
+    <!-- 通知模版 -->
+    <script type="text/template" id="tpl_notify">
+        <div class="headline">
+            <ul id="{{notifyid}}">
+                {{notifylist}}
+            </ul>
+        </div>
+        <div class="space"></div>
+    </script>
+    <script type="text/template" id="tpl_notify_list">
+        <li notifytype="{{notifytype}}" notifytitle="{{notifytext}}" notifybody="{{notifybody}}">
+            <img src="{{notifypic}}" alt="">
+            <a {{notifylink}}>{{notifytext}}</a>
+        </li>
+    </script>
+    <!-- @ 两栏两行推荐 -->
+    <script type="text/template" id="tpl_2L2H">
+        <article class="module">
+            <h1 class="module-hd">{{columnName}}</h1>
+            <ul class="cols-two clearfix">
+                {{productList}}
+            </ul>
+			<a {{showmoreLink}}><div class="fan-foodBox02-more clearfix"><span>{{showmoreTitle}}</span></div></a>
+        </article>
+
+        <div class="space"></div>
+    </script>
+    <script type="text/template" id="tpl_2L2H_productList">
+        <li>
+            <a {{ProductDetailURL}}>
+                <div class="goods-item">
+                    <img src="{{picture}}">
+                    {{SoldOut}}
+                </div>
+                <em class="goods-item-sale">{{discount}}折</em>
+                <h1 class="goods-item-tit">{{productNameString}}</h1>
+                <span class="goods-item-price"><i>¥</i>{{productPrice}}</span>
+            </a>
+        </li>
+    </script>
+    <!-- @ 三栏两行推荐 -->
+    <script type="text/template" id="tpl_3L2H">
+        <article class="module">
+            <h1 class="module-hd">{{columnName}}</h1>
+            <ul class="cols-three clearfix">
+                {{productList}}
+            </ul>
+			<a {{showmoreLink}}><div class="fan-foodBox02-more clearfix"><span>{{showmoreTitle}}</span></div></a>
+        </article>
+		
+		<div class="space"></div>
+    </script>
+    <script type="text/template" id="tpl_3L2H_productList">
+        <li>
+            <a {{ProductDetailURL}}>
+                <div class="goods-item">
+                    <img src="{{picture}}">
+                    {{SoldOut}}
+                </div>
+                <em class="goods-item-sale">{{discount}}折</em>
+                <h1 class="goods-item-tit">{{productNameString}}</h1>
+                <span class="goods-item-price"><i>¥</i>{{productPrice}}</span>
+            </a>
+        </li>
+    </script>
+    <div id="bodycontent"></div>
+    <a class="scroll-top" num="202101-1"></a>
+    <!-- <a href="cart.html" num="202101-2" class="shop-cart"><em></em></a> -->
+    <div class="ch-icon">
+        <a href="cart.html" class="ch02" num="202101-2"><i>5</i></a>
+    </div>
+    <footer class="copyright">
+        <a onclick="window.location.reload(true);" num="202101-3"></a>
+    </footer>
+    <!-- app tips -->
+    <!--<footer class="app" module="202102">
+        <a href="javascript:;" class="app-close"></a>
+        <a href="javascript:;" class="app-logo"></a>
+        <p><em><span id="sp_guide"></span></em></p>
+        <a href="javascript:;" onclick="openApp();" class="open-app">打开客户端</a>
+    </footer>-->
+    <!-- end -->
+    <!-- 引导页 -->
+    <aside class="guide-app" module="202102">
+        <img id="img_guide" src="" alt="">
+        <a href="javascript:;" onclick="openApp();"></a>
+        <a href="javascript:;" class="guide-close"></a>
+    </aside>
+    <aside class="mask" style="display:none"></aside>
+    <!-- end -->
+    <script type="text/javascript">
+        try{
+            //加载静态文件
+            //staticlist = [[], [g_StaticFilePath + "/wap_index.js"]];
+            //WriteStatic(staticlist);
+        }
+        catch(e){
+
+        }
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/swipeSlide.min.js", "/js/iscroll.js", "/js/jquery.w.js", "/js/pages/index.js?v=201601191323", "/js/pages/guide.js", "/js/shareGoodsDetail.js", "/js/g_footer.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script>document.write('<scri' + 'pt type="text/javascript" src="' + merchant_act_js + '"></scr' + 'ipt>');</script>
+    <script>
+        Page_Index.Init();
+        try {
+            //if (!(wap_index == undefined)) {
+                //从静态文件获取数据
+                
+                //My_LoadDataStaitc.LoadStaitc(wap_index, Page_Index.LoadDataStaitc, Page_Index.LoadData, "", false);
+
+            //}
+            //else {
+                //从接口获取数据
+                Page_Index.LoadData();
+            //}
+        }
+        catch (e) {
+            //从接口获取数据
+            Page_Index.LoadData();
+        }
+        //objTop.Start($(".scroll-top"));
+    </script>
+    <!--搜狐接口接获得用户端IP口-->
+    <!--<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>-->
+    <!--=通知详情 star=-->
+    <div class="notice" style="display:none;" id="div_notice">
+        <i></i>
+        <div class="cont">
+            <h2 id="notice_title">通知标题</h2>
+            <p id="notice_body">通知内容</p>
+        </div>
+    </div>
+    <!--=end =-->
+    <!--396 首页H5动画及遮罩 开始-->
+    <div class="h5_mask" style="display:none;" id="div_h5_396">
+        <iframe src="" frameborder="0" id="index_ifr" name="ifr" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:43px;left:0px;right:0px;bottom:0px"></iframe>
+        <img src="" id="img_ifr" style="display:none;" />
+        <b class="dia_h5_close" id="h5close" onclick="Action396H5.CloseDIV()"></b>
+    </div>
+    <!--396 首页H5动画及遮罩 结束-->
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+
+    //(function () {
+    //   window.page = "101006";
+    //    var gas = document.createElement("script");
+    //    gas.type = "text/javascript";
+     //   gas.src = cdn_path + "/js/gas.js";
+
+    //    var length = document.getElementsByTagName("script").length;
+    //    var cusScript = document.getElementsByTagName("script")[length - 1];
+     //   cusScript.parentNode.insertBefore(gas, cusScript);
+    //})();
+</script>
+
+<script type="text/javascript">
+$(function(){
+    $(window).scroll(function(){
+        if($(document).scrollTop()>100){
+            $(".header").addClass("on");
+        }else{
+            $(".header").removeClass("on");
+        }
+    })
+    
+})
+    
+</script>
+
+
+
+

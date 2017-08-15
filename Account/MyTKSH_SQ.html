@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <script src="/js/cdn.js"></script>
+
+    <!--<link href="/css/base.css" rel="stylesheet" type="text/css">
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/css/sbc.css" rel="stylesheet" type="text/css" />
+    <link href="/css/shouhou.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <script src="/JS/g_header.js"></script>
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/jquery.form.min.js"></script>
+    <script src="/JS/tost.js"></script>
+    <link href="css/base.css" rel="stylesheet">-->
+
+    <script type="text/javascript">
+
+        var staticlist = [["/css/sbc.css", "/css/base.css", "/css/index.css", "/css/shouhou.css"], ["/js/jquery-2.1.4.js", "/js/jquery.mobile-1.4.5.js", "/JS/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/g_footer.js", "/js/jquery.form.min.js", "/js/pages/MyTKSH_SQ.js"]];
+    WriteStatic(staticlist);
+    </script>
+
+
+    <style>
+    </style>
+</head>
+<body>
+
+    <!--订单号-->
+    <input id="hid_order_code" type="hidden" value="" />
+    <!--选中的退款原因-->
+    <input id="hid_CancelReason" type="hidden" value="" />
+    <!--售后类型-->
+    <input id="hid_shlx" type="hidden" value="" />
+    <!--是否收到货-->
+    <input id="hid_sfsdh" type="hidden" value="4497476900040001" />
+    <!--SKUCode-->
+    <input id="hid_skuCode" type="hidden" value="" />
+    <!--最大退货数量-->
+    <input id="hid_GoodsMaxNum" type="hidden" value="0" />
+    <!--单件物品金额-->
+    <input id="hid_OnePrice" type="hidden" value="0" />
+    <!--退款最大金额-->
+    <input id="hid_MaxPrice" type="hidden" value="0" />
+
+    <!--图片控件num，以便提交后获得控件对应图片-->
+    <input id="hid_img_ids" type="hidden" value="" />
+    <!--可上传图片控件ID-->
+    <input id="hid_freeimg_id" type="hidden" value="" />
+
+    <!--退货原因-->
+    <input id="hid_thyy_li" type="hidden" value="" />
+    <!--退货第一个原因-->
+    <input id="hid_thyy_li_first_text" type="hidden" value="" />
+    <input id="hid_thyy_li_first_val" type="hidden" value="" />
+    <!--换货原因-->
+    <input id="hid_hhyy_li" type="hidden" value="" />
+    <!--换货第一个原因-->
+    <input id="hid_hhyy_li_first_txt" type="hidden" value="" />
+    <input id="hid_hhyy_li_first_val" type="hidden" value="" />
+
+    <!-- <div class="addrHeader">
+        <a id="go_back" class="back"></a>申请售后
+    </div> -->
+    <h1 class="back-hd">
+                <a id="a_go_back" class="go-back ui-link"></a>申请售后
+            </h1>
+    <!--售后过期-->
+    <div id="div_overdue" class="applycustomer" style="display:none;">
+        <div class="overdue_pic"></div>
+        <div id="div_overdue_str" class="overdue_con"></div>
+    </div>
+    <!--申请售后内容-->
+    <div id="div_applycustomer" class="applycustomer">
+        <div id="div_notice" class="notice" style="display:none;">
+            
+
+        </div>
+        <ul id="ul_tuihuo" class="tuihuo">
+            <li class="clearfix sh_class" id="li_shlx">
+                <span class="cust_name">售后类型<i>*</i></span>
+                <span id="span_selshlx" class="cust_class"></span>
+                <span id="span_cust_b" class="cust_b"></span>
+                <ul class="sl_list" id="ul_shlx">
+                    <!--<li>春天来了 </li>
+                    <li>夏天来了</li>
+                    <li>秋天来了 </li>
+                    <li>冬天来了 </li>-->
+                </ul>
+            </li>
+            <li class="clearfix sh_class" id="li_shyy">
+                <span class="cust_name">售后原因<i>*</i></span>
+                <span class="cust_class" id="span_shyy">请选择售后原因</span>
+                <span class="cust_b"></span>
+                <ul class="sl_list" id="ul_shyy">
+                    <!--<li>因为春天来了 </li>
+                    <li>因为夏天来了</li>
+                    <li>因为秋天来了 </li>
+                    <li>因为冬天来了 </li>-->
+                </ul>
+            </li>
+            <li class="clearfix sh_class" id="li_sfsdh">
+                <span class="cust_name">是否收到货<i>*</i></span>
+                <span id="span_sfsdh" class="cust_class">是</span>
+                <span class="cust_b"></span>
+                <ul class="sl_list" id="ul_sfsdh">
+                    <li onclick="SelectVal.sel('sfsdh', '4497476900040001', '是')">是</li>
+                    <li onclick="SelectVal.sel('sfsdh', '4497476900040002', '否')">否</li>
+                </ul>
+            </li>
+            <li class="marg_botm60 clearfix">
+                <span class="cust_name">数量<i>*</i></span>
+                <input id="txt_goodsnum" type="text" class="cust_class" placeholder="请输入数量" />
+                <!--<p class="tip">(退换货商品数不能超过订单实际数量)</p>-->
+            </li>
+            <li id="li_tkje" class="marg_botm60 clearfix">
+                <span class="cust_name">退款金额<i>*</i></span>
+                <input id="txt_MaxPrice" type="text" class="cust_class" placeholder="" readonly="readonly" />
+                <p id="p_tips" class="tip"><span id="span_ichsy"></span>不含运费<span id="span_yf"></span>元</p>
+            </li>
+        </ul>
+        <!--<textarea placeholder="您可以补充说明您遇到的问题（200字以内）"></textarea>-->
+        <!--<article id="article_ms" class="feedback">-->
+        <textarea id="txtFeeddd" name="txtFeeddd" placeholder="您可以补充说明您遇到的问题（200字以内）" data-role="none"></textarea>
+            <!--<span class="text-num"><span id="textlen">0</span>/200</span>
+        </article>-->
+
+        <div id="div_uploadPic" class="uploadPic">
+            <h4>上传凭证  <i>（最多5张）</i></h4>
+            <ul class="_pic clearfix">
+                <!--<li>
+                    <img src="img/ccc.jpg" />
+                    <b class="deletPic"></b>
+                </li>
+                <li>
+                    <img src="img/ccc.jpg" />
+                    <b class="deletPic"></b>
+                </li>
+                <li>
+                    <img src="img/ccc.jpg" />
+                    <b class="deletPic"></b>
+                </li>
+                <li>
+                    <img src="img/ccc.jpg" />
+                    <b></b>
+                </li>
+                <li>
+                    <img src="img/ccc.jpg" />
+                    <b></b>
+                </li>-->
+                <li id="li_uploadimg" class="uploadBtn"><img src="/img/a.jpg" /></li>
+            </ul>
+        </div>
+        <div id="sh_submit" class="subBtn">提交</div>
+        <div id="sh_submit_o" class="subBtn" style="display:none;">提交中，请稍后</div>
+
+    </div>
+    <!--<script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/MyTKSH_SQ.js"></script>-->
+</body>
+
+
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>测试卡券JSAPI</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div id="showlog"></div>
+    <div id="showbody">
+        <button type="button" id="btn_addcard">添加卡券</button>
+    </div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://s.jyh.com/js/jquery-2.1.4.js"></script>
+    <script src="../js/g_header.js"></script>
+    <script src="../js/functions/g_Const.js"></script>
+    <script src="../js/functions/g_Type.js"></script>   
+    <script src="../js/tost.js"></script>
+    <script>
+
+        if (IsInWeiXin.check()) {
+           
+            WX_JSAPI.wx = wx;
+            WX_JSAPI.wxparam.debug = false;
+
+            WX_JSAPI.LoadParam("addCard");
+        }
+        $("#btn_addcard").on("click", function () {
+            var objcard = {
+                cardList: [{ "cardExt": "{\"nonce_str\":\"1c7f82124c894be2b8274d8f732a17af\",\"signature\":\"0694E2610652823D622B95F66DACBC1AE1003F7C\",\"timestamp\":\"1447918950\"}", "cardId": "p-voTt1p_VGTGdPt0YAoOh6MUiOU" }],
+                success: function (res) {
+                    alert('已添加卡券：' + JSON.stringify(res.cardList));
+                }
+
+            };
+            wx.addCard(objcard);
+        })
+    </script>
+    <script src="../js/g_footer.js"></script>
+</body>
+</html>

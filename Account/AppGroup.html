@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>五味商城</title>
+    <!--<script src="/js/cdn.js"></script>-->
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Type.js"></script>
+    <!--<script src="/js/pages/AppGroup.js"></script>-->
+
+
+    <script type="text/javascript">
+    //    var staticlist = [[], ["/js/jquery-2.1.4.js", "/JS/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/pages/AppGroup.js"]];
+    //WriteStatic(staticlist);
+
+        function up_urlparam(sKey) {
+            var sReturn = "";
+            var sUrl = window.location.href;
+
+            var sParams = (sUrl.indexOf("?") != -1) ? sUrl.split('?')[1].split('&') : '';
+            for (var i = 0, j = sParams.length; i < j; i++) {
+
+                var sKv = sParams[i].split("=");
+                if (sKv[0] == sKey) {
+                    sReturn = sKv[1];
+                    break;
+                }
+            }
+
+            return sReturn;
+        }
+
+        //$(function(){
+
+        //if (window.localStorage) {
+        //    alert("支持html5");
+        //    //localStorage.setItem("menuTitle", "values");	
+        //} else {
+        //    alert("不支持html5");
+        //    //Cookie.write("menuTitle", "values");	
+        //}
+
+        ////=======接收参数=========================
+        //app名称
+        var app = up_urlparam("app");//GetUrlParam.up_urlparam("app");//GetQueryString("app")
+        //来源android或ios
+        var from = up_urlparam("from");//GetQueryString("from")
+        //登录：login，注册：register，重置密码：resetPassword
+        var to = up_urlparam("to")
+        //微信授权号，不需要微信登录可传空
+        var wxopenid = up_urlparam("wxopenid");//GetQueryString("wxopenid")
+
+        var backurl = up_urlparam("backurl");
+
+        //=======业务处理===========================
+        //AppGroup.GoTo(app, from, to, wxopenid);
+
+
+        var tt = "&app=" + app + "&from=" + from + "&to=" + to + "&wxopenid=" + wxopenid + "&backurl=" + backurl;
+
+        switch (to) {
+            case "login"://登录
+                window.location.href = g_const_PageURL.Login + "?t=" + Math.random() + tt;
+                break;
+            case "register"://注册
+                window.location.href = g_const_PageURL.Reg + "?t=" + Math.random() + tt;
+                break;
+            case "resetPassword"://重置密码
+                window.location.href = g_const_PageURL.ResetPassword + "?t=" + Math.random() + tt;
+                break;
+        }
+        //});
+    </script>
+</head>
+<body>
+
+</body>
+</html>

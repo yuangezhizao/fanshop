@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>饭好了</title>
+    <script>
+        if (window.location.protocol == "https:") {
+            var reurl = window.location.href.replace("https://", "http://");
+            //console.log(reurl);
+            window.location = window.location.href.replace("https://", "http://");
+        }
+    </script>
+    <script src="http://s.jyh.com/js/jquery-2.1.4.js"></script>    
+    <script src="http://s.jyh.com/js/functions/g_Const.js"></script>
+   
+    <script src="http://s.jyh.com/js/tost.js"></script>
+    <script src="http://s.jyh.com/js/focus.js"></script>
+    <link href="http://s.jyh.com/css/sbc.css" rel="stylesheet" />
+    <link href="http://s.jyh.com/css/style.css" rel="stylesheet" />
+    <script src="http://s.jyh.com/js/pages/yaotv.aspx"></script>      
+</head>
+<body class="qqbg">
+    <div id="bodycontent">
+        <header>商品详情</header>
+        <div class="wrap share-pro">
+            <div class="box pro">
+                <div class="banner">
+                    <div class="scroll-wrapper" id="idContainer2" ontouchstart="touchStart(event)" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);">
+                        <ul class="scroller" id="idSlider2"></ul>
+                        <div class="banner-numw">
+                            <ul class="banner-num" id="idNum"></ul>
+                        </div>
+                        <div id="div_productStatus">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="num">
+                    <h2 id="productName"></h2>
+                    <p class="bianh"></p>
+                    <div class="sbox">
+                        <div class="time" style="display:none;" id="div_left_time"></div>
+                        <p class="price"></p>
+                    </div>
+                </div>
+                <div class="num-toal">
+
+                </div>
+            </div>
+            <div class="sales">
+            </div>
+            <div class="box sizes">
+
+            </div>
+            <div class="bz">
+            </div>
+            <div class="box">
+                <div class='tabnav' id="menu">
+                    <ul>
+                        <li onclick="javascript: page_yaotv_product_detail.TabnavSelect(0);" class="on"><span>图文详情</span></li>
+                        <li onclick="javascript: page_yaotv_product_detail.TabnavSelect(1);"><span>规格参数</span></li>
+                    </ul>
+                </div>
+                <div id="tabc0" class='tabc'>
+
+                </div>
+                <div id="tabc1" class="no">
+                    <div class="param">
+
+                    </div>
+                </div>
+            </div>
+            <div class="ch-bn"><img src="http://s.jyh.com/img/ch-img/logo.png" style="height:22px;width:57px;">本页面内容和服务由“家有购物频道”提供</div>           
+        </div>
+
+        
+        <div class="bottom"><!--<span id="maintelbuy">电话订购</span>--><a operate="orderconfim" id="mainbuy">立即购买</a></div>
+        <script type="text/template" id="tpl_sku">
+            <div class="tabw" style="-webkit-overflow-scrolling: touch; z-index:1000;">
+                <a class="btn-close">关闭</a>
+                <div class="pop-t">
+                    <img src="{{productpic}}" alt="" class="fl">
+                    <div class="imgr">
+                        <p class="pt">{{productName}}</p>
+                        <p class="pprice"><b>￥</b>{{sellPrice}}</p>
+                        <p class="size">请选择：{{productStyleName}}</p>
+                    </div>
+                </div>
+                <div class="abox">
+                    <div class="bbox">
+                        <div class="pop">
+                            <div class="pop-c">
+                                {{productStyleList}}
+                                <div class="sel selnum">
+                                    <div class="tdiv fl">购买数量</div>
+                                    <div class="bnum fr">
+                                        <form><a class="btn-minus">减一</a><input id="buycount" type="text" value="1" readonly="readonly" /><a class="btn-add">加一</a></form>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer><a class="btn-buy" operate="orderconfim" id="sku_buy">立即购买</a></footer>
+                <div class="botline">&nbsp;</div>
+            </div>
+        </script>
+        <div class="fbox ftel" style="display: none;">
+            <div class="sc">为节省您的时间，请告知客服<br>此商品的编号<span class="bh" style="color: #e83028;padding: 0 0 0 .5em;"></span></div>
+            <div class="btns">
+                <a onclick="page_yaotv_product_detail.exitCall()">取消</a><a href="tel:400-867-8210" class="ok" onclick="page_yaotv_product_detail.exitCall()">确定</a>
+            </div>
+        </div>
+        <div id="mask">&nbsp;</div>
+        <script type="text/javascript">               
+             page_yaotv_product_detail.Init(); 
+        </script>
+       
+        
+    </div>   
+    
+</body>
+</html>

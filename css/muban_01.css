@@ -1,0 +1,40 @@
+﻿ .mu_vidio .live-goods-info{
+    padding: 0 0.1rem;
+    position: relative;
+    border-top: 0.01rem solid #e5e5e5;
+
+  } 
+  .mu_vidio .live-goods-info h1 {
+    /*max-height: 0.18rem;*/
+    max-height: 0.36rem;
+    overflow: hidden;
+    padding-top: 0.13rem;
+    margin-bottom: 0.12rem;
+    font-size: 0.14rem;
+    color: #333;
+}
+ .mu_vidio .live-goods-info a {
+    color: #333;
+}
+ .mu_vidio .live-goods-info p {
+	font-size: 0.12rem;
+    padding-bottom: 0.10rem;
+    color: #dc0f50;
+}
+.f12 {
+    font-size: .12rem;
+}
+.f18 {
+    font-size: .18rem;
+}
+.old_price{font-size:.1rem; color:#666; text-decoration: line-through ; display:inline-block; margin-left:6px; }
+ .mu_vidio .live-status i {
+    height: 0.18rem;
+    color: #dc0f50;
+    padding: 0 0.13rem 0 0.25rem;
+    display: inline-block;
+    background: url(../img/w_img/live-icon.png) no-repeat left center;
+    background-size: 0.18rem;
+}
+.mu_buy{position:absolute; width:.82rem; height:.32rem; right:0; top:2rem; background:#dc0f50; 
+	line-height:3.2rem; text-align:center; font-size:.14rem; color:#000;  }

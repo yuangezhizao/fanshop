@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+	<meta charset="UTF-8">
+	<title>wap扫码引导下载页</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script type="text/javascript" src="/js/shareGoodsDetail.js"></script>
+    <script type="text/javascript">
+        function Enter() {
+            if (localStorage[g_const_localStorage.SMG_ProductID] != null && localStorage[g_const_localStorage.SMG_ProductID] != "")
+            {
+                if (localStorage[g_const_localStorage.SMG_ProductID] != "") {
+                    pid = localStorage[g_const_localStorage.SMG_ProductID];
+                    localStorage[g_const_localStorage.SMG_ProductID] = "";
+                    window.top.location.href = g_const_PageURL.Product_Detail + "?pid=" + pid + "&from_smg=1" + "&t=" + Math.random();
+                }
+            }
+            else 
+            {
+                window.top.location.href = g_const_PageURL.Index+"?t=" + Math.random();
+            }
+            return false;
+        }
+        //关闭当前页面
+        function GetQueryString(name) {
+            var results = new RegExp('[\\?&]' + name + '=([^&#]*)', "ig").exec(window.location.href);
+            if (results != null)
+                return results[1];
+            else
+                return "";
+        }
+    </script>
+</head>
+<body>
+<!--<div class="wrap">
+	<img src="img/bg.jpg" alt="">
+    <a onclick="Enter()" class="enter"><img src="img/enter.png" alt="进入触屏版"></a>
+    <a onclick="openApp()" class="down"><img src="img/down.png" alt="下载客户端"></a>
+    <p><img src="img/bottom_bg.png" alt=""></p>
+</div>-->
+</body>
+</html>

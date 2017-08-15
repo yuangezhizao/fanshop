@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+
+    <script src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/g_header.js"></script>
+
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>-->
+
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css", "/css/sbc.css"], ["/js/jquery-2.1.4.js", "/js/jquery.mobile-1.4.5.js", "/JS/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/focus.js", "/js/pages/MyCoupon.js", "/js/g_footer.js"]];
+    WriteStatic(staticlist);
+    </script>
+
+
+</head>
+<body>        
+    <!--未使用区域页码-->
+    <input type="hidden" id="hid_pagenum_weishiyong" value="1" />
+    <!--未使用总页码-->
+    <input type="hidden" id="hid_sumpage_weishiyong" value="0" />
+
+    <!--历史区域页码-->
+    <input type="hidden" id="hid_pagenum_lishi" value="1" />
+    <!--历史总页码-->
+    <input type="hidden" id="hid_sumpage_lishi" value="0" />
+
+    <!--展示区域（0：未使用，1：历史）-->
+    <input type="hidden" id="hid_couponLocation" value="0" />
+    <!--起始坐标-->
+    <input id="touchStart" type="hidden" />
+    <!--结果计算-->
+    <input id="touchMove" type="hidden" />
+    <!--下拉显示的层-->
+    <!-- <div id="div_scrolldown" class="d_refresh" style="display:block">
+    </div> -->
+    <div id="div_scrolldown"  class="d_refresh">
+        <div class="d_img"><img src="../img/loading.jpg"></div>
+        <div class="d_refresh_div">
+            <div>下拉可以刷新</div>
+            <div class="d_cfs9">上次刷新时间：2016-11-17 15:59:35</div>
+        </div>
+    </div>
+
+    <section class="container" module="202054">
+
+        <h1 class="back-hd"><a  class="go-back"></a>我的优惠劵<a class="back-right">兑换优惠劵</a></h1>
+        <article id="ScrollArea" class="my-coupon">
+            <ul class="coupon-tab">
+                <li id="li_weishiyong" class="curr">未使用</li>
+                <li id="li_lishi">历史</li>
+            </ul>
+            <section id="section_weishiyong" class="coupon-area">
+                <ul id="ul_weishiyong" class="coupon-list">
+                    <!--<li>
+                        <div class="coupon-info clearfix">
+                            <div class="coupon-price">
+                                <span><i>¥</i>1000</span>
+                                <em>满300,000元可用</em>
+                            </div>
+                            <h1 class="coupon-txt">仅服装服装品类使用服装品类使用</h1>
+                            <p class="coupon-time">
+                                <span>使用期限：</span>2015.04.03-2015.07.03
+                            </p>
+                        </div>
+                        <div class="coupon-caption">
+                            <a class="coupon-btn"></a>
+                            <p>
+                                1. 优惠劵使用说明，使用限制，品类太多则后台配置<br>
+                                说明；<br>
+                                2. 建议按序号分条展示，文本左靠齐；<br>
+                                3. 使用范围说明运营自行配置，限制200字；<br>
+                                4. 有使用范围说明时显示箭头，不配置则不显示。<br>
+                            </p>
+                        </div>
+                    </li>-->
+                </ul>
+            </section>
+            <section id="section_lishi" class="coupon-area" style="display: none;">
+                <ul id="ul_lishi" class="coupon-list" module="202055">
+                    <!--<li class="coupon-history">
+                        <div class="coupon-info apply clearfix">
+                            <div class="coupon-price">
+                                <span><i>¥</i>1000</span>
+                                <em>满300,000元可用</em>
+                            </div>
+                            <h1 class="coupon-txt">仅服装服装品类使用服装品类使用</h1>
+                            <p class="coupon-time">
+                                <span>使用期限：</span>2015.04.03-2015.07.03
+                            </p>
+                        </div>
+                        <div class="coupon-caption">
+                            <a class="coupon-btn"></a>
+                            <p>
+                                1. 优惠劵使用说明，使用限制，品类太多则后台配置<br>
+                                说明；<br>
+                                2. 建议按序号分条展示，文本左靠齐；<br>
+                                3. 使用范围说明运营自行配置，限制200字；<br>
+                                4. 有使用范围说明时显示箭头，不配置则不显示。<br>
+                            </p>
+                        </div>
+                    </li>-->
+
+                </ul>
+            </section>
+        </article>
+    </section>
+
+    <!--<script src="/JS/pages/MyCoupon.js"></script>
+    
+    <script src="/JS/g_footer.js"></script>-->
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101064";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

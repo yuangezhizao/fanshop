@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/style.css", "/css/sbc.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script> 
+    <style type="text/css">
+        .d_sale_header {
+            background: #fff;
+            color: #333;
+            font-size: 18px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #b2b2b2;
+        }
+
+        .d_jt_left::after {
+            content: "";
+            width: 21px;
+            height: 21px;
+            background: url(/img/d_btn_3.png);
+            background-size: 100%;
+            position: absolute;
+            left: 1rem;
+            top: 12px;
+        }
+    </style>
+
+</head>
+<body class="ddbg">
+    <header class="d_sale_header" module="202095"><a id="btnBack" class="fl d_jt_left"></a>商品抢光了</header>
+    <div class="top" module="202095">
+        <div class="txt"><div><img src="img/share-logo.png" alt=""></div><span>您的好友送您<em>5%返现特权</em>，购买任一商品都可以使用哦！</span></div>
+        <div class="btns"><span class='lspan'><a href="#">打开APP</a></span><span class='rspan'><a id="btnlqfxtq">领取返现特权</a></span></div>
+    </div>
+    <div class="nodata">
+        <div class="img">
+            <img src="img/bg-nodata.png" alt="" />
+
+        </div>
+        <p id="sMessage">抱歉您来晚一步，商品已抢光了，<br />来看看最新优惠商品吧~</p>
+    </div>
+    <div class="wrap wrap-tpro wrap-ts">
+        <h1><b>&nbsp;</b>优惠商品</h1>
+        <div class="lidw">
+            <div id="MonthTopProduct" module="202096"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js","/js/g_footer.js", "/JS/pages/Product_List.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "102009";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

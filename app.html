@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="/JS/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><h3></h3></td>
+            <td></td>
+            <td><a id="btncoupon">跳详情</a></td>
+        </tr>
+        <tr>
+            <td><h3></h3></td>
+            <td></td>
+            <td><a id="btnpro">关闭页面</a></td>
+        </tr>
+    </table>
+
+
+
+    <script>
+        function AppInit() {
+            $("#btncoupon").click(function () {
+                window.notify("goodsdetail");
+            });
+            $("#btnpro").click(function () {
+                window.notify("close_window");
+            });
+        }
+        AppInit();
+    </script>
+</body>
+</html>

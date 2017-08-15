@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script type="text/javascript">
+        function gotoProduct() {
+            pid = GetQueryString("p")
+            var dateNow = new Date().getTime();
+            var dateChange = new Date(g_const_SMG_ChangeDate.replace(/-/g, "/")).getTime();
+            //if (dateNow > dateChange) {
+            //    //alert(1);
+
+            //    localStorage[g_const_localStorage.SMG_ProductID] = pid;
+            //    window.top.location.href = g_const_PageURL.SMG_Index + "?t=" + Math.random();
+            //}
+            //else {
+            //    //alert(2);
+            //    if (pid == "") {
+            //        window.top.location.href = "/index.html?t=" + Math.random();
+            //    }
+            //    else {
+                    localStorage[g_const_localStorage.SMG_ProductID] = pid;
+                    window.top.location.href = "/Product_Detail.html?pid=" + pid + "&t=" + Math.random() + "&from_smg=1";
+                }
+            //}
+            //return false;
+       // }
+        //关闭当前页面
+        function GetQueryString(name) {
+            var results = new RegExp('[\\?&]' + name + '=([^&#]*)', "ig").exec(window.location.href);
+            if (results != null)
+                return results[1];
+            else
+                return "";
+        }
+    </script>
+</head>
+<body onload="gotoProduct()">
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+.caption p{ padding-top:10px; overflow:hidden; width:100%}
+.rm{ color:#dc0f50; font-size:20px; font-family:"Adobe 黑体 Std"}
+.textp{padding-top:10px; padding-left:10px; padding-right:10px;}
+.tp{padding-bottom:10px; padding-left:10px; padding-right:10px;}
+.inp{width:328px;  height:30%; margin-top:10px;}
+.iinp{text-align:center; padding-bottom:10px;}
+#btt{float:right; margin-right:5px;}
+#sl{margin-bottom:10px;}
+#wpt{padding-top:59px; }
+#textpp{padding-top:60px; text-align:center}
+#inp{padding-top:5px; text-align:center}
+#hea_in{ float:left; padding-left:10px;}
+#he_r{float:right; padding-right:10px;}
+#bo_in{color:#000;background:#fbe9d3;}
+#imagebt{position:absolute; right:10px; top:70px;}
+#condiv{margin:auto;}
+#image_p{padding-left:20px;}
+#pdiv{padding-top:60px;}
+#nont{background:#fbe9d3;}
+#overp{height:25px; overflow:hidden; text-align:center;}
+#keTitle{background:#000; margin:auto; position: absolute; left:5%; text-align:center; border:#000 1px solid; width:320px; color:#FFF}
+#imp{padding-bottom:10px;}
+<!----------------------->
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+.slide_container {
+ 
+  position: relative;
+  float: left;
+  width: 100%;
+  }
+
+.slide {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.slide li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+  
+ .slide img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  border: 0;
+  }
+
+.slide .caption {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  text-shadow: none;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  margin: 0;
+  max-width: none;
+  }
+  
+ .slide_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 60%;
+  left: 0;
+  opacity: 0.7;
+  z-index: 3;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height:61px;
+  width:38px;
+  background: transparent url("../images/themes.png") no-repeat left top;
+  margin-top: -45px;
+  }
+
+.slide_nav:active {
+  opacity: 1.0;
+  }
+
+.slide_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0;
+  }

@@ -1,0 +1,170 @@
+﻿
+<html>
+<head>
+    <meta charset="GBK">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+    <title>充值中心 </title>
+    <script src="/js/cdn.js"></script>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <!--<script src="/JS/jquery.mobile-1.4.5.js"></script>-->
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+    <script src="/JS/JValidator.js"></script>
+
+    <link rel="stylesheet" href="/css/cz_normalize.css">
+    <link rel="stylesheet" href="/css/cz_buy_v2.css">
+    <link rel="stylesheet" href="/css/cz_m_chong_vtms.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <script type="text/javascript">
+        var _speedMark = new Date();
+    </script>
+    
+    <style id="stylesheet">
+        body {
+            color: #000000;
+        }
+        /*cncolor*/
+
+        .tabs .cur {
+            color: #2C61C3;
+        }
+        /*tbfcolorc*/
+
+        .tabs .cur {
+            border-color: #ff0000;
+        }
+        /* tblinec*/
+
+        .tabs li {
+            width: 33.33%;
+        }
+
+        .price {
+            color: #FF0000;
+        }
+        /*pcolor*/
+
+        .value-sel .cur {
+            background: #D00007;
+            border-color: #C01011;
+        }
+
+        .btn-chong {
+            border-color: #C01011;
+            background: #E50008;
+            background: -o-linear-gradient(#E50008, #BC0005);
+            background: -moz-linear-gradient(#E50008, #BC0005);
+            background: -webkit-linear-gradient(#E50008, #BC0005);
+            background: linear-gradient(#E50008, #BC0005);
+        }
+    </style>
+
+    <script type="text/javascript" src="/js/pages/mobileCZ.js"></script>
+
+</head>
+<body>
+    <input id="hid_wxpaytype" type="hidden" value="3" />
+    <!--订单总页数-->
+    <input type="hidden" id="hid_sumpage" value="0" />
+    <!--页码-->
+    <input type="hidden" id="sel_nextPage" value="1" />
+    <!--登录手机号-->
+    <input type="hidden" id="hidLoginName" value="" />
+    <!--来源类型-->
+    <input type="hidden" id="hidclienttype" value="4" />
+    <!--选择产品编号-->
+    <input type="hidden" id="hidselProductID" value="" />
+    <!--选择产品提交订单号-->
+    <input type="hidden" id="hidselorderno" value="" />
+    <!--全部资金产品面值-->
+    <input type="hidden" id="hidallChzAmount" value="10|20|30|50|200|300" />
+    <!--全部流量产品面值-->
+    <input type="hidden" id="hidallChzAmountLiuliang" value="3@10|5@30|30@500|6@50|15@200|40@700|50@1000|200" />
+
+    <!--全部流量产品面值(移动)-->
+    <input type="hidden" id="hidallChzAmountLiuliang_yd" value="3@10|5@30|30@500|40@700|50@1000|70@2000" />
+    <!--全部流量产品面值(联通)-->
+    <input type="hidden" id="hidallChzAmountLiuliang_lt" value="6@50|15@200" />
+    <!--全部流量产品面值(电信)-->
+    <input type="hidden" id="hidallChzAmountLiuliang_dx" value="10@60|20@150|30@300" />
+
+    <!--全部流量产品面值-->
+    <input type="hidden" id="hidselcztype" value="00001" />
+    <!--选种产品面额金额-->
+    <input type="hidden" id="hidczmoney" value="" />
+    <!--选种产品支付金额-->
+    <input type="hidden" id="hidpaymoney" value="" />
+    <!--选种产品描述-->
+    <input type="hidden" id="hidmemo" value="" />
+    
+    
+    <div class="main">
+
+        <section class="container" module="202091">
+            <h1 class="back-hd"><a class="go-back"></a>充值中心</h1>
+
+            <div class="bd">
+                <ul class="tabs" id="tabList">
+                    <li><a class="cur" id="cz1">充话费</a></li>
+                    <li><a id="cz2">充流量</a></li>
+                </ul>
+
+                <div class="tab-cont show1" id="frames">
+                    <div class="form-list">
+                        <div id="chongform" class="chong-form">
+
+                            <div id="cz1_div" class="chong-mb-form">
+                                <input type="text" name="mobileNumInput" id="mobileNumInput" placeholder="请输入手机号码" value="" class="inputText" maxlength="11">
+                                <div class="tips-warning">错误提示错误提示错误提示</div>
+                                <!--资金充值  开始-->
+                                <ul id="value_sel" class="value-sel group"></ul>
+                                <!--资金充值  结束-->
+                                <!--流量充值  开始-->
+                                <ul id="value_sel_ll" class="value-sel group" style="display:none;"></ul>
+                                <!--流量充值  结束-->
+                                <div class="charge-info">
+                                    <p>描述：<span id="mb_area"> </span></p>
+                                    <p>价格：<em id="mb_price" class="price"></em> 元</p>
+                                </div>
+                                <a id="mb_submit" class="btn-chong btn2">立即充值</a>
+                                <a id="mb_submit_wite" class="pay-btn-gray" style="display:none">正在申请支付</a>
+                                <div class="charge-info">
+                                    <p id="Discount_p"></p>
+                                    <!--<p><a target="_blank" href="">充值帮助</a></p>-->
+                                </div>
+                                </divid>
+                            </div>
+                            <div id="waitdiv" class="tips-warning" style="display:none;">提交数据中，请稍等</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            </section>
+            <!--底部-->
+            <script src="/JS/g_footer.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "102007";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

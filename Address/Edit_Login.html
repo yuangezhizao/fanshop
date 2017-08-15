@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/tost.js"></script>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/JValidator.js"></script>
+</head>
+<body>
+    <header><a id="btnCancel" class="jt">返回</a>修改收货地址<a href="#" class="bc" id="btnSave">保存</a></header>
+    <section class="submit">
+        <ul>
+            <li><b>收货人姓名</b><input type="text" value="" placeholder="请输入收货人姓名" id="txtUserName"></li>
+            <li><b>手机号码</b><input type="tel" value="" placeholder="请输入收货人手机号" id="txtPhoneNo"></li>
+            <li>
+                <b>所在地区</b>
+                <select id="selProvince">
+                    <option value="请选择省">请选择省</option>
+                </select>
+                <select id="selCity">
+                    <option value="请选择市">请选择市</option>
+                </select>
+                <select id="selDistrict">
+                    <option value="请选择区">请选择区</option>
+                </select>
+            </li>
+            <li><b>详细地址</b><input type="text" value="" placeholder="请输入详细地址" id="txtAddressDetail"></li>
+        </ul>
+        <div class="fbox ftel" style="display:none">
+            <div class="sc jxtx"><span>提示</span>放弃填写的内容吗？</div>
+            <div class="btns">
+                <a operate="yes">放弃</a><a class="ok" operate="no">继续填写</a>
+            </div>
+        </div>
+        <div id="mask" style="display:none;z-index:20;">&nbsp;</div>
+        <!--<div class="toast curr"><p>验证码错误</p></div>
+        <div class="toast curr" style="display:none;"><p>详细地址字数需控制在5－40之间哦~</p></div>-->
+    </section>
+    <script src="/js/pages/AddressBase.js"></script>
+    <script src="/js/pages/AddressEditLogin.js"></script>
+</body>
+</html>

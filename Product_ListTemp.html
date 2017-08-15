@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link href="/css/style.css" rel='stylesheet'>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/tost.js"></script>
+</head>
+<body>
+    <table>
+        <tr><td><input id="txtSearch" type="text" onp /><input id="btnSearch" type="button" value="搜索" /></td></tr>
+        <tr>
+            <td>
+                <div id="divResultNull" style="display:none">没有商品</div>
+                <span onclick="Product.Change_Sort('0')">综合</span>
+                <span onclick="Product.Change_Sort('1')">销量</span>
+                <span onclick="Product.Change_Sort('2')">价格</span>
+                <span onclick="Product.Change_Sort('3')">人气</span>
+                <div id="divResultList"></div>
+                <div id="divResultPic"></div>
+                
+            </td>
+        </tr>
+    </table>
+    <script src="/js/pages/Product_List.js"></script>
+    <script src="/js/g_footer.js"></script>
+</body>
+</html>

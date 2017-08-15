@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript" src="http://tj.ichsy.com/UpImg/jyhshop/goodsappprice.js"></script>
+    <!--<script type="text/javascript" src="http://172.18.19.166:8002/UpImg/hjy_shop/goodsappprice.js"></script>-->
+
+    <script type="text/javascript">
+        var staticlist = [["/css/sbc.css", "/css/style.css"], ["/js/functions/g_Const.js", "/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script>
+        var dateNow = new Date().getTime();
+        var dateChange = new Date(g_const_SMG_ChangeDate.replace(/-/g, "/")).getTime();
+        localStorage[g_const_localStorage.SMG_ProductID] = "";
+        if (dateNow > dateChange) {
+            var pid = GetQueryString("pid");
+            if (pid.indexOf("IC_SMG_") > -1) {
+                if (GetQueryString("from_smg") == "") {
+                    localStorage[g_const_localStorage.SMG_ProductID] = pid;
+                   // window.top.location.replace(g_const_PageURL.SMG_Index + "?t=" + Math.random());
+                }
+            }
+        }
+
+    </script>
+    <link href="css/sbc.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body class="qqbg">
+    <div id="bodycontent" module="202044">
+        <div class="top" style="display:none">
+            <a href="javascript:void(0);" class="btn-close">关闭</a>
+            <div class="txt"><div><img src="img/share-logo.png" alt=""></div><span>您的好友<b id="sharephone" style="display:none;"></b>送您<em>1次返现特权</em>,购买任一产品都可以使用哦！</span></div>
+            <div class="btns"><span class='lspan'><a id="btnOpenApp2">打开APP</a></span><span class='rspan'><a id="btnlqfxtq">领取返现特权</a></span></div>
+        </div>
+        <!-- app tips -->
+        <footer class="app" style="position: static;display:none" id="app_com">
+            <a href="javascript:;" class="app-close"></a>
+            <a href="javascript:;" class="app-logo"></a>
+            <p><em><span id="sp_guide"></span></p>
+            <a href="javascript:;" class="open-app" id="btnOpenApp1">打开客户端</a>
+        </footer>
+        <footer class="app" style="position:fixed;left:0;display:none" id="app_smg">
+            <!--<a href="javascript:;" class="app-close"></a>-->
+            <a href="javascript:;" class="app-logo"></a>
+            <p><span id="sp_guide_smg"></span></p>
+            <a href="javascript:;" class="open-app" id="btnOpenApp3">打开客户端</a>
+        </footer>
+        <!-- end -->
+        <header><span class="fl jt">向左</span>商品详情</header>
+        <div class="wrap share-pro">
+            <div class="box pro">
+                <div class="banner">
+                    <div class="tip" id="div_productStatus"><!--<p>没货啦，下次早点来哦～</p><span>&nbsp;</span>--></div>
+                    <div class="scroll-wrapper" id="idContainer2" ontouchstart="touchStart(event)" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);">
+                        <ul class="scroller" id="idSlider2" module="202045"></ul>
+                        <div class="banner-numw">
+                            <ul class="banner-num" id="idNum" module="202045"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="spec">
+                    <div class="spec_price"><i>￥</i>000.<i>00</i></div>
+                    <!-- <div class="spec_class">
+                        <div class="spec_class_pic"><img src="img/wza_img/spec_01.png"></div>
+                        <div class="spec_class_time">
+                            仅限6.16-23日
+                        </div>
+                    </div> -->
+                    <div class="spec_class">
+                        <div class="spec_class_pic"><i>闪购价</i></div>
+                        <div class="spec_class_time">
+                            <p><b>45</b>:<b>45</b>:<b>45</b>:<b>8</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="num">
+                    <div class="sbox">
+                        <div>
+                            
+                        </div>
+                        <p class="price"></p>
+                        
+
+                        <div class="d_remain" id="div_left_time" style="display:none;"><!--剩余<span>0</span>天<span>10</span>小时<span>45</span>分<span>28</span>秒--></div>
+                        <div class="d_mth_ret">
+                            <div class="fl d_mth">返现：<span id="sp_dismoney"><!--￥10.95--></span></div>   
+                            <div class="fr d_ret">月销：<span id="sp_month"><!--300--></span></div>
+                            <div class="d_mth" id="appprice" style="display:none;clear:both;font-size:1.4rem;color:#ffa729;"><em class="nprice"></em></div>
+                        </div>
+                        <!--App指导价-->
+                        
+                    </div>
+                    <div class="festival">
+                        <span class="festival_img"><img src="img/wza_img/icon_618@2x.png"></span>
+                        <span class="festival_txt">此商品参加沙漏咖啡即可169大促销</span>
+                    </div>
+                    <!-- 秒杀价 活动 -->
+                    <div class="tv_goods_info">
+                        <h2>腰加厚毛呢阔腿休闲裤大码 七分哈伦九分直通就流口水的就废了</h2>
+                        <p>山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品山品</p>
+                    </div>
+                    <!--秒杀价 活动 立即购买按钮  -->
+                    <div class="tv_goPay"><span>2tian12shi93fen19.9秒后结束</span> 立即购买</div>
+                    <div class="d_gd_name">
+                        <img id="img_gd_name" src="" style="display:none">
+                        <span id="productName"></span>
+                        
+                    </div>
+                    <div id="div_good_tip" class="good_tip" style="display:none"></div>
+                    <div class="d_act_ts" id="d_act_ts" onclick="Product_Detail.OpenActLayer()"></div>
+                    <div class="sales" style="display:none" onclick="Product_Detail.CloseActLayer()">
+                    </div>
+                    <div class="box sizes">
+                        <!--<div class="lid">
+                            <span class="fr jt">跳转</span>
+                            <em>查看：</em>颜色 款式
+                        </div>-->
+                    </div>
+                    <div class="bz">
+                        <!--<span><b class="zing">&nbsp;</b>正品保障</span>
+                        <span><b class="by">&nbsp;</b>全场包邮</span>
+                        <span class="sec"><b class="qi">&nbsp;</b>7天无理由退换货</span>-->
+                    </div>
+                </div>
+            </div>
+            <!-- 商品评价区域Begin -->
+            <div class="commodity_review" id="div_commodity_review">
+                <!--<h2>
+            <a href="">
+                <b>商品评价</b>
+                <p>好评度<i>98%</i>332342人评论</p>
+            </a>
+        </h2>
+        <ul class="bd">
+            <li>
+                <img src="img/ch-img/dome_4.jpg" alt="" class="pic">
+                <h3><font class="f4"></font>程****程</h3>
+                <b>此处只显示一条用户评论，使用感觉很好啊，买来送人的，母亲节买的时候优惠，妈妈很喜欢，还会回购哦~</b>
+                <strong>2015-02-01&emsp;款式：黑色&emsp;规格：M</strong>
+            </li>
+        </ul>-->
+            </div>
+            <div class="commodity_review" id="div_commodity_review_no">
+                <h2>
+                    <a href="">
+                        <b>商品评价</b>
+                        <p>暂无评价</p>
+                    </a>
+                </h2>
+            </div>
+                <!-- 商品评价区域End -->
+                <!-- 相关推荐Begin -->
+                <div class="relevant">
+
+                </div>
+                <!-- 相关推荐End -->
+                <div id="div_detaillist" class="box">
+                    <div class='tabnav' id="menu">
+                        <ul class="clearfix">
+                            <li onclick="javascript:test_item(0);" class="on"><span>图文详情</span></li>
+                            <li onclick="javascript:test_item(1);"><span>规格参数</span></li>
+                            <li onclick="javascript:test_item(2);" style="display:none" id="li_commonquestion"><span>常见问题</span></li>
+                        </ul>
+                    </div>
+                    <div id="tabc0" class='tabc'>
+
+                    </div>
+                    <div id="tabc1" class="no">
+                        <div class="param">
+
+                        </div>
+                    </div>
+                    <div id="tabc2" class="no">
+                        <div class="issue" id="div_commonquestion">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="ch-bn"><img src="img/ch-img/logo.png" alt=""></div>
+                <div class="ch-icon">
+                    <!--电话订购-->
+                    <a class="ch01 gray" id="maintelbuy"></a>
+                    <!--购物车-->
+                    <a class="ch02" onclick="Product_Detail.Load_Product();"><i>0</i></a>
+                </div>
+            </div>
+        <!--=更改地址==-->
+        <div class="change" style="display:none;"><a>更改地址</a><span></span>不可售</div>
+        <div id="mask">&nbsp;</div>
+        <div class="bottom" id="bottom_div">
+            <a id="a_Collection" class=" gr">收藏</a>
+            <a class="atBuy" operate="orderconfim" id="mainbuy">立即购买</a>
+            <a class="tocart" operate="addtocart" id="mainaddtocart">加入购物车</a>
+            <a id="mainseckillbuy" operate="orderconfim"></a>
+        </div>
+
+        
+        <div class="fbox ftel" style="display: none;">
+            <div class="sc">为节省您的时间，请告知客服<br>此商品的编号<span class="bh" style="color: #e83028;padding: 0 0 0 .5em;"></span></div>
+            <div class="btns">
+                <a onclick="Product_Detail.exitCall()">取消</a><a href="tel:400-867-8210" class="ok" onclick="Product_Detail.exitCall()">确定</a>
+            </div>
+        </div>
+        <div id="pageloading" class="wrap-wait">
+            <div class="img">
+                <img src="img/waiting.gif" alt="" />
+            </div>
+            <p>拼命加载中<br />...</p>
+        </div>
+    </div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <script type="text/template" id="tpl_sku">
+        <div class="tabw" module="202046" style="-webkit-overflow-scrolling: touch; z-index:1000;">
+            <a class="btn-close">关闭</a>
+            <div class="pop-t">
+                <img src="{{productpic}}" alt="" class="fl">
+                <div class="imgr">
+                    <p class="pt">{{productName}}</p>
+                    <p class="pprice"><b>￥</b>{{sellPrice}}</p>
+                    <p class="size">请选择：{{productStyleName}}</p>
+                </div>
+            </div>
+            <div class="sale_area">
+                <h2>以下区域有售</h2>
+                <p>{{selectarea_city}}</p>
+                <div class="select_add" style="display:none;">
+                    <h3><a>{{selectarea_pro}}</a><span>{{selectarea_city}}</span></h3>
+                    <ul id="provlist" style="display:none">
+                        {{provlist}}
+                    </ul>
+                    <ul id="arealist">
+                        {{arealist}}
+                    </ul>
+                </div>
+            </div>
+            <div class="abox">
+                <div class="bbox">
+                    <div class="pop">
+                        <div class="pop-c" module="202047">
+                            {{productStyleList}}
+                            <div class="sel selnum">
+                                <div class="tdiv fl">购买数量</div>
+                                <div class="bnum fr">
+                                    <form><a class="btn-minus">减一</a><input id="buycount" type="text" value="1" readonly="readonly" /><a class="btn-add">加一</a></form>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer><a class="btn-buy btn-jia" operate="addtocart" id="sku_addtocart">加入购物车</a> <a class="btn-buy" operate="orderconfim" id="sku_buy">立即购买</a><a id="sku_seckill_button" class="ch-seckill" operate="orderconfim">2天15:04:18.8后开始</a></footer>
+            <div class="botline">&nbsp;</div>
+        </div>
+    </script>
+    <script type="text/template" id="tpl_productComment">
+        <h2>
+            <a>
+                <b>商品评价</b>
+                <p>好评度<i>{{highPraiseRate}}%</i>{{commentSumCounts}}人评论</p>
+            </a>
+        </h2>
+        <ul class="bd">
+            {{productCommentList}}
+        </ul>
+    </script>
+    <script type="text/template" id="tpl_productComment_list">
+        <li>
+            <img src="{{userFace}}" class="pic">
+            <h3><font class="{{grade}}"></font>{{userMobile}}</h3>
+            <b>{{commentContent}}</b>
+            <strong>{{commentTime}}&emsp;{{skuStyle}}</strong>
+        </li>
+    </script>
+    <script type="text/template" id="tpl_recommend">
+        <h2>{{recBarName}}</h2>
+        <div class="bd">
+            <!--===ul的宽度是li的个数乘以102   下面例子是  5x102=510px ==-->
+            <ul style="{{ulwidth}}">
+                {{recommendlist}}
+            </ul>
+        </div>
+    </script>
+    <script type="text/template" id="tpl_recommend_list">
+        <li><a style="cursor:pointer" onclick="Product_Detail.Load_RecommendDetail({{productlink}})"><img src="{{productpicture}}" />{{productlabelpicture}}<b>{{productname}}</b><i>¥{{productprice}}</i></a></li>       
+    </script>
+    <script type="text/javascript">
+        var staticlist = [["/css/sbc.css", "/css/style.css"], ["/js/functions/g_Type.js", "/js/tost.js", "/js/focus.js", "/js/iscroll.js", "/js/shareGoodsDetail.js", "/js/pages/guide.js", "/js/g_footer.js", "/js/pages/product_detail.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script type="text/javascript" src="http://tj.ichsy.com/UpImg/jyhshop/merchant_act.js"></script>
+    <script type="text/javascript">
+            UserLogin.Check(function () {
+
+                Product_Detail.api_input.picWidth = 0;
+                Product_Detail.api_input.productCode = GetQueryString("pid");// "108577";
+                Product_Detail.api_input.buyerType = GetQueryString("buyerType");
+                Product_Detail.api_input.version = 1.0;
+                Product_Detail.Init();
+                Product_Detail.GetDetail();
+                Product_Detail.RefreshSecKill();
+            });
+
+            //g_type_cart.Upload(function () { alert('同步完成');});
+    </script>
+
+
+    <!--搜狐接口接获得用户端IP口-->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101012";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

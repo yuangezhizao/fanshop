@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <style>
+        #mask {
+            display: block;
+        }
+    </style>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css", "/css/sbc.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <section class="container" module="202041">
+        <h1 class="back-hd"><a id="btnBack" class="go-back"></a><span id="spoperate"></span>收货地址<a id="btnSave" class="back-right red">保存</a></h1>
+        <article class="my-address">
+            <ul class="add-address">
+                <li><label>收货人姓名</label><input type="text" name="" value="" placeholder="请输入收货人姓名" id="txtUserName" onKeyUp="ChangeUserName()" onblur="ChangeUserName()"></li>
+                <li><label>手机号码</label><input type="tel" name="" value="" placeholder="请输入手机号码" id="txtPhoneNo"></li>
+                <li id="liCode"><label>短信验证码</label><input type="tel" value="" placeholder="请输入验证码" id="txtValidCode"><button id="btnCode" class="mobile-yanzm">获取验证码</button></li>
+                <li class="select-city">
+                    <label>所在地区</label>
+                    <select id="selProv"></select>
+                    <select id="selCity"></select>
+                    <select id="selDistrict"></select>
+                </li>
+                <li><label>详细地址</label><input type="text" name="" value="" placeholder="请输入详细地址" id="txtAddressDetail"></li>
+                <li><label>身份证号</label><input type="text" name="" value="" placeholder="海外商品报关使用" id="txtIDNumber"></li>
+            </ul>
+            <p class="address-tip">提示：购买海外商品,海关需验证收货人身份证信息,请填写与收货人姓名一致的身份证号！否则将下单失败！</p>
+            <!--<span class="address-default" id="spDefault" style="display:none">设置默认收货地址</span>-->
+            <div id="btnDel" class="d_del_sv" onclick="DeleteAddress()">删除收货地址</div>
+        </article>
+        <div id="divAlert"></div>
+    </section>
+    <footer id="ft_default_address"><a class="d_st_address" style="cursor:pointer" onclick="SetDefault()">设置为默认收货地址</a></footer>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/JValidator.js", "/js/g_footer.js", "/js/pages/AddressBase.js", "/js/pages/ValidCodeBase.js", "/js/pages/AddressEdit.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        var addressid = GetQueryString("addressid");
+        if (addressid == "0" || addressid == "") {
+            window.page = "101053";
+        }
+        else {
+            window.page = "101054";
+        }
+        console.log(window.page);
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

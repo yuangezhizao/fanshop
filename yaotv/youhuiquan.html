@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>饭好了</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=0.5,maximum-scale=0.5,minimum-scale=0.5" />
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/style_wza.css" rel="stylesheet" />
+    
+    <script>
+        window.onload = function () {
+            //自适应rem初始化设置
+            function fontSize() {
+                document.documentElement.style.fontSize = 10 * (document.documentElement.clientWidth / 320) + 'px';
+            }
+            fontSize();
+            window.onresize = function () { fontSize(); };
+        }
+    </script>
+</head>
+<body style="background-color:black">
+    
+        <div class="coup" id="btn_addcard">
+            <div class="pojoWrap">
+                <a href="javascript:;" class="pojo"></a>
+            </div>
+            <div class="receive"></div>
+            <p></p>
+            <div><a href="javascript:;" class="close"></a></div>
+        </div>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script src="../js/jquery-2.1.4.js"></script>
+        <script src="../js/g_header.js"></script>
+        <script src="../js/functions/g_Const.js"></script>
+        <script src="../js/functions/g_Type.js"></script>
+        <script src="../js/tost.js"></script>
+        <script src="../js/pages/page_yaotv_youhuiquan.js"></script>
+        <script>
+            page_yaotv_youhuiquan.Init();            
+        </script>
+        <script src="../js/g_footer.js"></script>
+    
+    <!--<div class="from">本页面内容由家有购物 & 提供</div>-->    
+    <div id="showlog" style="width:100%;display:block;word-break: break-all;word-wrap: break-word;">
+
+    </div>
+</body>
+</html>

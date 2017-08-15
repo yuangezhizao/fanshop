@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css"],["/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <style>
+        #mask {
+            display: block;
+        }
+
+        .d_add_onload {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            color: #999;
+            line-height: 40px;
+            font-size: 14px;
+            margin-top:15px;
+        }
+
+            .d_add_onload img {
+                width: 40px;
+                height: 40px;
+                margin: 0 auto;
+            }
+    </style>
+</head>
+<body>
+    <section class="container" module="202105">
+        <h1 class="back-hd"><a class="go-back" id="btnBack"></a>活动详情<a id="btnCar" style="cursor:pointer" class="car"></a></h1>
+
+        <article class="history" id="atData">
+            <div class="lijian" id="div_fullCutDescription" style="display:none"></div>
+            <ul class="full-tab">
+                <li id="liot1" class="curr" onclick="Product.Change_Sort(1)" ><a style="cursor:pointer">默认</a></li>
+                <li id="liot2" onclick="Product.Change_Sort(2)"><a style="cursor:pointer">销量</a></li>
+            </ul>
+            <ul class="cols-one clearfix" id="divResultList" module="202106">
+            </ul>
+        </article>
+        <article class="no-data" style="display:none;" id="atDataNo">
+            <p>
+                暂无浏览记录哦~<br />
+
+                去发现一下心仪的宝贝吧！
+            </p>
+            <div class="no-data-btn">
+                <a id="btnIndex" style="cursor:pointer">去逛逛</a>
+            </div>
+        </article>
+    </section>
+    <a class="scroll-top topone" href="javascript:;" style="display:none;"></a>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/pages/FullCut.js", "/js/g_footer.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <div id="waitdiv" class="d_add_onload" style="display:none;">
+        <img src="/img/loading.jpg"><span style=" margin-left:8px;">努力加载中~</span>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+
+    (function () {
+        window.page = "102013";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.src = cdn_path + "/js/gas.js";
+
+        var length = document.getElementsByTagName("script").length;
+        var cusScript = document.getElementsByTagName("script")[length - 1];
+        cusScript.parentNode.insertBefore(gas, cusScript);
+    })();
+</script>

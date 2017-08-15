@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>惠家有购物商城</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <link href="css/share.css" rel="stylesheet" />
+</head>
+<body class="qqbg" style="margin:0px;padding:0px;overflow:hidden;">
+    <div id="bodycontent">
+        <div class="top" style="display: block;">
+            <a class="btn-close" href="javascript:void(0);">关闭</a>
+            <div class="txt"><div><img alt="" src="img/share-logo.png"></div><span>您的好友<b id="sharephone">134****5860</b>送您<em>5%返现特权</em>,购买任一产品都可以使用哦！</span></div>
+            
+        </div>
+        <div class="bottom" style="margin:0px;padding:0px;overflow:hidden;">
+            <iframe src="http://s.jyh.com/Product_Detail.html?pid=8016444024" frameborder="0"  id="ifr" name="ifr" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:130px;left:0px;right:0px;bottom:0px" />
+        </div>
+    </div>
+</body>
+</html>

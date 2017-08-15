@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="height:100%; background:#fdfbf7">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <script src="/JS/jquery-2.1.4.js"></script>
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/g_header.js"></script>
+
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+
+    <script src="/JS/pages/feedback.js"></script>
+
+</head>
+<body>
+    <section class="container">
+        <h1 class="back-hd">
+            <a class="go-back" href="javascript:void(0);"></a>商品评价
+        </h1>
+        <article class="commodity">
+            <div class="hd" id="gradeType" style="display:none;">
+                <a href="javascript:void(0);" gradeType="all" num="1" class="curr">全部(0)</a>
+                <a href="javascript:void(0);" gradeType="good" num="2">好评(0)</a>
+                <a href="javascript:void(0);" gradeType="middle" num="3">中评(0)</a>
+                <a href="javascript:void(0);" gradeType="bad" num="4">差评(0)</a>
+                <a href="javascript:void(0);" gradeType="pic" num="5">有图(0)</a>
+            </div>
+            <ul style="display:none;" id="reviewList"></ul>
+            <div class="review-wu" id="reviewNo" style="display:none;">
+                暂无评价
+            </div>
+            <!--<div class="commodity-btn">
+                <p>
+                    <span id="sc">收藏</span>
+                    <a href>加入购物车</a>
+                    <a href class="lj">立即购买</a>
+                </p>
+            </div>-->
+            <div class="comm_tip">已加载全部</div>
+        </article>
+    </section>
+
+    <!--<div id="pageloading" class="wrap wrap-wait" style="position: absolute;top:0;z-index:10;">
+        <div class="img">
+            <img src="img/waiting.gif" alt="" />
+        </div>
+        <p>拼命加载中<br />...</p>
+    </div>-->
+<!--@2016,3,15.wangza底部&弹框-->
+    <!--<div class="bottom" id="bottom_div"><span id="maintelbuy">电话订购</span><a class="atBuy" operate="orderconfim" id="mainbuy">立即购买</a><a class="tocart" operate="addtocart" id="mainaddtocart">加入购物车</a><a id="mainseckillbuy" operate="orderconfim"></a></div>--> 
+        <div class="tabw" module="202046" style="-webkit-overflow-scrolling: touch; z-index:1000;">
+            <a class="btn-close">关闭</a>
+            <div class="pop-t">
+                <img src="http://qhbeta-cfiles.qhw.srnpr.com/cfiles/staticfiles/imzoom/2716a/93659888ba2d40a29cb02a38a3d0e0cc.jpg" alt="" class="fl">
+                <div class="imgr">
+                    <p class="pt">货号测试货号测试货号测试测试商品名称长度如果显示不完整显示123456</p>
+                    <p class="pprice"><b>￥</b>125</p>
+                    <p class="size">请选择：</p>
+                </div>
+            </div>
+            <div class="sale_area" style="display:none;">
+                <h2>以下区域有售</h2>
+                <p>货号测试货号测试货号测试测试</p>
+                <div class="select_add" style="display:none;">
+                    <h3><a>货号测</a><span>货号测</span></h3>
+                    <ul id="provlist" style="display:none">
+                        
+                    </ul>
+                    <ul id="arealist">
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="abox">
+                <div class="bbox">
+                    <div class="pop">
+                        <div class="pop-c" module="202047">
+                            <div class="sel selnum">
+                                <div class="tdiv fl">购买数量</div>
+                                <div class="bnum fr">
+                                    <form><a class="btn-minus">减一</a><input id="buycount" type="text" value="1" readonly="readonly" /><a class="btn-add">加一</a></form>
+                                    <span>限购98件</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom" id="bottom_div" style="bottom:0px"><a id="a_Collection" class="gr" num="202044-5"><i></i></a><a class="tocart" operate="addtocart" id="mainaddtocart" num="202044-6">加入购物车</a><a class="atBuy" operate="orderconfim" id="mainbuy" num="202044-7">立即购买</a><a id="mainseckillbuy" operate="orderconfim" class="star" num="202044-8" style="display: none;">立即购买</a></div>
+            <!-- <footer><a class="store" operate="addtocart" >收藏</a><a class="btn-buy btn-jia" operate="addtocart" id="sku_addtocart">加入购物车</a> <a class="btn-buy" operate="orderconfim" id="sku_buy">立即购买</a><a id="sku_seckill_button" class="ch-seckill" operate="orderconfim">2天15:04:18.8后开始</a></footer> -->
+            <div class="botline">&nbsp;</div>
+        </div>
+    <!--end-->
+        <script type="text/template" id="tmpReview">
+        <li>
+            <img src="{{userFace}}" alt="" class="pic">
+            <h2><font class="{{grade}}"></font>{{userMobile}}</h2>
+            <b>{{commentContent}}</b>
+            <strong>{{commentTime}}{{attribute}}</strong>
+            {{imgs}}
+            <div class="reply">
+                <p>{{replyContent}}</p>
+                <span>{{replyTime}} </span>
+            </div>
+        </li>
+    </script>
+    <script src="/JS/g_footer.js"></script>
+    <script src="/js/pages/reviewList.js"></script>
+</body>
+</html>

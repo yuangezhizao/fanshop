@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/g_header.js"></script>-->
+    
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css"], ["/js/jquery-2.1.4.js", "/js/functions/g_Const.js", "/js/g_header.js", "/js/functions/g_Type.js", "/js/tost.js","/js/g_footer.js", "/js/pages/MyViewHsitory.js"]];
+
+    WriteStatic(staticlist);
+    </script>
+
+
+</head>
+<body>
+    <section class="container" module="202039">
+        <h1 class="back-hd"><a class="go-back" id="btnBack"></a>浏览记录</h1>
+
+        <article class="history pb-55">
+            <ul class="cols-one clearfix" module="202040"></ul>
+        </article>
+        <script type="text/template" id="tpl_h_p">
+            <li>
+                <a onclick="page_myviewhistory.Load_Product('{{purl}}')">
+                    <div class="goods-item">
+                        <img src="{{picture}}">
+                        {{spicture}}
+                    </div>
+                    <h1 class="goods-item-tit">{{pname}}</h1>
+                    <span class="goods-item-price"><i>¥{{sprice}}</i><b>¥{{mprice}}</b></span>
+                    <!--<p class="scale-num">月销{{salenum}}件</p>-->
+                </a>
+            </li>
+        </script>
+        <aside class="fixed">
+            <a class="btn">清空浏览记录</a>
+        </aside>
+
+        <article class="no-data" style="display:none;">
+            <p>
+                暂无浏览记录哦~<br />
+
+                去发现一下心仪的宝贝吧！
+            </p>
+            <div class="no-data-btn">
+                <a id="btnqugg">去逛逛</a>
+            </div>
+        </article>
+    </section>
+
+    <!--<script src="../js/functions/g_Const.js"></script>
+    <script src="../js/functions/g_Type.js"></script>
+    <script src="../js/tost.js"></script>
+    <script src="../js/pages/MyViewHsitory.js"></script>-->
+    <!--<script>
+        page_myviewhistory.Init();
+    </script>-->
+    <!--<script src="../js/g_footer.js"></script>-->
+</body>
+
+<script type="text/javascript">
+    //var staticlist_1 = [[], ["/js/g_footer.js", "/js/pages/MyViewHsitory.js"]];
+
+    //AppendStatic(staticlist_1, function () {
+    //    page_myviewhistory.Init();
+    //});
+</script>
+
+
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101016";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

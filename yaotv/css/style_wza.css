@@ -1,0 +1,23 @@
+﻿.coup{position: absolute; left: 50%; top:50%;  width:21rem; height:27.5rem; background:url(../img/wza_img/yaoyiyao3.png) no-repeat; background-size:100%; margin-left: -10.5rem; margin-top:-17.75rem; overflow: hidden; z-index: 9999;}
+.pojoWrap{width:3.6rem; height:3.6rem; margin:0 auto; margin-top:2.6rem;}
+.container{ position:fixed; width:100%; height:100%; left:0; top:0; background:rgba(0,0,0,0.7);}
+/*.coup{position: relative;}*/
+.coup .pojo{ display:block; width:4rem; height:4rem; }
+.receive{ width:17.25rem; height:3.35rem;position: absolute; left:1.875rem;bottom:3.3rem; cursor: pointer;}
+.close{ width:1.7rem; height:1.7rem; position: absolute; top:1rem; right:1rem;}
+
+.from{ width:100%; color:#bc563f; font-size:1.2rem; text-align: center; position: fixed; left:0; bottom: 6rem; z-index: 9999;}
+/*@新加的底部浮框*/
+.bottom { position: fixed; width: 100%; left: 0; bottom: 0; z-index: 9999; background: #fff; opacity: .9; box-sizing: border-box; -webkit-box-sizing: border-box;/* padding: .9rem 3.125%;border-top: 1px solid #ddd6cc;*/  overflow: hidden }
+.bottom a { float: right; padding: 1rem 1rem 1.2rem; margin:0.66rem 3.125% 0 0.8rem;background: #dc0f50; color: #fff; border-radius: 6px; -webkit-border-radius: 6px; font-size: 1.4rem; overflow: hidden; }
+.bottom a.end{width:100%;box-sizing:border-box;text-align:center;background:#adadad;}
+.bottom a.star{width:100%;box-sizing:border-box;text-align:center;}
+.bottom a.gray{background: #adadad;}
+.bottom span { float: left; background: url(../img/ico-tel.png) no-repeat left top; background-size: auto 100%; color: #333; font-size: 1.4rem; text-align: left; padding: .72rem 0 .72rem 3.2rem; margin: 1.1rem 0 0.9rem 3.125%; }
+
+.ui-loader-default{ display:none}
+.ui-mobile-viewport{ border:none;}
+.ui-page {padding: 0; margin: 0; outline: 0} 
+.div_subscribe_area_class{    
+    /*margin-top:45px;*/     margin-bottom: -4px;
+}

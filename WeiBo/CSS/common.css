@@ -1,0 +1,15 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+	body,input,textarea,select,button,table{font-size:16px;line-height:1.25em}    
+	.video embed, .video object, .video iframe {width: 100%; height:auto;}
+
+	
+	/* page */
+	body{ background:#ffffff;}
+	.wrap{margin:0 auto;}
+	.wrap,.xq-img,{width:100%; overflow:hidden;}
+	.xq-pro{margin:0;width:50%;float:left;}
+	.xq-pro1{margin:0;width:100%;float:left;}
+	.xq-img{line-height:0px;}
+	.xq-img a,.xq-pro a{ display:block; overflow:hidden; clear:both;}
+	.xq-pro img,.xq-img img,.xq-bj img,.xq-pro1 img{width:100%; }
+	.xq-bj{width:100%;}

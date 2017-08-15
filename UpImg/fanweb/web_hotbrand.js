@@ -1,0 +1,1 @@
+﻿var web_hotbrand={"resultCode":1,"resultMessage":"","brands":[],"paged":{"total":0,"count":0,"more":0}}

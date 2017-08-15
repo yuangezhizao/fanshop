@@ -1,0 +1,116 @@
+﻿@charset "utf-8";
+/* base set */
+html{font-size:62.5%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0;}body,input,textarea,select,button,table{font-size:.75rem;line-height:1.25rem;}body{min-width:320px;/*max-width:640px;*/ margin:0 auto;font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;color:#333;-webkit-text-size-adjust:none;background: #f5f5f5;}
+img,fieldset{display:block;border:0;}ul,ol{list-style:none;}ins{ text-decoration:none;}em,address{font-style:normal;}table{border-collapse:collapse;}
+article, aside,details,figcaption, figure,footer,header,hgroup,menu,nav,section {display: block;}a{color:#333;text-decoration:none;}
+a{-webkit-appearance: none; outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+
+.wrap{width:100%; margin:0 auto; padding:0 0 2rem;  overflow:hidden}
+.pinp-ad,.pinp-ad a{display:block; width:100%; overflow:hidden}
+.pinp-ad img{width:100%; display:block; height:auto}
+
+/*品牌特惠列表页*/
+.pinp-list{padding:0 2.125% 2rem; box-sizing:border-box;-webkit-box-sizing:border-box;}
+.pinp-list .lid{width:100%; margin:.8rem 0 0; border-bottom:1px solid #e0e0df; position:relative; overflow:hidden}
+.pinp-list .lid a,.pinp-list .lid img{ display:block; width:100%; height:auto; overflow:hidden}
+.pinp-list .lid span{ display:block; width:100%; height:3.4rem; line-height:3.4rem;font-size:1.4rem; color:#333;}
+.pinp-list .lid span b{ float:right; font-weight:normal; color:#dc0f50;}
+.pinp-list .icob{ display:block; position:absolute; left:0; top:0; background:url(../img/ico-end.png) left top no-repeat; background-size:100% 100% ; z-index:9; width:6.4rem; height:6.4rem; text-indent:-99em; }
+
+/*正在进行的品牌特惠详情页*/
+.pinp-th h1{font-size:1.4rem; font-weight:normal; line-height:3.2rem; padding:.8rem 3.025% 0; }
+.pinp-th h1 span{color:#dc0f50; font-size:1.6rem;}
+.pinp-th h1 b{ float:left; width:3px; height:13px; background:#dc0f50; margin:1.05rem .5rem 0 0; overflow:hidden;}
+.pinp-th .lidw {width:100%;padding:0 3.025%;box-sizing:border-box;-webkit-box-sizing:border-box; overflow:hidden}
+.pinp-th .fl{ float:left}
+.pinp-th .fr{ float:right}
+.pinp-th .lid{ width:49%;border:1px solid #e0e0df;box-sizing:border-box; -webkit-box-sizing:border-box; background:#fff; margin:0 0 .6rem; overflow: hidden;}
+.pinp-th .imgd{width:100%; height: auto; overflow: hidden; position:relative}
+.pinp-th .imgd img{display:block; width:100%;}
+.pinp-th .imgd span{display:block; position: absolute; top:50%; left:50%; width:6rem; height:6rem; margin:-3rem 0 0 -3rem; z-index: 9;background:url(../img/ico-sx.png) no-repeat 0 0; background-size:100% 100%;}
+.pinp-th .txtd{position:relative; width:100%;padding:0 0 0 .4rem;height: 6.8rem;box-sizing:border-box;-webkit-box-sizing:border-box;overflow:hidden;}
+.pinp-th .txtd h3{ font-size: 1.2rem; height:3.2rem;line-height: 1.6rem; margin:.5em 0 .4rem; font-weight:normal; overflow: hidden;}
+.pinp-th .price{font-size: 1.5rem;color :#dc0f50;padding:.6rem 0 .1rem; font-weight:normal; overflow:hidden;}
+.pinp-th .price b{font-size: .8rem; font-weight: normal}
+.pinp-th .price span{color:#999; font-size: 1rem; font-weight: normal; padding:0 0 0 .8rem; text-decoration: line-through;}
+.pinp-th .icod{position:absolute; right:0; bottom:.5rem;overflow: hidden;}
+.pinp-th .icod span{color:#fff; background: #db7093; border-radius: 2px; -webkit-border-radius: 2px; height:1.6rem;line-height:1.6rem; width:3rem; padding:0 .1rem; margin:0 .5rem 0 0;font-size: 1rem; text-align:center; display: inline-block;}
+
+/*闪购优化_即将开始*/
+.pinp-sg .lidw{ padding:.6rem 0 0 3.025%; background:#fff; overflow:hidden}
+.pinp-sg .lid{ position:relative;width:100%; margin:.5rem 0; height:10rem; padding:0 0 .5rem; border-bottom:1px solid #e0e0df;overflow: hidden;}
+.pinp-sg .lid .imgd{ position:absolute; left:0; top:0;width:10rem; height:10rem; overflow: hidden; background:#f8f8f8;}
+.pinp-sg .lid .imgd img{display:block; width:100%;height:auto;}
+.pinp-sg .lid .imgd span{display:block; position: absolute; top:50%; left:50%; width:6rem; height:6rem; margin:-3rem 0 0 -3rem; z-index: 9;background:url(img/ico-sx.png) no-repeat 0 0; background-size:100% 100%;}
+.pinp-sg .lid .txtd{ position:relative; float:left;height: 10rem;width:100%; padding:.4rem 0 0 11rem;box-sizing:border-box;-webkit-box-sizing:border-box;overflow:hidden;}
+.pinp-sg .lid .txtd h3{ font-size: 1.4rem; height:4rem;line-height: 2rem; font-weight:normal; margin:-.5rem 0 0.7rem; overflow: hidden;}
+.pinp-sg .lid .price{font-size: 1.8rem; font-weight:normal;color :#dc0f50;padding:0.1rem 0 .1rem; height:1.8rem;}
+.pinp-sg .lid .price b{font-size: 1.2rem; font-weight: normal}
+.pinp-sg .lid .price span{color:#999; font-size: 1.1rem; font-weight: normal;text-decoration: line-through;}
+.pinp-sg .lid .icod{padding:0 0 .6em; overflow: hidden;}
+.pinp-sg .lid .icod span{color:#fff; background: #dc0f50; border-radius: 2px; -webkit-border-radius: 2px; height:1.5rem; width:3.2rem; margin:0;line-height:1.5rem; text-align:center;font-size: 1.1rem; display: inline-block; padding:0 .2rem;}
+.pinp-sg .lid:last-child{margin-bottom:0;}
+.pinp-sg .clock-open{position:absolute; right:3.05%; bottom:.5rem;overflow: hidden; font-size:1.2rem; color :#fff; background:#2fa86f; width:7rem; height:2.05rem; line-height:2.05rem; padding:0 .4rem; border-radius:3px; -webkit-border-radius:3px; text-align:center;}
+.pinp-sg .clock-open b{ display:inline-block; vertical-align:-2px; background:url(../img/ico-clock-white.png) left top no-repeat; background-size:100% 100%; width:1.3rem; height:1.3rem; margin:0 .2rem 0 0; overflow:hidden;}
+.pinp-sg .clock-close{background: #fff;padding: 0 .4rem 0 .2rem;width: 7.05rem;border: 1px solid #2fa86f;color: #2fa86f; }
+
+/*时间表*/
+.pinp-sg .time-go{ background:#f5f5f5;  height:2.2rem; padding:.6rem 0 .2rem; text-align:center; overflow:hidden;}
+.pinp-sg .time-go .ico,.pinp-sg .time-go span,.pinp-sg .time-go em{ display:inline-block; vertical-align:-2px;font-size:1.1rem; line-height:1.4rem; height:1.4rem; overflow:hidden }
+.pinp-sg .time-go .ico{background:url(../img/ico-clock-black.png) left top no-repeat; background-size:100% auto; width:1.4rem;margin:.1rem 0; overflow:hidden;}
+.pinp-sg .time-go em{ background:#555; border-radius: 2px; -webkit-border-radius: 2px; text-align:center; padding:0 .4rem; color:#fff; font-family:Arial, Helvetica, sans-serif;}
+.pinp-sg .time-go span{margin:0 .5rem;}
+.d_cdc0f50{color: #dc0f50!important}
+.d_bgcdc0f50{background: #dc0f50!important;color:#fff!important;}
+.d_go_top{display:block;width: 4.7rem;height: 4.7rem;position: fixed;bottom: 2rem;right: 2rem;}
+.d_go_top img{width: 4.7rem;height: 4.7rem;}
+.d_sale_header {background: #fff;color: #333;font-size: 18px;height: 45px;line-height: 45px;text-align: center;position: relative;overflow: hidden;border-bottom: 1px solid #b2b2b2}
+.d_jt_left::after{content: "";width: 21px;height: 21px;background: url(../img/d_btn_3.png);background-size: 100%;position: absolute;left: 1rem;top: 12px;}
+
+/*闪购优化_进行中*/
+.sche-open{box-sizing:border-box;-webkit-box-sizing:border-box; border:1px solid #dc0f50; position:absolute; right:3.05%; bottom:.5rem;overflow: hidden; font-size:1.2rem; color :#fff; background:#fff; width:10rem; height:1.6rem; line-height:1.6rem; padding:0 .4rem; border-radius:3px; -webkit-border-radius:3px; text-align:center;}
+.sche-open span,.sche-open em{ position:absolute; left:0; top:0; display:block; height:1.72rem;}
+.sche-open span{background:#dc0f50; z-index:2}
+.sche-open em{ font-size:1.1rem; color:#333; z-index:2; line-height:1.6rem; width:100%; text-align:center}
+.sche-close{border-color:#ccc}
+.sche-close span{ background:#ccc; width:100%; }
+.sche-close em{color:#333;}
+
+/*切换滚屏效果*/
+.tabsw{ position:fixed; top:0; left:0; background:#fff;}
+.tabsw{background:#fff; width: 100%;border-bottom:1px solid #e0e0df;position:fixed;z-index:99;overflow:hidden }
+.tabw,.tabsw{height:40px;position: relative;}
+
+.tabsw .a{width: 100%;height: 4rem;overflow-x:auto;}
+.tabs{/*width: 10000px;*/}
+.tabs a{float: left;padding: 0 1.1em;box-sizing:border-box; -webkit-box-sizing:border-box; font-size:1.5rem;height: 4rem;box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden}
+.tabs a span{ height:100%; width:100%;height: 2px; display:block; overflow:hidden}
+.tabs a em{display:block; line-height: 4rem; height:3.8rem; overflow:hidden;}
+.tabs a.active{color:#dc0f50;}
+.tabs a.active span{ background:#dc0f50;}
+
+.swiper-container{background:#fff;width:100%; height:auto; border-top:0;  }
+.swiper-slide{width:100%; height:auto; background:none;color:#333; display:}
+.content-slide{ box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden }
+.tabw .more-video{display:block; text-align:right; height:3rem; margin:0 0 1rem; color:#666; line-height:3rem;}
+.tabw .more-video b{ font-family:"\5b8b\4f53"}
+.tfix{ position: fixed; top:5.05rem; left:0; z-index:9;}
+.tabw .pro1{padding:1rem 0 3rem; overflow:hidden}
+.tabw .sps{padding:0; } 
+.pro1 .fl{float:left;}
+.pro1 .fr{float:right;}
+.pro1 .imgd{position:relative;width:48%; height:auto; margin:0 0 1rem; overflow: hidden;}
+.pro1 .imgd img{display:block; width:100%;}
+.pro1 .imgd div{ position: absolute;bottom:0; left:0; padding:.5rem 0; background:url(../img/ico-tag3.png) no-repeat 0 0; background-size:100% 100%; overflow:hidden}
+.pro1 .imgd span{display:block; width:100%; padding:0 .5rem; height:3.4rem; line-height:1.7rem; color:#fff; z-index: 3;box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden;}
+.pro1 .imgd b{display:block; position: absolute; top:0; left:0;  z-index: 3;background:url(../img/ico-new.png) no-repeat 0 0; color:#fff; font-size:.8rem; font-weight:normal;width:5.6rem; height:5.6rem; background-size:100% 100%; overflow:hidden}
+.bbox{height:10.05rem; width:100%; overflow:hidden; display:none;}
+.ftline{width:1px;height: 1px; display:block;background:#dc0f50; position:absolute; left:50%; bottom:0;  z-index:99; overflow:hidden }
+
+
+/*tost效果*/
+#toastMessage{ top:50%; width:auto; position:fixed; z-index:9999;}
+#toastMessage span{ display:block;  overflow:hidden}
+#toastMessage .sbg{ background:#000; color:#fff;opacity:.9; z-index:1; width:100%; height:100%;position:absolute; left:0; top:0; border-radius:5px; -webkit-border-radius:5px; }
+#toastMessage .stxt{padding:.8em 1em; font-size:1.4rem; line-height:1.4rem; z-index:2; color:#fff; text-align:center; position:relative}

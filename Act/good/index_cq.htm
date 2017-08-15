@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>惠家有-活动兑换</title>
+    <link href="http://tj.ichsy.com/jyhshop/act/good/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://tj.ichsy.com/jyhshop/js/jquery-2.1.4-min.js"></script>
+    <script type="text/javascript" src="http://tj.ichsy.com/jyhshop/act/js/swipe.js"></script>
+    <script type="text/javascript" src="/js/JValidator.js"></script>
+    <script type="text/javascript" src="/js/g_header.js"></script>
+</head>
+<body>
+    <input id="hidcardid" type="hidden" />
+    <input id="hidcardkey" type="hidden" />
+    <input id="hidexchangedcode" type="hidden" />
+    <input id="hidmerchant" type="hidden" />
+    <div class="wrap">
+        <img src="http://tj.ichsy.com/jyhshop/act/good/img/bg.jpg" alt="">
+        <div class="banner">
+            <div id="swipe" class="hd">
+                <div class="swipe-wrap">
+                    <div><img src="http://tj.ichsy.com/jyhshop/act/good/img/8016451743.jpg" alt=""><img src="http://tj.ichsy.com/jyhshop/act/good/img/8016451562.jpg" alt=""></div>
+                    <div><img src="http://tj.ichsy.com/jyhshop/act/good/img/8016451355.jpg" alt=""><img src="http://tj.ichsy.com/jyhshop/act/good/img/8016451671.jpg" alt=""></div>
+                </div>
+            </div>
+            <div id="position" class="bd">
+                <span class="on"></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="from">
+            <ul class="hd" id="quick">
+                <li><input id="txtNum" type="tel" value="" placeholder="请输入11位有效手机号"></li>
+                <li id="li_Verify" style="display:none"><input id="txtPicCode" type="text" value="" placeholder="请输入图片验证码" class="text"><img src="" id="Verify_codeImag" alt="点击切换验证码" title="点击切换验证码" style=" cursor: pointer;" onclick="ToggleCode(this.id, '/Ajax/LoginHandler.ashx'); return false;" /></li>
+                <li><input id="in" type="text" value="" placeholder="请输入验证码" class="text"><button id="btnCode">获取验证码</button></li>
+            </ul>
+            <a id="atOnce" style="cursor:pointer"></a>
+        </div>
+    </div>
+
+    <div class="receive" style="display:" id="div_succ">
+        <img src="http://tj.ichsy.com/jyhshop/act/good/img/lq_bg.jpg" alt="">
+        <p><a id="lbl_succ_0" onclick="CloseAct()" style="cursor:pointer"></a></p>
+        <div class="lq">
+            <b id="lbl_succ_1"></b>
+            <i id="lbl_succ_2"></i>
+            <a id="lbl_succ_3" onclick="ResultApp()" style="cursor:pointer"></a>
+        </div>
+        <img src="http://tj.ichsy.com/jyhshop/act/good/img/bottom.png" class="bottom" alt="">
+    </div>
+    
+    <div class="receive" style="display:" id="div_have">
+        <img src="http://tj.ichsy.com/jyhshop/act/good/img/lq_bg.jpg" alt="">
+        <p><a id="lbl_have_0" onclick="CloseAct()" style="cursor:pointer"></a></p>
+        <div class="lq have">
+            <b id="lbl_have_1"></b>
+            <i id="lbl_have_2"></i>
+            <a id="lbl_have_3" onclick="ResultApp()" style="cursor:pointer"></a>
+        </div>
+        <div id="lbl_have_4" class="tips"></div>
+        <img src="http://tj.ichsy.com/jyhshop/act/good/img/bottom.png" class="bottom" alt="">
+    </div>
+
+    <div class="receive" style="display:" id="div_fail">
+        <img src="http://tj.ichsy.com/jyhshop/act/good/img/lq_bg.jpg" alt="">
+        <p><a id="lbl_fail_0" onclick="CloseAct()" style="cursor:pointer"></a></p>
+        <div class="lq fail">
+            <b id="lbl_fail_1"></b>
+            <i id="lbl_fail_2"></i>
+            <a id="lbl_fail_3" onclick="ResultApp()" style="cursor:pointer"></a>
+        </div>
+        <img src="http://tj.ichsy.com/jyhshop/act/good/img/bottom.png" class="bottom" alt="">
+    </div>
+    <script type="text/javascript" src="/js/functions/g_Const.js"></script>
+    <script type="text/javascript" src="/js/functions/g_Type.js"></script>
+    <script type="text/javascript" src="/js/shareGoodsDetail.js"></script>
+    <script type="text/javascript" src="/Act/good/index.js"></script>
+    <script src="/js/pages/ValidCodeAct.js"></script>
+    <script type="text/javascript">
+window.uiejSwipe = new Swipe(document.getElementById('swipe'), {
+  startSlide: 0,
+  speed: 400,
+  auto: 2000,
+  continuous: true,
+  disableScroll: true,
+  stopPropagation: false,
+  callback: function(pos) {
+	var i=bullets.length;
+      while (i--) {
+        bullets[i].className = '';
+      }
+      bullets[pos].className = 'on';
+},
+  transitionEnd: function(index, elem) {}
+});
+var bullets = document.getElementById('position').getElementsByTagName('span');
+
+
+    </script>
+</body>
+</html>

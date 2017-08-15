@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/functions/g_Type.js"></script>
+</head>
+<body>
+    <script>
+        try{
+            //console.log(obj_cartfull);
+            var objcartfull = JSON.parse(decodeURIComponent(GetQueryString("c")))[0];
+            objcartfull.product_code = "IC_SMG_" + objcartfull.product_code;
+            objcartfull.sku_code = "IC_SMG_" + objcartfull.sku_code;
+            var objcart = {
+                /*商品数量*/
+                "sku_num": objcartfull.sku_num,
+                /*地区编号,可不填写，添加购物车不再需要区域编号*/
+                "area_code": objcartfull.area_code,
+                /*商品编号*/
+                "product_code": objcartfull.product_code,
+                /*sku编号*/
+                "sku_code": objcartfull.sku_code,
+            };
+            var objcartlist = [];
+            var objcarts = {
+                "GoodsInfoForAdd": [objcart]
+            };
+            objcartlist.push(objcartfull);
+            localStorage[g_const_localStorage.ImmediatelyBuy] = JSON.stringify(objcarts);
+            localStorage[g_const_localStorage.OrderConfirm] = localStorage[g_const_localStorage.ImmediatelyBuy];
+            localStorage[g_const_localStorage.GoodsInfo] = JSON.stringify(objcartlist);
+            //if (IsInWeiXin.check()) {
+            //    var wxUrl = g_const_PageURL.OrderConfirm + "?t=" + Math.random() + "&showwxpaytitle=1";
+            //    WxInfo.GetPayID(wxUrl);
+            //}
+            //else {
+            window.location.replace(g_const_PageURL.OrderConfirm + "?t=" + Math.random() + "&from=jygw&showwxpaytitle=1");
+            //}           
+        }
+        catch (e) {
+            console.log(e);
+            window.location.replace("http://s.jyh.com/tvlive.html");
+        }
+    </script>
+</body>
+</html>

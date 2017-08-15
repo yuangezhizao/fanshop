@@ -1,0 +1,23 @@
+﻿
+function callpay()
+{
+	alert("11")
+    if (typeof WeixinJSBridge == "undefined")
+    {
+
+        if (document.addEventListener)
+        {
+            document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+        }
+        else if (document.attachEvent)
+        {
+            document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+            document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+        }
+    }
+    else
+    {
+		alert("22")
+        jsApiCall();
+    }
+}

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>惠家友-现金券</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="../css/base.css" rel="stylesheet">
+<style>
+*{padding: 0px; margin: 0px;}
+html{ font-size: 10px;}
+.werification{ position:fixed; left:0; top:0; width:100%;  }
+.werification header{ height:6.65rem; }
+.werification header a{ height:4rem; width:4rem; margin-top: 1.325rem; margin-left:0.75rem; float:left;}
+.werification .con{float:left; margin-left: 0.9rem;}
+.werification .c{ font-size:1.6rem; }
+.werification .cen{font-size:1rem; margin:0 0.7rem 0 0.8rem; line-height:7rem;}
+
+.weri li{ height:4.65rem; border:0.1rem solid #e5e5e5; position: relative;}
+.w_send input{ margin-left:1rem; height:4.65rem; width:50%; line-height:4.65rem; font-size:1.3rem; outline:none; border:none; color:#968c88;}
+.w_send a{  position: absolute; right:1rem; top:0.575rem; width:9.5rem; height:3.5rem; background:#dc0f50; border-radius:0.4rem;text-align:center; line-height:3.5rem; color:#FFF; font-size:1.1rem; }
+.weri .in{ margin-left:1rem; width:100%; line-height:4.65rem; font-size:1.3rem; outline:none; border:none; color:#968c88;}
+.atOnce{ display:block; width:93%; height:3.75rem; margin:0 auto; margin-top:7.4rem; background:#dc0f50; border-radius:0.4rem; font-size:1.4rem; color:#FFF; text-align:center; line-height:3.75rem;}
+/*成功*/
+.open{ position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7);display: none; }
+.open .close{ color:#FFF; font-size:1.5rem;  position:absolute; top:1.5rem; right:2rem;}
+.open .s_pic{ width:23.25rem; height:20.2rem; background:url(../img/yes.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 14%;}
+.open .re{ width:23.25rem; height:4.25rem; background:url(../img/pic2.png)no-repeat; background-size:100%;  margin:0 auto; margin-top: 18%;}
+.open .toOpen a{display:block; width:100%; height:3.95rem; background:url(../img/open.png)no-repeat; background-size:100%; }
+.open .toOpen{ width:85%; margin:0 auto; margin-top: 3%;}
+/*验证码失败提示框*/
+#toastMessage {  top:70%; left:36%; width: auto; max-width: 20rem; position: fixed; z-index: 9999; }
+#toastMessage span { display: block; overflow: hidden }
+#toastMessage .sbg { background: #000; color: #fff; opacity: .8; z-index: 1; width: 100%; height: 100%; position: absolute; left: 0; top: 0; border-radius: 5px; -webkit-border-radius: 5px; }
+#toastMessage .stxt { padding: .8rem 1.5rem 1.1rem; font-size: 2.6rem; line-height: 1.6rem; z-index: 2; color: #fff; text-align: center; position: relative }
+</style>
+<script type='application/javascript' src="../js/fastclick-master/lib/fastclick.js"></script> 
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+	//自适应rem初始化设置
+	function fontSize(){
+		document.documentElement.style.fontSize = 10*(document.documentElement.clientWidth/320)+'px';
+	}
+	fontSize();
+	window.onresize=function(){fontSize();};
+	
+	//FastClick插件
+	FastClick.attach(document.body);
+	//..........................
+	var oWeri =document.getElementsByClassName('werification')[0];
+	var atOnce=document.getElementsByClassName('atOnce')[0];
+	var open=document.getElementsByClassName('open')[0];
+	atOnce.addEventListener('click',function(){ 
+		oWeri.style.display='none';
+		open.style.display='block';
+	},false);
+}, false);
+
+</script>
+</head>
+<body>
+	<div class="werification">
+		<header class="clearfix">
+			<a href="javascript:;" id="logo">
+				<img src="../img/logo.gif" alt="惠家有" title="惠家有"/>
+			</a>
+	           		<span class="con"><i class="c">品位家居</i><i class="cen">•</i><i class="c">优选特卖</i></span>
+		</header>
+		<section>
+			<ul class="weri">
+				<li class="w_send">
+					<input type="text" value="请输入11位有效数字">
+	                			<a href="javascript:;">获取验证码</a>
+				</li>
+				<li>
+					<input class="in" type="text" value="请输入验证码" />
+				</li>
+			</ul>
+		</section>
+		<footer>
+		            <a href="javascript:;" class="atOnce">
+		                立即兑换
+		            </a>
+	             </footer>
+	</div>
+	<div  class="open">
+		<div class="close">关闭</div>
+		<div class="s_pic"></div>
+		<div class="re"></div>
+		<div class="toOpen"><a href="javascript:;"></a></div>
+	          
+    	</div>
+    </body>
+</html>

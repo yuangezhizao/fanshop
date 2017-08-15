@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五味商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/index.css"], ["/js/jquery-2.1.4-min.js", "/js/g_header.js", "/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/focus.js", "/JS/pages/weixin/paypage.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script>
+        if (IsInWeiXin.check()) {
+            $.each(g_const_OrderConfirmRefer, function (k, o) {
+                if (document.referrer.toLowerCase().indexOf(o) > -1) {
+                    var wxUrl = g_const_PageURL.MyOrder_pay + "?t=" + Math.random() + "&showwxpaytitle=1";
+                    WxInfo.GetPayID(wxUrl);
+                }
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <input id="hid_wxpaytype" type="hidden" value="3" />
+
+    <!--订单编号-->
+    <input type="hidden" id="hid_order_code" value="">
+    <!--订单价格-->
+    <input type="hidden" id="hid_order_money" value="">
+    <!--订单价格-->
+    <input type="hidden" id="hid_selpaytype" value="">
+    <input id="hid_uid" type="hidden" value="" />
+
+    <section class="container" module="202066">
+        <h1 class="back-hd"><a class="go-back"></a>选择支付方式</h1>
+        <article class="my-order">
+            <dl class="pay-method" module="202067">
+                <!--<dt>请支付：<em><i>￥</i>876.00</em></dt>-->
+                <!--<dd><em class="alipay"></em>支付宝<a href="javascript:;" class="curr"></a></dd>
+                <dd><em class="weixin"></em>微信支付<a href="javascript:;"></a></dd>
+                <dd><em class="blank"></em>银联支付<a href="javascript:;"></a></dd>
+                <dd><em class="tenpay"></em>财付通<a href="javascript:;"></a></dd>-->
+            </dl>
+            <a id="btn_pay" class="btn">立即支付</a>
+            <a id="btn_pay_wait" class="pay-btn-gray" style="display:none">正在申请支付</a>
+        </article>
+    </section>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/pages/MyOrder_pay.js", "/JS/g_footer.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101081";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

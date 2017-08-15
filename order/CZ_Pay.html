@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值支付</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/js/cdn.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <!--<script type="text/javascript" src="/JS/jquery.w.js"></script>-->
+
+    <script src="/js/jquery-2.1.4.js"></script>
+    <!--<script src="/JS/jquery.mobile-1.4.5.js"></script>-->
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+    <script src="/JS/JValidator.js"></script>
+
+    <script type="text/javascript" src="/js/pages/mobileCZ_Pay.js"></script>
+
+</head>
+<body>
+    <input id="hid_wxpaytype" type="hidden" value="3" />
+    <!--订单编号-->
+    <input type="hidden" id="hid_orderno" value="">
+    <!--订单价格-->
+    <input type="hidden" id="hid_selpaytype" value="">
+    <!--产品编号-->
+    <input type="hidden" id="hid_productid" value="">
+    <!--产品类型-->
+    <input type="hidden" id="hid_cztype" value="">
+    <!--产品面值-->
+    <input type="hidden" id="hid_ordermoney" value="">
+    <!--产品实际支付-->
+    <input type="hidden" id="hid_paymoney" value="">
+    <!--来源-->
+    <input type="hidden" id="hidclienttype" value="">
+    <!--充值手机号-->
+    <input type="hidden" id="hidmobileNum" value="">
+    <!--发起手机号-->
+    <input type="hidden" id="hidLoginName" value="">
+    <!--产品描述-->
+    <input type="hidden" id="hid_memo" value="">
+    <!--支付价格-->
+    <input type="hidden" id="hid_paymoney" value="">
+
+    
+    <section class="container" module="">
+        <h1 class="back-hd"><a id="go_back" class="go-back"></a>选择支付方式</h1>
+        <article class="my-order">
+            <dl class="pay-method" module="202093">
+                <!--<dt>请支付：<em><i>￥</i>876.00</em></dt>
+                <dd><em class="alipay"></em>支付宝<a href="javascript:;" class="curr"></a></dd>
+                <dd><em class="weixin"></em>微信支付<a href="javascript:;"></a></dd>
+                <dd><em class="blank"></em>银联支付<a href="javascript:;"></a></dd>
+                <dd><em class="tenpay"></em>财付通<a href="javascript:;"></a></dd>-->
+            </dl>
+            <a id="btn_pay" class="btn">立即支付</a>
+            <a id="btn_pay_wait" class="pay-btn-gray" style="display:none">正在申请支付</a>
+        </article>
+    </section>
+    <!--底部-->
+    <script src="/JS/g_footer.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "102008";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

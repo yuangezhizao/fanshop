@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>惠家有购物商城</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <script src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/g_header.js"></script>
+
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+
+    <script src="/JS/pages/MyAccount.js"></script>
+</head>
+<body>
+    <section class="container">
+        <h1 class="back-hd"><a href="/Account/index.html" class="go-back"></a>我的账户</h1>
+        <ul class="user-setting">
+            <li id="li_AddressList"><a href="/Account/AddressList.html">管理收货地址</a></li>
+            <li id="li_ResetPassword"><a href="/Account/ResetPassword.html">修改密码</a></li>
+        </ul>
+    </section>
+    <!--底部-->
+    <script src="/JS/g_footer.js"></script>
+
+</body>
+</html>

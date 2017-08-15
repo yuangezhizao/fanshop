@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html style="max-width:100%">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/sbc.css", "/css/style.css"], ["/js/functions/g_Const.js", "/js/jquery-2.1.4-min.js", "/js/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body class="qqbg">
+    <!--<div class='tabnav' id="menu" style="display:none">
+        <ul class="clearfix">
+            <li onclick="javascript:test_item(0);" class="on"><span>图文详情</span></li>
+            <li onclick="javascript:test_item(1);"><span>规格参数</span></li>
+            <li onclick="javascript:test_item(2);" style="display:none" id="li_commonquestion"><span>常见问题</span></li>
+        </ul>
+    </div>
+                <div id="tabc0" class='tabc'>
+
+                </div>
+                <div id="tabc1" class="no">
+                    <div class="param">
+
+                    </div>
+                </div>
+                <div id="tabc2" class="no">
+                    <div class="issue" id="div_commonquestion">
+
+                    </div>
+                </div>-->
+
+    <div class="fan_spec_describe">
+        <h3 class="gs_h3">
+            <span></span>
+            <b>◆</b>
+            <i>规格参数</i>
+            <b>◆</b>
+            <span></span>
+        </h3>
+        <div class="fan_spec" id="tabc1">
+            <!--<table>
+                <tr>
+                    <td class="w22">商品编号</td>
+                    <td class="w76">415968895</td>
+                </tr>
+                <tr>
+                    <td class="w22">商品编号</td>
+                    <td class="w76">415968895</td>
+                </tr>
+                <tr>
+                    <td class="w22">商品编号</td>
+                    <td class="w76">415968895</td>
+                </tr>
+                <tr>
+                    <td class="w22">商品编号</td>
+                    <td class="w76">415968895</td>
+                </tr>
+                <tr>
+                    <td class="w22">商品编号</td>
+                    <td class="w76">415968895</td>
+                </tr>
+            </table>-->
+        </div>
+    </div>
+    <div class="fan_spec_describe">
+        <h3 class="gs_h3">
+            <span></span>
+            <b>◆</b>
+            <i>商品详情</i>
+            <b>◆</b>
+            <span></span>
+        </h3>
+        <div class="fan_detials" id="tabc0">
+            <!--<div class="detials01">
+                <img src="img/wza_img/kkk.png">
+                <img src="img/wza_img/kkk.png">
+            </div>
+            <div class="space02"><img src="img/wza_img/dashed.png"></div>
+            <ul class="detials02">
+                <li>
+                    <img src="img/wza_img/g01.png">
+                    <p>sd卡飓风桑迪建瓯if奖的防雷接地将，<br />饿哦i个joe感觉到舒服感觉到, <br />将的房价高 地方sergio.</p>
+                </li>
+                <li>
+                    <img src="img/wza_img/g01.png">
+                    <p>sd卡飓风桑迪建瓯if奖的防雷接地将，<br />饿哦i个joe感觉到舒服感觉到, <br />将的房价高 地方sergio.</p>
+                </li>
+            </ul>
+            <div class="space02"><img src="img/wza_img/dashed.png"></div>
+            <ul class="detials03">
+                <li class="clearfix">
+                    <img src="img/wza_img/vc.png" />
+                    <p>将的死哦防静电服的股份将离开的房间的风格</p>
+                </li>
+                <li class="clearfix">
+                    <img src="img/wza_img/vc.png" />
+                    <p>将的死哦防静电服的股份将离开的房间的风格</p>
+                </li>
+                <li class="clearfix">
+                    <img src="img/wza_img/vc.png" />
+                    <p>将的死哦防静电服的股份将离开的房间的风格</p>
+                </li>
+            </ul>-->
+        </div>
+    </div>
+    <div class="fan_spec_describe" id="li_commonquestion">
+        <h3 class="gs_h3">
+            <span></span>
+            <b>◆</b>
+            <i>常见问题</i>
+            <b>◆</b>
+            <span></span>
+        </h3>
+        <ul class="questions" id="div_commonquestion">
+            <!--<li>
+                <h4>购买运费九分裤宋德福？</h4>
+                <p>奥斯卡了的房间了的风口浪尖思考了的房间宋德福收代理费地方阿萨德发地方</p>
+            </li>
+            <li>
+                <h4>购买运费九分裤宋德福？</h4>
+                <p>奥斯卡了的房间了的风口浪尖思考了的房间宋德福收代理费地方阿萨德发地方</p>
+            </li>-->
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/pages/product_info.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <script type="text/javascript">
+        Product_Detail.api_input.picWidth = 0;
+        Product_Detail.api_input.productCode = GetQueryString("pid");// "108577";
+        Product_Detail.api_input.buyerType = GetQueryString("buyerType");
+        Product_Detail.api_input.version = 1.0;
+        Product_Detail.GetDetail();
+        test_item(GetQueryString("tab"))
+    </script>
+</body>
+</html>

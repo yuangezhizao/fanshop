@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>领取返现特权</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/tost.js"></script>
+    <script src="/js/g_header.js"></script>
+    
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/functions/g_Type.js"></script>
+    <script src="/js/JValidator.js"></script>
+</head>
+<body class="bg1">
+    <div class="wrap fpass" id="div_step1" style="display:none">
+        <div class="wc">
+            <form>
+                <div class="lid"><div><input type="text" placeholder="请输入您的手机号" value="" id="txtPhoneNo" /><span>&nbsp;</span></div></div>
+                <a id="a_step1" class="btn-reg">立即领取</a>
+            </form>
+        </div>
+    </div>
+    <div class="wrap yreg" id="div_step2" style="display:none">
+        <p id="p_code"></p>
+        <div class="wc">
+            <form>
+                <div class="lid yzm"><input type="button" style="background:#dc0f50;color:#fff" id="btnCode" value="获取验证码" /><div><input id="txtValidCode" type="text" placeholder="输入验证码" value="" /></div></div>
+                <div class="lid tel"><div><input id="txtPass" type="password" placeholder="请设置密码(限6-16位字符，不能包含空格)" value=""></div></div>
+                <div class="lid pic" id="li_Verify" style="display:none"><img src="/Ajax/LoginHandler.ashx?action=code" id="Verify_codeImag" width="120" height="30" alt="点击切换验证码"
+     title="点击切换验证码" style="vertical-align: top; cursor: pointer;"
+     onclick="ToggleCode(this.id, '/Ajax/LoginHandler.ashx'); return false;" /><div><input id="txtPicCode" type="text" placeholder="输入图片验证码" value="" /></div></div>
+                <a id="a_step2" class="btn-sure">下一步</a>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/js/pages/ValidCodeBase.js"></script>
+<script src="js/Step.js"></script>
+<script src="/js/g_footer.js"></script>
+<script>
+
+$(function(){
+
+	//new Toast({context:$('body'),message:'验证码错误',top:'50%'}).show();
+	//new Toast({context:$('body'),message:'请输入6-16位字符且不能包含空格',top:'50%'}).show();
+	//new Toast({context:$('body'),message:'请输入11位有效手机号',top:'50%'}).show();
+	//new Toast({context:$('body'),message:'验证码短信已发送，请注意查收',top:'50%'}).show();
+	//new Toast({context:$('body'),message:'验证码输入错误次数过多，请重新获取验证码',top:'50%'}).show();
+});
+var getEl = function(id){
+	return document.getElementById(id);
+};
+//倒计时
+//getEl('getTime').onclick = function(){
+//	stTime();
+//};
+
+var countdown = 2;
+function settime(val) {
+	if (countdown == 0) {
+		val.removeAttribute("disabled", true);
+		val.value="重发验证码";
+        val.style.background="#dc0f50";
+		val.style.color ="#fff";
+		//countdown = 60;
+	} else {
+		val.setAttribute("disabled",false);
+		val.value=countdown +"s后可重发";
+        val.style.background="#ccc";
+		val.style.color ="#666";
+		countdown--;
+		setTimeout(function() {settime(val)},1000)
+	}
+
+};
+function stTime(){
+	//getEl('getTime').setAttribute("disabled", false);
+	//getEl('getTime').value=countdown +"s后可重发";
+	//settime(getEl('getTime'));
+ };
+
+//stTime();
+
+</script>
+</html>
